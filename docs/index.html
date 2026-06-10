@@ -42,7 +42,7 @@
       display: none;
       height: 100%;
       overflow: auto;
-      padding: 22px 20px 92px;
+      padding: 22px 20px 108px;
     }
 
     .screen.active { display: block; }
@@ -973,9 +973,11 @@
       bottom: 0;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      background: rgba(255,255,255,.96);
-      border-top: 1px solid #dfe7ec;
-      padding: 9px 6px 16px;
+      background: #ffffff;
+      border-top: 1px solid #cfdce5;
+      padding: 11px 6px 18px;
+      box-shadow: 0 -10px 26px rgba(9, 22, 34, .12);
+      z-index: 20;
     }
 
     .tabbar[hidden] {
@@ -985,9 +987,9 @@
     .tabbar button {
       border: 0;
       background: transparent;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
+      color: #4f6070;
+      font-size: 12px;
+      font-weight: 800;
       cursor: pointer;
       display: grid;
       justify-items: center;
@@ -1004,25 +1006,30 @@
     .emoji {
       display: inline-grid;
       place-items: center;
-      width: 26px;
-      height: 22px;
-      font-size: 20px;
+      width: 32px;
+      height: 28px;
+      font-size: 22px;
       line-height: 1;
+      border-radius: 999px;
     }
 
     .emoji-large {
-      font-size: 25px;
+      font-size: 27px;
+    }
+
+    .tabbar button.active .emoji {
+      background: rgba(0,104,180,.12);
     }
 
     .profile-icon {
-      width: 26px;
-      height: 22px;
+      width: 32px;
+      height: 28px;
       font-size: 0;
     }
 
     .profile-icon svg {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       display: block;
     }
 
