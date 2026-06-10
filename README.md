@@ -9,8 +9,8 @@ RateCompass is a SwiftUI iOS starter app affiliated with The Wealth Map. It keep
 - Home dashboard with RateCompass Signal, Bank of Canada decision card, personal impact, and suggested action.
 - Rates tab with Mortgage, Savings, GIC, and Prime categories, including common mortgage term views, Big 5 watchlist coverage, and a Prime reference card that separates Bank of Canada policy rate from bank-set prime rate.
 - My Impact tab with mortgage, GIC, and debt profile inputs for balance, rate, and renewal or maturity timing.
-- Free-tier framing for one mortgage and one GIC, with Plus prompts for additional mortgages and GICs.
-- Profile tab with notification toggles, Data Sources, V1 scope notes, and Plus positioning.
+- RateCompass Core and RateCompass Plus annual plan positioning, both with a 14-day free trial.
+- Profile tab with notification toggles, Data Sources, V1 scope notes, and plan positioning.
 - Plus-framed prototype interaction for dragging institution watchlist rows into a custom order.
 
 ## Data Note
