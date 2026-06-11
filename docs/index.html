@@ -797,6 +797,23 @@
       background: var(--mist);
     }
 
+    .upgrade-button,
+    .premium-title.upgrade-button,
+    .watchlist-note.upgrade-button {
+      width: 100%;
+      border: 0;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .upgrade-button:hover,
+    .premium-title.upgrade-button:hover,
+    .watchlist-note.upgrade-button:hover {
+      box-shadow: inset 0 0 0 2px rgba(0,104,180,.14);
+    }
+
     .lock-dot {
       width: 26px;
       height: 26px;
@@ -813,6 +830,96 @@
     .upgrade-row b {
       display: block;
       color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .plan-card {
+      display: grid;
+      gap: 14px;
+    }
+
+    .plan-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .plan-price {
+      color: var(--blue);
+      font-size: 30px;
+      font-weight: 900;
+      margin-top: 4px;
+    }
+
+    .plan-badge {
+      color: var(--green);
+      background: rgba(36, 174, 124, .14);
+      border-radius: 8px;
+      padding: 6px 9px;
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .plan-features {
+      display: grid;
+      gap: 9px;
+    }
+
+    .plan-feature,
+    .compare-row {
+      display: grid;
+      gap: 8px;
+    }
+
+    .plan-feature {
+      grid-template-columns: 18px 1fr;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .plan-feature span {
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .trial-button {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      background: var(--blue);
+      color: white;
+      padding: 13px;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .trial-button.plus {
+      background: var(--green);
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .compare-pill {
+      padding: 10px;
+      border-radius: 8px;
+      background: var(--mist);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .compare-pill span {
+      display: block;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
       margin-bottom: 3px;
     }
 
@@ -1212,10 +1319,10 @@
         </div>
       </div>
       <div class="section-title">Institution Watchlist</div>
-      <div class="watchlist-note">
+      <button class="watchlist-note upgrade-button" type="button" onclick="openPlans('Custom institution order')">
         <span>Drag rows to preview a custom order. Saving this order belongs in RateCompass Plus.</span>
         <span class="plus-badge">Plus</span>
-      </div>
+      </button>
       <div id="rate-list"></div>
     </section>
 
@@ -1234,18 +1341,18 @@
           <label>Renewal date</label>
           <input id="mortgage-renewal" type="date" />
         </div>
-        <div class="premium-title">
+        <button class="premium-title upgrade-button" type="button" onclick="openPlans('Custom mortgage title')">
           <div class="premium-title-top">
             <label>Custom title</label>
             <span class="plus-badge">Plus</span>
           </div>
           <input type="text" value="Home mortgage" disabled aria-label="Custom mortgage title requires RateCompass Plus" />
           <p>Rename saved items, such as Home mortgage or Rental renewal, with RateCompass Plus.</p>
-        </div>
-        <div class="upgrade-row">
+        </button>
+        <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Add another mortgage')">
           <span class="lock-dot">◆</span>
           <p><b>Add another mortgage</b>Track multiple properties with RateCompass Plus.</p>
-        </div>
+        </button>
       </div>
       <div class="card slider-card">
         <h2>GIC 1</h2>
@@ -1257,18 +1364,18 @@
           <label>Maturity date</label>
           <input id="gic-maturity" type="date" />
         </div>
-        <div class="premium-title">
+        <button class="premium-title upgrade-button" type="button" onclick="openPlans('Custom GIC title')">
           <div class="premium-title-top">
             <label>Custom title</label>
             <span class="plus-badge">Plus</span>
           </div>
           <input type="text" value="Emergency fund GIC" disabled aria-label="Custom GIC title requires RateCompass Plus" />
           <p>Rename saved GICs, such as Emergency fund GIC or Ladder year 2, with RateCompass Plus.</p>
-        </div>
-        <div class="upgrade-row">
+        </button>
+        <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Add another GIC')">
           <span class="lock-dot">◆</span>
           <p><b>Add another GIC</b>Track multiple GICs and maturity dates with RateCompass Plus.</p>
-        </div>
+        </button>
       </div>
       <div class="card slider-card">
         <h2>Debt Profile</h2>
@@ -1354,10 +1461,10 @@
         <div class="source-row"><span class="status-pill sample">Tip</span><p>GIC and savings quotes score better when they are higher.</p></div>
         <div class="source-row"><span class="status-pill sample">Tip</span><p>Restrictions, penalties, deposit insurance, and promo expiry still matter.</p></div>
       </div>
-      <div class="upgrade-row">
+      <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Save quote history')">
         <span class="lock-dot">◆</span>
         <p><b>Save quote history</b>Save multiple quotes and compare changes over time with RateCompass Plus.</p>
-      </div>
+      </button>
     </section>
 
     <section id="guidance" class="screen">
@@ -1435,10 +1542,10 @@
           <div class="guide-step"><span>3</span>How would this choice change if rates moved by 0.50%?</div>
         </div>
       </div>
-      <div class="upgrade-row">
+      <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Personalized action plan')">
         <span class="lock-dot">◆</span>
         <p><b>Personalized action plan</b>Future RateCompass Plus can turn saved mortgages, GICs, debts, and watchlists into a monthly next-steps report.</p>
-      </div>
+      </button>
     </section>
 
     <section id="profile" class="screen">
@@ -1486,6 +1593,76 @@
         <div class="summary-row"><div><b>RateCompass Core</b><p>Rate dashboards, basic Rate Check, one mortgage, one GIC, and key alerts.</p></div><strong>$23.95/yr</strong></div>
         <div class="summary-row"><div><b>RateCompass Plus</b><p>Multiple saved items, quote history, custom watchlists, deeper scenarios, and personalized opportunity reports.</p></div><strong>$38.95/yr</strong></div>
         <p class="source-note">Both plans include a 14-day free trial. No ads in the paid experience.</p>
+        <button class="trial-button" type="button" onclick="openPlans('Compare plans')">Compare Plans</button>
+      </div>
+    </section>
+
+    <section id="plans" class="screen">
+      <div class="header">
+        <h1>Choose Your Plan</h1>
+        <div class="sub">Start with 14 days free</div>
+        <button class="link-button" onclick="closePlans()">Back</button>
+      </div>
+      <div class="card">
+        <h2 id="plans-context">RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.</h2>
+        <p>Both annual plans include a 14-day free trial. Cancel before the trial ends and you will not be charged.</p>
+      </div>
+      <div class="card plan-card">
+        <div class="plan-head">
+          <div>
+            <h2>RateCompass Core</h2>
+            <div class="plan-price">$23.95/yr</div>
+          </div>
+          <span class="plan-badge" style="color:var(--blue);background:rgba(0,104,180,.14);">Best start</span>
+        </div>
+        <p>For checking rates, understanding your own impact, and getting basic alerts.</p>
+        <div class="plan-features">
+          <div class="plan-feature"><span>✓</span>Rates dashboard and institution watchlist</div>
+          <div class="plan-feature"><span>✓</span>Basic Rate Check</div>
+          <div class="plan-feature"><span>✓</span>One mortgage and one GIC</div>
+          <div class="plan-feature"><span>✓</span>Basic impact and rate-change scenarios</div>
+          <div class="plan-feature"><span>✓</span>Key alerts and data source visibility</div>
+        </div>
+        <button class="trial-button" type="button" onclick="startTrial('RateCompass Core')">Start 14-day free trial</button>
+        <p id="core-trial-note" class="source-note">Prototype only. Purchase flow will connect later.</p>
+      </div>
+      <div class="card plan-card">
+        <div class="plan-head">
+          <div>
+            <h2>RateCompass Plus</h2>
+            <div class="plan-price" style="color:var(--green);">$38.95/yr</div>
+          </div>
+          <span class="plan-badge">More personal</span>
+        </div>
+        <p>For saving more details, comparing quotes over time, and getting personalized planning prompts.</p>
+        <div class="plan-features">
+          <div class="plan-feature"><span>✓</span>Multiple mortgages and GICs</div>
+          <div class="plan-feature"><span>✓</span>Saved quote history</div>
+          <div class="plan-feature"><span>✓</span>Custom institution order</div>
+          <div class="plan-feature"><span>✓</span>Deeper scenario testing</div>
+          <div class="plan-feature"><span>✓</span>Personalized opportunity reports</div>
+        </div>
+        <button class="trial-button plus" type="button" onclick="startTrial('RateCompass Plus')">Start 14-day free trial</button>
+        <p id="plus-trial-note" class="source-note">Prototype only. Purchase flow will connect later.</p>
+      </div>
+      <div class="card">
+        <h2>How The Plans Split</h2>
+        <div class="compare-row">
+          <b>Explore rates</b>
+          <div class="compare-grid"><div class="compare-pill"><span>Core</span>Included</div><div class="compare-pill"><span>Plus</span>Included</div></div>
+        </div>
+        <div class="compare-row">
+          <b>Personal items</b>
+          <div class="compare-grid"><div class="compare-pill"><span>Core</span>1 mortgage + 1 GIC</div><div class="compare-pill"><span>Plus</span>Multiple</div></div>
+        </div>
+        <div class="compare-row">
+          <b>Quote history</b>
+          <div class="compare-grid"><div class="compare-pill"><span>Core</span>Basic check</div><div class="compare-pill"><span>Plus</span>Save and compare</div></div>
+        </div>
+        <div class="compare-row">
+          <b>Reports</b>
+          <div class="compare-grid"><div class="compare-pill"><span>Core</span>Basic guidance</div><div class="compare-pill"><span>Plus</span>Personalized</div></div>
+        </div>
       </div>
     </section>
 
@@ -1728,6 +1905,7 @@
     let activeMortgageTerm = "fiveYearFixed";
     let activeRateRows = [];
     let draggedRateIndex = null;
+    let planReturnScreen = "profile";
 
     const mortgageTerms = {
       oneYearFixed: {
@@ -1902,6 +2080,24 @@
       showScreen('guidance');
       document.querySelectorAll('.tabbar button').forEach(tab => tab.classList.remove('active'));
       document.querySelector('#tabs button[onclick*="home"]')?.classList.add('active');
+    }
+
+    function openPlans(context) {
+      planReturnScreen = document.querySelector('.screen.active')?.id || 'profile';
+      const contextLine = context && context !== 'Compare plans'
+        ? `${context} is included with RateCompass Plus. Choose a plan to start with 14 days free.`
+        : 'RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.';
+      document.getElementById('plans-context').textContent = contextLine;
+      showScreen('plans');
+    }
+
+    function closePlans() {
+      showScreen(planReturnScreen || 'profile');
+    }
+
+    function startTrial(planName) {
+      const noteId = planName === 'RateCompass Core' ? 'core-trial-note' : 'plus-trial-note';
+      document.getElementById(noteId).textContent = `${planName} trial selected for prototype review. Purchase flow will connect later.`;
     }
 
     function selectRateCategory(category, button) {
