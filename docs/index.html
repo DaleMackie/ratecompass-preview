@@ -1555,6 +1555,7 @@
       </div>
       <div class="card">
         <h2>Notification Toggles</h2>
+        <p class="source-note">Core includes 2 active alerts. RateCompass Plus unlocks unlimited alerts and saved alert history.</p>
         <div class="toggle">
           <span class="toggle-copy">Bank of Canada announcements <span class="info-dot" tabindex="0" aria-label="More about Bank of Canada announcements" onclick="event.stopPropagation(); setTooltipState(this, true)" onmouseenter="setTooltipState(this, true)" onmouseleave="setTooltipState(this, false)" onfocus="setTooltipState(this, true)" onblur="setTooltipState(this, false)">i</span><span class="tooltip">Receive reminders before scheduled Bank of Canada decisions and a plain-English summary when the rate decision is released.</span></span>
           <button class="switch" type="button" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
@@ -1590,8 +1591,8 @@
       </div>
       <div class="card">
         <h2>RateCompass Plans</h2>
-        <div class="summary-row"><div><b>RateCompass Core</b><p>Rate dashboards, basic Rate Check, one mortgage, one GIC, and key alerts.</p></div><strong>$23.95/yr</strong></div>
-        <div class="summary-row"><div><b>RateCompass Plus</b><p>Multiple saved items, quote history, custom watchlists, deeper scenarios, and personalized opportunity reports.</p></div><strong>$38.95/yr</strong></div>
+        <div class="summary-row"><div><b>RateCompass Core</b><p>Rate dashboards, basic Rate Check, one mortgage, one GIC, and 2 active alerts.</p></div><strong>$23.95/yr</strong></div>
+        <div class="summary-row"><div><b>RateCompass Plus</b><p>Multiple saved items, unlimited alerts, quote history, custom watchlists, and personalized opportunity reports.</p></div><strong>$38.95/yr</strong></div>
         <p class="source-note">Both plans include a 14-day free trial. No ads in the paid experience.</p>
         <button class="trial-button" type="button" onclick="openPlans('Compare plans')">Compare Plans</button>
       </div>
@@ -1615,13 +1616,13 @@
           </div>
           <span class="plan-badge" style="color:var(--blue);background:rgba(0,104,180,.14);">Best start</span>
         </div>
-        <p>For checking rates, understanding your own impact, and getting basic alerts.</p>
+        <p>For checking rates, understanding your own impact, and keeping two key alerts active.</p>
         <div class="plan-features">
           <div class="plan-feature"><span>✓</span>Rates dashboard and institution watchlist</div>
           <div class="plan-feature"><span>✓</span>Basic Rate Check</div>
           <div class="plan-feature"><span>✓</span>One mortgage and one GIC</div>
           <div class="plan-feature"><span>✓</span>Basic impact and rate-change scenarios</div>
-          <div class="plan-feature"><span>✓</span>Key alerts and data source visibility</div>
+          <div class="plan-feature"><span>✓</span>2 active alerts and data source visibility</div>
         </div>
         <button class="trial-button" type="button" onclick="startTrial('RateCompass Core')">Start 14-day free trial</button>
         <p id="core-trial-note" class="source-note">Prototype only. Purchase flow will connect later.</p>
@@ -1639,6 +1640,7 @@
           <div class="plan-feature"><span>✓</span>Multiple mortgages and GICs</div>
           <div class="plan-feature"><span>✓</span>Saved quote history</div>
           <div class="plan-feature"><span>✓</span>Custom institution order</div>
+          <div class="plan-feature"><span>✓</span>Unlimited active alerts and saved alert history</div>
           <div class="plan-feature"><span>✓</span>Deeper scenario testing</div>
           <div class="plan-feature"><span>✓</span>Personalized opportunity reports</div>
         </div>
@@ -1654,6 +1656,10 @@
         <div class="compare-row">
           <b>Personal items</b>
           <div class="compare-grid"><div class="compare-pill"><span>Core</span>1 mortgage + 1 GIC</div><div class="compare-pill"><span>Plus</span>Multiple</div></div>
+        </div>
+        <div class="compare-row">
+          <b>Alerts</b>
+          <div class="compare-grid"><div class="compare-pill"><span>Core</span>2 active</div><div class="compare-pill"><span>Plus</span>Unlimited + history</div></div>
         </div>
         <div class="compare-row">
           <b>Quote history</b>
