@@ -54,7 +54,7 @@
       align-items: center;
       justify-content: center;
       gap: 26px;
-      min-height: 100%;
+      min-height: calc(100% + 130px);
       text-align: center;
       color: white;
       background: linear-gradient(160deg, var(--ink), #073446);
@@ -120,6 +120,14 @@
       max-width: 320px;
     }
 
+    .auth-actions {
+      width: 100%;
+      max-width: 330px;
+      display: grid;
+      gap: 12px;
+      justify-items: stretch;
+    }
+
     .button {
       appearance: none;
       border: 0;
@@ -148,6 +156,19 @@
       cursor: pointer;
     }
 
+    .secondary-inline-button {
+      appearance: none;
+      width: 100%;
+      border: 1px solid rgba(0,104,180,.22);
+      border-radius: 14px;
+      background: white;
+      color: var(--blue);
+      padding: 14px 18px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
     .ghost-button {
       appearance: none;
       border: 0;
@@ -157,6 +178,54 @@
       font-size: 15px;
       font-weight: 700;
       cursor: pointer;
+    }
+
+    .setup-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .setup-choice {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid #dfe7ec;
+    }
+
+    .setup-choice span {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(0,104,180,.12);
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .setup-choice b {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    button.setup-choice {
+      width: 100%;
+      text-align: left;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    button.setup-choice.selected {
+      border-color: rgba(0,104,180,.62);
+      box-shadow: inset 0 0 0 1px rgba(0,104,180,.22);
+      background: rgba(0,104,180,.06);
     }
 
     .header {
@@ -923,9 +992,85 @@
       margin-bottom: 3px;
     }
 
+    .question-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .question-button {
+      width: 100%;
+      border: 1px solid #dfe7ec;
+      border-radius: 8px;
+      background: white;
+      color: var(--ink);
+      padding: 14px;
+      font: inherit;
+      font-weight: 800;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .question-button span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    .question-button:hover {
+      border-color: rgba(0,104,180,.34);
+      box-shadow: inset 0 0 0 1px rgba(0,104,180,.12);
+    }
+
+    .insight-result {
+      display: grid;
+      gap: 12px;
+    }
+
+    .insight-result strong {
+      color: var(--blue);
+      font-size: 26px;
+      line-height: 1.05;
+    }
+
+    .benefit-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .benefit-list div {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 13px;
+      font-weight: 750;
+      color: var(--ink);
+    }
+
+    .benefit-list span {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(36, 174, 124, .14);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
     .form {
       display: grid;
       gap: 14px;
+    }
+
+    .form .button {
+      max-width: none;
+      justify-self: stretch;
     }
 
     .field {
@@ -1169,9 +1314,11 @@
           <h1>Welcome to RateCompass</h1>
           <p>Sign in to save your profile, rate alerts, and personal impact estimates.</p>
         </div>
-        <button class="button" onclick="showScreen('signup')">Create Account</button>
-        <button class="secondary-button" onclick="showScreen('login')">Sign In</button>
-        <button class="ghost-button" onclick="showApp()">Preview Without Account</button>
+        <div class="auth-actions">
+          <button class="button" onclick="showScreen('signup')">Create Account</button>
+          <button class="secondary-button" onclick="showScreen('login')">Sign In</button>
+          <button class="ghost-button" onclick="showApp()">Preview Without Account</button>
+        </div>
       </div>
     </section>
 
@@ -1185,6 +1332,7 @@
         <input id="login-password" class="field" type="password" placeholder="Password" autocomplete="current-password" />
         <button id="login-submit" class="button" onclick="validateLogin()">Sign In</button>
         <div id="login-note" class="form-note">Prototype sign-in only; no password is sent yet.</div>
+        <button class="secondary-inline-button" onclick="showApp()">Preview Without Account</button>
         <button class="link-button" onclick="showScreen('auth')">Back</button>
       </div>
       <div class="card" style="margin-top:18px;">
@@ -1205,12 +1353,70 @@
         <input id="signup-confirm" class="field" type="password" placeholder="Confirm Password" autocomplete="new-password" />
         <button id="signup-submit" class="button" onclick="validateSignup()" disabled>Create Account</button>
         <div id="signup-note" class="form-note error">Enter your name to continue.</div>
+        <button class="secondary-inline-button" onclick="showApp()">Preview Without Account</button>
         <button class="link-button" onclick="showScreen('auth')">Back</button>
       </div>
       <div class="card" style="margin-top:18px;">
         <h2>What this enables</h2>
         <p>Rate alerts, saved impact assumptions, renewal timing, and future RateCompass Plus reports.</p>
       </div>
+    </section>
+
+    <section id="account-setup-priorities" class="screen">
+      <div class="header">
+        <h1>Your Mortgage Picture</h1>
+        <div class="sub">A quick setup before entering the app</div>
+      </div>
+      <div class="card">
+        <h2>Do you currently have a mortgage?</h2>
+        <p>Your answer helps RateCompass show the most useful rate tools first.</p>
+        <div class="setup-list" style="margin-top:14px;">
+          <button class="setup-choice selected" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'one', this)"><span>1</span><p><b>Yes, one mortgage</b>Track one renewal and understand how rate moves could affect payment planning.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'multiple', this)"><span>2</span><p><b>Yes, more than one</b>Multiple properties can make renewal timing, quote comparison, and alerts more valuable.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'future', this)"><span>3</span><p><b>Not yet, but I may buy</b>Use the app to watch rate direction and feel better prepared before shopping.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'none', this)"><span>4</span><p><b>No mortgage plans right now</b>Focus on savings, GICs, Bank of Canada decisions, and rate quote checks.</p></button>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showScreen('account-setup-timing')">Continue</button>
+      <button class="link-button" type="button" onclick="showApp()">Skip setup</button>
+    </section>
+
+    <section id="account-setup-timing" class="screen">
+      <div class="header">
+        <h1>Timing Matters</h1>
+        <div class="sub">Renewal and purchase windows shape the value</div>
+      </div>
+      <div class="card">
+        <h2>Is a mortgage renewal or home purchase likely in the next year?</h2>
+        <div class="setup-list" style="margin-top:14px;">
+          <button class="setup-choice selected" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'oneYear', this)"><span>✓</span><p><b>Yes, within 12 months</b>Rate alerts and quote checks can help before the decision gets urgent.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'later', this)"><span>2</span><p><b>Later than a year</b>Use trend context now so you are not starting from zero later.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'notSure', this)"><span>?</span><p><b>Not sure yet</b>RateCompass can keep the big rate signals visible while plans become clearer.</p></button>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showSetupSummary()">See my setup summary</button>
+      <button class="link-button" type="button" onclick="showScreen('account-setup-priorities')">Back</button>
+    </section>
+
+    <section id="account-setup-summary" class="screen">
+      <div class="header">
+        <h1>Your RateCompass Setup</h1>
+        <div class="sub">Why the app may be useful for you</div>
+      </div>
+      <div class="card">
+        <h2 id="setup-summary-title">Your first focus is mortgage timing.</h2>
+        <p id="setup-summary-copy">RateCompass will help you watch renewal timing, compare quotes, and understand rate movement before the decision feels rushed.</p>
+      </div>
+      <div class="card">
+        <h2>Suggested starter benefits</h2>
+        <div class="setup-list" style="margin-top:14px;">
+          <div class="setup-choice"><span>✓</span><p><b id="setup-benefit-one-title">Renewal visibility</b><span id="setup-benefit-one">Track rate direction and what it could mean for payment planning.</span></p></div>
+          <div class="setup-choice"><span>✓</span><p><b id="setup-benefit-two-title">Rate Check</b><span id="setup-benefit-two">Compare bank quotes before accepting them.</span></p></div>
+          <div class="setup-choice"><span>✓</span><p><b id="setup-benefit-three-title">Alerts</b><span id="setup-benefit-three">Watch Bank of Canada decisions and personal rate moments.</span></p></div>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showApp()">Start Using RateCompass</button>
+      <button class="link-button" type="button" onclick="showScreen('account-setup-timing')">Back</button>
     </section>
 
     <section id="home" class="screen">
@@ -1598,11 +1804,65 @@
       </div>
     </section>
 
+    <section id="paywall-discovery" class="screen">
+      <div class="header">
+        <h1>Before You Choose</h1>
+        <div class="sub">See where RateCompass can help</div>
+        <button class="link-button" onclick="closePlans()">Back</button>
+      </div>
+      <div class="card">
+        <h2 id="paywall-discovery-context">RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.</h2>
+        <p>Pick the situation that feels most familiar. The app will show how it can help before you choose a plan.</p>
+        <div class="question-stack">
+          <button class="question-button" type="button" onclick="selectPaywallConcern('gic')">
+            Have you ever had a GIC mature and sit in cash?
+            <span>Even a short delay can mean missed interest or an auto-renewal you did not really choose.</span>
+          </button>
+          <button class="question-button" type="button" onclick="selectPaywallConcern('banker')">
+            Do you ever feel unprepared discussing rates with your banker?
+            <span>RateCompass can help you compare the quote, understand the context, and ask better questions.</span>
+          </button>
+          <button class="question-button" type="button" onclick="selectPaywallConcern('renewal')">
+            Has a mortgage renewal ever felt rushed?
+            <span>Renewal timing, fixed-versus-variable choices, and rate movement can be easier to review ahead of time.</span>
+          </button>
+          <button class="question-button" type="button" onclick="selectPaywallConcern('savings')">
+            Have you missed a savings or promo-rate change?
+            <span>Rates can change quietly. Alerts and watchlists help keep important moves visible.</span>
+          </button>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showPlansChoice()">Skip to plans</button>
+    </section>
+
+    <section id="paywall-insight" class="screen">
+      <div class="header">
+        <h1>Your Rate Moment</h1>
+        <div class="sub">What the app helps prevent</div>
+        <button class="link-button" onclick="showScreen('paywall-discovery')">Back</button>
+      </div>
+      <div class="card insight-result">
+        <span id="paywall-fit" class="plan-badge" style="justify-self:start;">Best fit</span>
+        <strong id="paywall-insight-title">Rates are easier when you know what to ask.</strong>
+        <p id="paywall-insight-copy">RateCompass gives you a clearer view before you make a decision.</p>
+      </div>
+      <div class="card">
+        <h2>How RateCompass Helps</h2>
+        <div class="benefit-list">
+          <div><span>1</span><p id="paywall-benefit-one">Compare the rate against a benchmark before accepting it.</p></div>
+          <div><span>2</span><p id="paywall-benefit-two">See how the decision may affect your own mortgage, GIC, savings, or debt.</p></div>
+          <div><span>3</span><p id="paywall-benefit-three">Use reminders and saved context so important dates do not slip by.</p></div>
+        </div>
+      </div>
+      <button class="trial-button plus" type="button" onclick="showPlansChoice()">See recommended plans</button>
+      <button class="link-button" type="button" onclick="showScreen('paywall-discovery')">Answer a different question</button>
+    </section>
+
     <section id="plans" class="screen">
       <div class="header">
         <h1>Choose Your Plan</h1>
         <div class="sub">Start with 14 days free</div>
-        <button class="link-button" onclick="closePlans()">Back</button>
+        <button class="link-button" onclick="showScreen('paywall-discovery')">Back</button>
       </div>
       <div class="card">
         <h2 id="plans-context">RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.</h2>
@@ -1912,6 +2172,54 @@
     let activeRateRows = [];
     let draggedRateIndex = null;
     let planReturnScreen = "profile";
+    let pendingPlanContext = "";
+    const setupAnswers = {
+      mortgage: "one",
+      timing: "oneYear"
+    };
+
+    const paywallInsights = {
+      gic: {
+        fit: "Best fit: RateCompass Plus",
+        title: "Idle cash can quietly shrink your return.",
+        copy: "A matured GIC can lose momentum if it sits in cash or renews without a fresh comparison. RateCompass Plus is built for tracking more GICs, maturity dates, and reinvestment decisions.",
+        benefits: [
+          "Save multiple GICs and maturity dates in one place.",
+          "Compare the quoted reinvestment rate against the current sample benchmark.",
+          "Use alerts so maturity windows and better-rate opportunities are harder to miss."
+        ]
+      },
+      banker: {
+        fit: "Best fit: RateCompass Core",
+        title: "A clearer rate view can change the conversation.",
+        copy: "When you know the benchmark, the trend, and the questions to ask, a bank meeting can feel less like guessing and more like comparing.",
+        benefits: [
+          "Check a quoted mortgage, GIC, savings, or LOC rate before accepting it.",
+          "See whether the quote looks poor, fair, good, or very good against sample benchmarks.",
+          "Bring better questions into the conversation around fees, penalties, restrictions, and timing."
+        ]
+      },
+      renewal: {
+        fit: "Best fit: RateCompass Plus",
+        title: "Renewals are easier when you start before the deadline.",
+        copy: "A rushed renewal can make it harder to compare terms, test scenarios, or understand what a rate change means for your payment.",
+        benefits: [
+          "Track renewal timing and compare common mortgage terms.",
+          "Estimate how a rate move could affect your monthly payment.",
+          "Save more mortgage details and run deeper scenarios with RateCompass Plus."
+        ]
+      },
+      savings: {
+        fit: "Best fit: RateCompass Core",
+        title: "Small rate gaps can add up over time.",
+        copy: "Savings and promo rates can change quietly. RateCompass helps keep rate movement and opportunities visible so cash does not drift unnoticed.",
+        benefits: [
+          "Watch savings and GIC rate movement from one Canada-first dashboard.",
+          "Keep two active alerts in Core for the rate moments that matter most.",
+          "Upgrade to Plus later if you want unlimited alerts and saved alert history."
+        ]
+      }
+    };
 
     const mortgageTerms = {
       oneYearFixed: {
@@ -2027,6 +2335,59 @@
       document.getElementById(id).classList.add('active');
     }
 
+    function selectSetupAnswer(group, value, button) {
+      setupAnswers[group] = value;
+      document.querySelectorAll(`[data-setup-group="${group}"]`).forEach(option => option.classList.remove('selected'));
+      button.classList.add('selected');
+    }
+
+    function showSetupSummary() {
+      const hasMortgage = setupAnswers.mortgage === 'one' || setupAnswers.mortgage === 'multiple';
+      const multipleMortgages = setupAnswers.mortgage === 'multiple';
+      const futureBuyer = setupAnswers.mortgage === 'future';
+      const urgentTiming = setupAnswers.timing === 'oneYear';
+
+      const title = multipleMortgages
+        ? "You may benefit from tracking more than one rate decision."
+        : hasMortgage && urgentTiming
+          ? "Your first focus is renewal timing."
+          : futureBuyer
+            ? "Your first focus is getting prepared before you shop."
+            : "Your first focus is watching rate opportunities.";
+
+      const copy = multipleMortgages
+        ? "RateCompass can help compare terms, keep renewal dates visible, and show when Plus features like multiple saved mortgages may be useful."
+        : hasMortgage
+          ? "RateCompass will help you watch renewal timing, compare quotes, and understand rate movement before the decision feels rushed."
+          : futureBuyer
+            ? "RateCompass can help you understand rate direction, compare future quotes, and feel more prepared before speaking with a lender."
+            : "RateCompass can help you monitor Bank of Canada decisions, savings, GICs, and rate quotes even if mortgages are not your focus right now.";
+
+      document.getElementById('setup-summary-title').textContent = title;
+      document.getElementById('setup-summary-copy').textContent = copy;
+
+      document.getElementById('setup-benefit-one-title').textContent = futureBuyer ? "Buyer readiness" : hasMortgage ? "Renewal visibility" : "Rate awareness";
+      document.getElementById('setup-benefit-one').textContent = futureBuyer
+        ? "Watch fixed, variable, and prime-linked movement before you start shopping."
+        : hasMortgage
+          ? "Track rate direction and what it could mean for payment planning."
+          : "Follow Bank of Canada decisions and how they can affect savings, GICs, and debt.";
+
+      document.getElementById('setup-benefit-two-title').textContent = "Rate Check";
+      document.getElementById('setup-benefit-two').textContent = futureBuyer
+        ? "Use Rate Check when a lender gives you a future quote."
+        : "Compare bank quotes before accepting them.";
+
+      document.getElementById('setup-benefit-three-title').textContent = multipleMortgages ? "Plus fit" : "Alerts";
+      document.getElementById('setup-benefit-three').textContent = multipleMortgages
+        ? "Multiple saved mortgages and deeper scenarios are good candidates for RateCompass Plus."
+        : urgentTiming
+          ? "Use alerts so the next 12 months do not sneak up on you."
+          : "Keep the important rate moments visible while your timing becomes clearer.";
+
+      showScreen('account-setup-summary');
+    }
+
     function updateGreeting() {
       const hour = new Date().getHours();
       const greeting = hour >= 5 && hour < 12 ? "Good Morning" : hour < 17 ? "Good Afternoon" : "Good Evening";
@@ -2039,7 +2400,7 @@
 
     function validateSignup() {
       if (!isSignupValid()) return;
-      showApp();
+      showScreen('account-setup-priorities');
     }
 
     function signupValidationMessage() {
@@ -2090,15 +2451,36 @@
 
     function openPlans(context) {
       planReturnScreen = document.querySelector('.screen.active')?.id || 'profile';
+      pendingPlanContext = context || "";
       const contextLine = context && context !== 'Compare plans'
         ? `${context} is included with RateCompass Plus. Choose a plan to start with 14 days free.`
         : 'RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.';
+      document.getElementById('paywall-discovery-context').textContent = contextLine;
       document.getElementById('plans-context').textContent = contextLine;
-      showScreen('plans');
+      showScreen('paywall-discovery');
     }
 
     function closePlans() {
       showScreen(planReturnScreen || 'profile');
+    }
+
+    function selectPaywallConcern(concern) {
+      const insight = paywallInsights[concern] || paywallInsights.banker;
+      document.getElementById('paywall-fit').textContent = insight.fit;
+      document.getElementById('paywall-insight-title').textContent = insight.title;
+      document.getElementById('paywall-insight-copy').textContent = insight.copy;
+      document.getElementById('paywall-benefit-one').textContent = insight.benefits[0];
+      document.getElementById('paywall-benefit-two').textContent = insight.benefits[1];
+      document.getElementById('paywall-benefit-three').textContent = insight.benefits[2];
+      showScreen('paywall-insight');
+    }
+
+    function showPlansChoice() {
+      const contextLine = pendingPlanContext && pendingPlanContext !== 'Compare plans'
+        ? `${pendingPlanContext} is included with RateCompass Plus. Choose a plan to start with 14 days free.`
+        : 'RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.';
+      document.getElementById('plans-context').textContent = contextLine;
+      showScreen('plans');
     }
 
     function startTrial(planName) {
