@@ -590,7 +590,7 @@
       margin: 0;
     }
 
-    .premium-title input {
+    .premium-title .locked-field {
       width: 100%;
       border: 1px solid #dfe7ec;
       border-radius: 12px;
@@ -1235,18 +1235,18 @@
             <strong id="home-reference-rates">2.25% / 4.45%</strong>
           </div>
         </div>
-        <p id="home-trust-note" class="source-note">Reference values checked Jun 5-6, 2026. Institution rows remain sample until live feeds are connected.</p>
+        <p id="home-trust-note" class="source-note">Reference values checked Jun 5-10, 2026. Institution rows remain sample until live feeds are connected.</p>
       </div>
 
       <div class="card">
         <h2>Next Bank of Canada Decision</h2>
-        <p id="next-boc-date" style="margin-top:4px;">Jun 10, 2026</p>
+        <p id="next-boc-date" style="margin-top:4px;">Jul 15, 2026</p>
         <div class="prob-grid">
           <div class="pill"><span>Policy rate</span><strong id="home-policy-rate">2.25%</strong></div>
           <div class="pill"><span>Last decision</span><strong style="color:var(--cyan)">Hold</strong></div>
           <div class="pill"><span>Movement</span><strong style="color:var(--green)">Unchanged</strong></div>
         </div>
-        <p id="home-policy-note" style="margin-top:12px;font-size:12px;">Held Apr 29, 2026. Last cut Oct 29, 2025. Forecast probabilities are hidden until a live model is connected.</p>
+        <p id="home-policy-note" style="margin-top:12px;font-size:12px;">Held Jun 10, 2026. Last cut Oct 29, 2025. Forecast probabilities are hidden until a live model is connected.</p>
         <p class="source-note">Verified source: Bank of Canada policy-rate reference.</p>
       </div>
 
@@ -1304,14 +1304,14 @@
           <div class="reference-metric"><span>Bank of Canada policy rate</span><strong style="color:var(--cyan)">2.25%</strong></div>
           <div class="reference-metric"><span>Major bank prime rate</span><strong>4.45%</strong></div>
         </div>
-        <p style="font-size:12px;">Held Apr 29, 2026. Prime as of Jun 5, 2026. The Bank of Canada does not set prime directly; banks set prime, usually in response to policy-rate changes.</p>
+        <p style="font-size:12px;">Held Jun 10, 2026. Prime as of Jun 5, 2026. The Bank of Canada does not set prime directly; banks set prime, usually in response to policy-rate changes.</p>
       </div>
       <div class="card">
         <h2 id="rate-title">Mortgage Outlook</h2>
         <h1 id="rate-trend" style="color:var(--green);font-size:30px;margin-top:6px;">Likely Lower</h1>
         <p id="rate-summary">Fixed mortgage rates are watched through lender pricing and bond-yield trends.</p>
         <p id="rate-why" class="why-note">Why this matters: Your renewal timing can change how useful fixed-rate trends are.</p>
-        <p id="rate-freshness" class="source-note">Last checked: Jun 5-6, 2026. Institution rows are sample until live feeds are connected.</p>
+        <p id="rate-freshness" class="source-note">Last checked: Jun 5-10, 2026. Institution rows are sample until live feeds are connected.</p>
         <div class="prob-grid">
           <div class="pill"><span id="rate-prob-1-label">Direction</span><strong id="rate-prob-1" style="color:var(--green)">Likely Lower</strong></div>
           <div class="pill"><span id="rate-prob-2-label">Primary driver</span><strong id="rate-prob-2">Bond yields</strong></div>
@@ -1346,7 +1346,7 @@
             <label>Custom title</label>
             <span class="plus-badge">Plus</span>
           </div>
-          <input type="text" value="Home mortgage" disabled aria-label="Custom mortgage title requires RateCompass Plus" />
+          <div class="locked-field" aria-label="Home mortgage custom title preview">Home mortgage</div>
           <p>Rename saved items, such as Home mortgage or Rental renewal, with RateCompass Plus.</p>
         </button>
         <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Add another mortgage')">
@@ -1369,7 +1369,7 @@
             <label>Custom title</label>
             <span class="plus-badge">Plus</span>
           </div>
-          <input type="text" value="Emergency fund GIC" disabled aria-label="Custom GIC title requires RateCompass Plus" />
+          <div class="locked-field" aria-label="Emergency fund GIC custom title preview">Emergency fund GIC</div>
           <p>Rename saved GICs, such as Emergency fund GIC or Ladder year 2, with RateCompass Plus.</p>
         </button>
         <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Add another GIC')">
@@ -1690,8 +1690,8 @@
     };
 
     const rateDataCatalog = {
-      checkedRange: "Jun 5-6, 2026",
-      policyLastDecision: "Held Apr 29, 2026",
+      checkedRange: "Jun 5-10, 2026",
+      policyLastDecision: "Held Jun 10, 2026",
       policyLastChange: "Last cut Oct 29, 2025",
       primeAsOf: "Prime as of Jun 5, 2026",
       policyRate: {
@@ -1699,13 +1699,13 @@
         title: "Bank of Canada policy rate",
         value: "2.25%",
         status: rateTrustStatus.verified,
-        detail: "Held Apr 29, 2026.",
+        detail: "Held Jun 10, 2026.",
         source: "Bank of Canada policy-rate reference"
       },
       nextDecision: {
         id: "next-boc-decision",
         title: "Next Bank of Canada decision",
-        value: "Jun 10, 2026",
+        value: "Jul 15, 2026",
         status: rateTrustStatus.verified,
         detail: "Scheduled policy-rate decision date.",
         source: "Bank of Canada decision calendar"
@@ -1756,8 +1756,8 @@
         }
       ],
       freshness: {
-        sampleRows: "Last checked: Jun 5-6, 2026. Institution rows are sample until live feeds are connected.",
-        verifiedReferences: "Last checked: Jun 5-6, 2026. Policy and prime references are verified."
+        sampleRows: "Last checked: Jun 5-10, 2026. Institution rows are sample until live feeds are connected.",
+        verifiedReferences: "Last checked: Jun 5-10, 2026. Policy and prime references are verified."
       },
       mortgageRows: {
         oneYearFixed: [
@@ -1888,7 +1888,7 @@
           return [
             rateIndicator("Policy rate", rateDataCatalog.policyRate.value, "var(--blue)"),
             rateIndicator("Prime", rateDataCatalog.primeRate.value, "var(--cyan)"),
-            rateIndicator("Next decision", "Jun 10", "var(--amber)")
+            rateIndicator("Next decision", "Jul 15", "var(--amber)")
           ];
         default:
           return [
