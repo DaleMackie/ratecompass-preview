@@ -491,6 +491,10 @@
       padding: 2px 0;
     }
 
+    .term-strip.two-col {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .term-strip button {
       border: 1px solid #dfe7ec;
       border-radius: 999px;
@@ -517,6 +521,41 @@
       font-size: 12px;
       font-weight: 600;
       line-height: 1.35;
+    }
+
+    .term-card {
+      padding: 14px;
+      border-radius: 8px;
+      background: var(--mist);
+      border: 1px solid #dfe7ec;
+    }
+
+    .term-card h3 {
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    .term-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .term-card + .term-card {
+      margin-top: 10px;
+    }
+
+    .helper-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .reference-top {
@@ -713,7 +752,6 @@
       font-weight: 800;
     }
 
-    .quote-field select,
     .quote-field input[type="number"] {
       width: 100%;
       border: 0;
@@ -723,6 +761,38 @@
       padding: 13px;
       font: inherit;
       font-weight: 750;
+    }
+
+    .quote-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .quote-options.compact {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .quote-option {
+      border: 1px solid #dfe7ec;
+      border-radius: 8px;
+      background: var(--mist);
+      color: var(--ink);
+      padding: 10px 8px;
+      min-height: 42px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1.15;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .quote-option.active {
+      border-color: var(--blue);
+      background: rgba(0,104,180,.12);
+      color: var(--blue);
+      box-shadow: inset 0 0 0 1px rgba(0,104,180,.18);
     }
 
     .quote-field[hidden] {
@@ -762,8 +832,8 @@
 
     .meter-bars {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 5px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 4px;
     }
 
     .meter-bars span {
@@ -1500,6 +1570,26 @@
           <button data-mortgage-term="fiveYearVariable" onclick="selectMortgageTerm('fiveYearVariable')">5Y Variable</button>
         </div>
         <div class="term-note">V1 includes common term views. Personalized term-fit guidance stays a future Plus feature.</div>
+        <div class="helper-row"><span>New to rate terms?</span><button class="link-button" type="button" onclick="openTerms('rates')">View terms</button></div>
+      </div>
+      <div id="savings-type-panel" class="term-panel" hidden>
+        <div class="term-label">Savings Type</div>
+        <div class="term-strip two-col" aria-label="Savings type options">
+          <button data-savings-type="standard" onclick="selectSavingsType('standard')">Standard</button>
+          <button class="active" data-savings-type="highInterest" onclick="selectSavingsType('highInterest')">High Interest</button>
+        </div>
+        <div class="term-note">Promo rates are sample rows and may have short expiry windows or conditions.</div>
+        <div class="helper-row"><span>Standard, high interest, promo?</span><button class="link-button" type="button" onclick="openTerms('rates')">View terms</button></div>
+      </div>
+      <div id="gic-type-panel" class="term-panel" hidden>
+        <div class="term-label">GIC Type</div>
+        <div class="term-strip" aria-label="GIC type options">
+          <button class="active" data-gic-type="nonRedeemable" onclick="selectGICType('nonRedeemable')">Non-red.</button>
+          <button data-gic-type="redeemable" onclick="selectGICType('redeemable')">Redeemable</button>
+          <button data-gic-type="cashable" onclick="selectGICType('cashable')">Cashable</button>
+        </div>
+        <div class="term-note">Redeemable and cashable GICs usually trade a lower rate for earlier access.</div>
+        <div class="helper-row"><span>Unsure which GIC type fits?</span><button class="link-button" type="button" onclick="openTerms('rates')">View terms</button></div>
       </div>
       <div id="prime-reference-card" class="card" hidden>
         <div class="reference-top">
@@ -1619,33 +1709,63 @@
         <h2>Quote Details</h2>
         <p>Compare a quoted rate from your bank against the current sample benchmark.</p>
         <div class="quote-field">
-          <label for="quote-product">Product</label>
-          <select id="quote-product">
-            <option value="mortgage">Mortgage</option>
-            <option value="gic">GIC</option>
-            <option value="savings">Savings</option>
-            <option value="lineOfCredit">LOC / HELOC</option>
-          </select>
+          <label>Product</label>
+          <div class="quote-options" id="quote-product-options">
+            <button class="quote-option active" type="button" data-quote-field="product" data-value="mortgage">Mortgage</button>
+            <button class="quote-option" type="button" data-quote-field="product" data-value="gic">GIC</button>
+            <button class="quote-option" type="button" data-quote-field="product" data-value="savings">Savings</button>
+            <button class="quote-option" type="button" data-quote-field="product" data-value="lineOfCredit">LOC / HELOC</button>
+          </div>
+        </div>
+        <div id="quote-mortgage-use-wrap" class="quote-field">
+          <label>Property use</label>
+          <div class="quote-options">
+            <button class="quote-option active" type="button" data-quote-field="mortgageUse" data-value="ownerOccupied">Owner-occupied</button>
+            <button class="quote-option" type="button" data-quote-field="mortgageUse" data-value="rental">Rental / investment</button>
+          </div>
+        </div>
+        <div id="quote-mortgage-insurance-wrap" class="quote-field">
+          <label>Default insurance</label>
+          <div class="quote-options compact">
+            <button class="quote-option" type="button" data-quote-field="mortgageInsurance" data-value="insured">Default insured</button>
+            <button class="quote-option active" type="button" data-quote-field="mortgageInsurance" data-value="insurable">Conventional / insurable</button>
+            <button class="quote-option" type="button" data-quote-field="mortgageInsurance" data-value="uninsured">Uninsured / uninsurable</button>
+          </div>
         </div>
         <div id="quote-term-wrap" class="quote-field">
-          <label for="quote-term">Term</label>
-          <select id="quote-term">
-            <option value="oneYear">1 year</option>
-            <option value="twoYear">2 year</option>
-            <option value="threeYear">3 year</option>
-            <option value="fiveYear" selected>5 year</option>
-            <option value="fiveYearVariable">5 year variable</option>
-          </select>
+          <label>Term</label>
+          <div class="quote-options compact" id="quote-term-options">
+            <button class="quote-option" type="button" data-quote-field="term" data-value="oneYear">1 year</button>
+            <button class="quote-option" type="button" data-quote-field="term" data-value="twoYear">2 year</button>
+            <button class="quote-option" type="button" data-quote-field="term" data-value="threeYear">3 year</button>
+            <button class="quote-option active" type="button" data-quote-field="term" data-value="fiveYear">5 year</button>
+            <button class="quote-option" type="button" data-quote-field="term" data-value="fiveYearVariable">5 year variable</button>
+          </div>
         </div>
         <div id="quote-gic-type-wrap" class="quote-field" hidden>
-          <label for="quote-gic-type">GIC type</label>
-          <select id="quote-gic-type">
-            <option value="nonRedeemable">Non-redeemable</option>
-            <option value="redeemable">Redeemable</option>
-          </select>
+          <label>GIC type</label>
+          <div class="quote-options compact">
+            <button class="quote-option active" type="button" data-quote-field="gicType" data-value="nonRedeemable">Non-redeemable</button>
+            <button class="quote-option" type="button" data-quote-field="gicType" data-value="redeemable">Redeemable</button>
+            <button class="quote-option" type="button" data-quote-field="gicType" data-value="cashable">Cashable</button>
+          </div>
+        </div>
+        <div id="quote-loc-type-wrap" class="quote-field" hidden>
+          <label>LOC type</label>
+          <div class="quote-options">
+            <button class="quote-option" type="button" data-quote-field="locType" data-value="secured">Secured</button>
+            <button class="quote-option active" type="button" data-quote-field="locType" data-value="unsecured">Unsecured</button>
+          </div>
+        </div>
+        <div id="quote-savings-type-wrap" class="quote-field" hidden>
+          <label>Savings type</label>
+          <div class="quote-options">
+            <button class="quote-option" type="button" data-quote-field="savingsType" data-value="standard">Standard savings</button>
+            <button class="quote-option active" type="button" data-quote-field="savingsType" data-value="highInterest">High interest savings</button>
+          </div>
         </div>
         <div class="quote-field">
-          <label for="quote-rate">Quoted rate</label>
+          <label id="quote-rate-label" for="quote-rate">Quoted rate</label>
           <input id="quote-rate" type="number" min="0.5" max="10" step="0.05" value="4.79" />
         </div>
         <div class="quote-meter">
@@ -1656,16 +1776,18 @@
             </div>
             <span id="quote-benchmark" class="benchmark-pill">Benchmark 4.39%</span>
           </div>
-          <div id="quote-bars" class="meter-bars"><span></span><span></span><span></span><span></span></div>
-          <p id="quote-detail">Compared with a 4.39% sample benchmark, this quote is weaker than the current sample view but still within the fair range.</p>
+          <div id="quote-bars" class="meter-bars"><span></span><span></span><span></span><span></span><span></span></div>
+          <p id="quote-detail">Compared with a 4.39% weighted sample benchmark, this quote is weaker than the current sample view but still within the fair range.</p>
         </div>
-        <p id="quote-source-note" class="source-note">Prototype benchmark catalog. Last checked: Jun 5-6, 2026. 5-year fixed sample benchmark.</p>
+        <p id="quote-source-note" class="source-note">Weighted sample benchmark catalog. Last checked: Jun 12-14, 2026. 5-year fixed sample benchmark.</p>
       </div>
       <div class="card">
         <h2>How To Use It</h2>
-        <div class="source-row"><span class="status-pill sample">Tip</span><p>Mortgage and LOC quotes score better when they are lower.</p></div>
+        <div class="source-row"><span class="status-pill sample">Tip</span><p>Mortgage rates and LOC/HELOC prime spreads score better when they are lower.</p></div>
         <div class="source-row"><span class="status-pill sample">Tip</span><p>GIC and savings quotes score better when they are higher.</p></div>
+        <div class="source-row"><span class="status-pill sample">Tip</span><p>The benchmark quietly gives more weight to major Canadian bank comparables.</p></div>
         <div class="source-row"><span class="status-pill sample">Tip</span><p>Restrictions, penalties, deposit insurance, and promo expiry still matter.</p></div>
+        <button class="link-button" type="button" onclick="openTerms('rate-check')">View Terms Index</button>
       </div>
       <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Save quote history')">
         <span class="lock-dot">◆</span>
@@ -1752,6 +1874,41 @@
         <span class="lock-dot">◆</span>
         <p><b>Personalized action plan</b>Future RateCompass Plus can turn saved mortgages, GICs, debts, and watchlists into a monthly next-steps report.</p>
       </button>
+      <button class="upgrade-row" type="button" onclick="openTerms('guidance')">
+        <span class="lock-dot" style="background:rgba(0,104,180,.12);color:var(--blue);">i</span>
+        <p><b>Terms Index</b>Plain-language explanations for mortgage, GIC, savings, and prime-rate terminology.</p>
+      </button>
+    </section>
+
+    <section id="terms" class="screen">
+      <div class="header">
+        <h1>Terms Index</h1>
+        <div class="sub">Plain-language rate terminology</div>
+        <button class="link-button" onclick="closeTerms()">Back</button>
+      </div>
+      <div class="card">
+        <h2>Mortgages And Debt</h2>
+        <div class="term-card"><h3>Default insured mortgage</h3><p>A mortgage where insurance protects the lender if the borrower cannot repay. These rates can differ from uninsured mortgages because lender risk is different.</p></div>
+        <div class="term-card"><h3>Uninsured mortgage</h3><p>A mortgage that does not have default insurance. Rates may be higher when the loan, property, or borrower profile creates more lender risk.</p></div>
+        <div class="term-card"><h3>Variable mortgage</h3><p>A mortgage where the rate is tied to prime. The cost can change when lenders change prime after Bank of Canada decisions.</p></div>
+        <div class="term-card"><h3>Prime rate</h3><p>A reference lending rate set by banks, often influenced by Bank of Canada policy-rate changes. Variable mortgages, HELOCs, and lines of credit are commonly priced from prime.</p></div>
+        <div class="term-card"><h3>Prime + spread</h3><p>A rate shown as prime plus an extra amount, such as Prime +0.50%. HELOCs and lines of credit are often quoted this way.</p></div>
+        <div class="term-card"><h3>HELOC</h3><p>A home equity line of credit secured by your property. It is usually quoted as a spread over prime.</p></div>
+      </div>
+      <div class="card">
+        <h2>GICs</h2>
+        <div class="term-card"><h3>Non-redeemable GIC</h3><p>A GIC where the money is usually locked in until maturity. The tradeoff is often a stronger posted rate.</p></div>
+        <div class="term-card"><h3>Redeemable GIC</h3><p>A GIC that may allow early access before maturity. The tradeoff is usually a lower rate than a non-redeemable GIC.</p></div>
+        <div class="term-card"><h3>Cashable GIC</h3><p>A GIC designed for easier access to funds, often after a short waiting period. The rate is usually lower because flexibility has value.</p></div>
+      </div>
+      <div class="card">
+        <h2>Savings And Comparisons</h2>
+        <div class="term-card"><h3>High-interest savings account</h3><p>A savings account that aims to pay more than a standard account. The rate can depend on the institution, balance, and conditions.</p></div>
+        <div class="term-card"><h3>Promo rate</h3><p>A temporary savings or GIC offer. It can be attractive, but expiry dates, limits, and conditions matter.</p></div>
+        <div class="term-card"><h3>Weighted benchmark</h3><p>A sample comparison point that gives more influence to major Canadian bank rates while still considering smaller or online institution samples.</p></div>
+        <div class="term-card"><h3>Quote rating</h3><p>A plain-language score that compares a quoted rate or prime spread against the current sample benchmark.</p></div>
+      </div>
+      <button class="link-button" onclick="closeTerms()">Back</button>
     </section>
 
     <section id="profile" class="screen">
@@ -1790,6 +1947,15 @@
       <div class="card">
         <h2>Data Sources</h2>
         <div id="data-source-list"></div>
+      </div>
+      <div class="card">
+        <h2>Learning Preferences</h2>
+        <p>Keep plain-language terms available while you are learning the app.</p>
+        <button class="link-button" type="button" onclick="openTerms('profile')">Open Terms Index</button>
+        <button class="upgrade-row upgrade-button" style="margin-top:12px;" type="button" onclick="openPlans('Hide term helpers')">
+          <span class="lock-dot">◆</span>
+          <p><b>Hide term helpers</b>RateCompass Plus can turn off the helper prompts once the terminology feels familiar.</p>
+        </button>
       </div>
       <div class="card">
         <h2>V1 Scope</h2>
@@ -1995,8 +2161,8 @@
           title: "Rate Check benchmarks",
           value: "Sample benchmarks",
           status: rateTrustStatus.sample,
-          detail: "Used to score quoted rates until verified lender feeds are connected.",
-          source: "Prototype benchmark catalog"
+          detail: "Weighted toward major Canadian bank comparables until verified lender feeds are connected.",
+          source: "Weighted sample benchmark catalog"
         },
         {
           id: "floating-spread-ranges",
@@ -2063,23 +2229,45 @@
           ["Scotiabank", "Prime +0.63%", "5.08%"]
         ]
       },
-      savingsRows: [
-        ["EQ Bank", "HISA", "4.00%"],
-        ["Tangerine", "Promo savings", "4.25%"],
-        ["RBC", "Savings", "1.70%"],
-        ["TD", "Savings", "1.85%"],
-        ["BMO", "Savings", "1.75%"],
-        ["CIBC", "Savings", "1.80%"],
-        ["Scotiabank", "Savings", "1.70%"]
-      ],
-      gicRows: [
-        ["EQ Bank", "1-year GIC", "4.15%"],
-        ["CIBC", "2-year GIC", "3.95%"],
-        ["TD", "5-year GIC", "3.65%"],
-        ["BMO", "3-year GIC", "3.80%"],
-        ["RBC", "1-year GIC", "3.90%"],
-        ["Scotiabank", "2-year GIC", "3.85%"]
-      ],
+      savingsRows: {
+        standard: [
+          ["RBC", "Standard savings", "1.70%"],
+          ["TD", "Standard savings", "1.85%"],
+          ["BMO", "Standard savings", "1.75%"],
+          ["CIBC", "Standard savings", "1.80%"],
+          ["Scotiabank", "Standard savings", "1.70%"]
+        ],
+        highInterest: [
+          ["EQ Bank", "High interest savings", "4.00%"],
+          ["Tangerine", "Promo savings", "4.25%"],
+          ["RBC", "High interest savings", "1.70%"],
+          ["TD", "High interest savings", "1.85%"],
+          ["CIBC", "High interest savings", "1.80%"]
+        ]
+      },
+      gicRows: {
+        nonRedeemable: [
+          ["EQ Bank", "1-year non-redeemable GIC", "4.15%"],
+          ["CIBC", "2-year non-redeemable GIC", "3.95%"],
+          ["TD", "5-year non-redeemable GIC", "3.65%"],
+          ["BMO", "3-year non-redeemable GIC", "3.80%"],
+          ["RBC", "1-year non-redeemable GIC", "3.90%"]
+        ],
+        redeemable: [
+          ["EQ Bank", "1-year redeemable GIC", "3.65%"],
+          ["CIBC", "2-year redeemable GIC", "3.45%"],
+          ["TD", "5-year redeemable GIC", "3.15%"],
+          ["BMO", "3-year redeemable GIC", "3.30%"],
+          ["RBC", "1-year redeemable GIC", "3.40%"]
+        ],
+        cashable: [
+          ["EQ Bank", "1-year cashable GIC", "3.40%"],
+          ["CIBC", "2-year cashable GIC", "3.20%"],
+          ["TD", "5-year cashable GIC", "2.90%"],
+          ["BMO", "3-year cashable GIC", "3.05%"],
+          ["RBC", "1-year cashable GIC", "3.15%"]
+        ]
+      },
       primeRows: [
         ["RBC", "Prime rate", "4.45%"],
         ["TD", "Prime rate", "4.45%"],
@@ -2099,16 +2287,19 @@
           fiveYearVariable: { rate: 5.05, detail: "5-year variable sample benchmark based on the floating-rate profile." }
         },
         gic: {
-          oneYear: { rate: 4.15, detail: "1-year GIC sample benchmark." },
-          twoYear: { rate: 3.95, detail: "2-year GIC sample benchmark." },
-          threeYear: { rate: 3.80, detail: "3-year GIC sample benchmark." },
-          fiveYear: { rate: 3.65, detail: "5-year GIC sample benchmark." },
-          fiveYearVariable: { rate: 3.65, detail: "5-year GIC sample benchmark." }
+          oneYear: { rate: 3.96, detail: "1-year GIC weighted sample benchmark." },
+          twoYear: { rate: 3.90, detail: "2-year GIC weighted sample benchmark." },
+          threeYear: { rate: 3.80, detail: "3-year GIC weighted sample benchmark." },
+          fiveYear: { rate: 3.65, detail: "5-year GIC weighted sample benchmark." },
+          fiveYearVariable: { rate: 3.65, detail: "5-year GIC weighted sample benchmark." }
         },
-        savings: { rate: 4.00, detail: "High-interest savings sample benchmark." },
-        lineOfCredit: { rate: 6.45, detail: "Line of credit sample benchmark based on the prime-rate spread profile." },
-        source: "Prototype benchmark catalog",
-        lastChecked: "Last checked: Jun 5-6, 2026"
+        savings: {
+          standard: { rate: 1.75, detail: "Standard savings sample benchmark." },
+          highInterest: { rate: 2.94, detail: "High-interest savings weighted sample benchmark." }
+        },
+        lineOfCredit: { unsecuredSpread: 2.00, securedSpread: 0.50, detail: "LOC/HELOC sample benchmark based on the prime-rate spread profile." },
+        source: "Weighted sample benchmark catalog",
+        lastChecked: "Last checked: Jun 12-14, 2026"
       }
     };
 
@@ -2169,10 +2360,13 @@
     };
 
     let activeMortgageTerm = "fiveYearFixed";
+    let activeSavingsType = "highInterest";
+    let activeGICType = "nonRedeemable";
     let activeRateRows = [];
     let draggedRateIndex = null;
     let planReturnScreen = "profile";
     let pendingPlanContext = "";
+    let termReturnScreen = "guidance";
     const setupAnswers = {
       mortgage: "one",
       timing: "oneYear"
@@ -2278,6 +2472,42 @@
       }
     };
 
+    const savingsTypes = {
+      standard: {
+        title: "Standard Savings Outlook",
+        summary: "Standard savings accounts tend to move slowly and may lag promotional or online alternatives.",
+        why: "A low everyday savings rate can quietly reduce return on cash that is sitting idle.",
+        rows: rateDataCatalog.savingsRows.standard
+      },
+      highInterest: {
+        title: "High Interest Savings Outlook",
+        summary: "High-interest savings accounts and promos can be stronger, but conditions and expiry dates matter.",
+        why: "Promo and online rates can be useful, but they should be compared against terms, limits, and expiry windows.",
+        rows: rateDataCatalog.savingsRows.highInterest
+      }
+    };
+
+    const gicTypes = {
+      nonRedeemable: {
+        title: "Non-redeemable GIC Outlook",
+        summary: "Non-redeemable GICs usually offer stronger posted rates because the funds are locked in for the term.",
+        why: "Locking in can improve yield, but the maturity date needs to match your cash timeline.",
+        rows: rateDataCatalog.gicRows.nonRedeemable
+      },
+      redeemable: {
+        title: "Redeemable GIC Outlook",
+        summary: "Redeemable GICs trade some yield for the option to access funds before maturity.",
+        why: "Flexibility may be worth a lower rate if you may need the money before maturity.",
+        rows: rateDataCatalog.gicRows.redeemable
+      },
+      cashable: {
+        title: "Cashable GIC Outlook",
+        summary: "Cashable GICs focus on access and flexibility, so the posted rate is usually lower than locked-in GICs.",
+        why: "Cashable products can be useful for liquidity, but the rate gap should be visible before choosing one.",
+        rows: rateDataCatalog.gicRows.cashable
+      }
+    };
+
     const rateCategories = {
       mortgage: {
         title: "Mortgage Outlook",
@@ -2295,7 +2525,7 @@
         summary: "Savings and TFSA rates can change quickly when promotional offers expire.",
         why: "Savings rates can lag policy moves and promo rates can expire quickly.",
         indicators: categoryIndicators('savings'),
-        rows: rateDataCatalog.savingsRows
+        rows: rateDataCatalog.savingsRows.highInterest
       },
       gic: {
         title: "GIC Outlook",
@@ -2304,7 +2534,7 @@
         summary: "GIC rates depend heavily on term length and where the market expects rates to go next.",
         why: "Term choice matters because locking in too early or too late can change annual interest.",
         indicators: categoryIndicators('gic'),
-        rows: rateDataCatalog.gicRows
+        rows: rateDataCatalog.gicRows.nonRedeemable
       },
       prime: {
         title: "Prime Outlook",
@@ -2449,6 +2679,15 @@
       document.querySelector('#tabs button[onclick*="home"]')?.classList.add('active');
     }
 
+    function openTerms(returnScreen) {
+      termReturnScreen = returnScreen || document.querySelector('.screen.active')?.id || 'guidance';
+      showScreen('terms');
+    }
+
+    function closeTerms() {
+      showScreen(termReturnScreen || 'guidance');
+    }
+
     function openPlans(context) {
       planReturnScreen = document.querySelector('.screen.active')?.id || 'profile';
       pendingPlanContext = context || "";
@@ -2493,11 +2732,30 @@
       if (button) button.classList.add('active');
 
       const termPanel = document.getElementById('mortgage-term-panel');
+      const savingsTypePanel = document.getElementById('savings-type-panel');
+      const gicTypePanel = document.getElementById('gic-type-panel');
       const primeReferenceCard = document.getElementById('prime-reference-card');
+      savingsTypePanel.hidden = category !== 'savings';
+      gicTypePanel.hidden = category !== 'gic';
+
       if (category === 'mortgage') {
         termPanel.hidden = false;
         primeReferenceCard.hidden = true;
         selectMortgageTerm(activeMortgageTerm);
+        return;
+      }
+
+      if (category === 'savings') {
+        termPanel.hidden = true;
+        primeReferenceCard.hidden = true;
+        selectSavingsType(activeSavingsType);
+        return;
+      }
+
+      if (category === 'gic') {
+        termPanel.hidden = true;
+        primeReferenceCard.hidden = true;
+        selectGICType(activeGICType);
         return;
       }
 
@@ -2542,6 +2800,60 @@
       document.getElementById('rate-freshness').textContent = rateDataCatalog.freshness.sampleRows;
 
       mortgageIndicators(data).forEach((indicator, index) => {
+        const number = index + 1;
+        document.getElementById(`rate-prob-${number}-label`).textContent = indicator.title;
+        const value = document.getElementById(`rate-prob-${number}`);
+        value.textContent = indicator.value;
+        value.style.color = indicator.color;
+      });
+
+      renderRateRows(data.rows);
+    }
+
+    function selectSavingsType(type) {
+      const data = savingsTypes[type] || savingsTypes.highInterest;
+      activeSavingsType = type;
+
+      document.querySelectorAll('[data-savings-type]').forEach(button => {
+        button.classList.toggle('active', button.dataset.savingsType === type);
+      });
+
+      document.getElementById('rate-title').textContent = data.title;
+      const trend = document.getElementById('rate-trend');
+      trend.textContent = rateCategories.savings.trend;
+      trend.style.color = rateCategories.savings.color;
+      document.getElementById('rate-summary').textContent = data.summary;
+      document.getElementById('rate-why').textContent = `Why this matters: ${data.why}`;
+      document.getElementById('rate-freshness').textContent = categoryFreshness('savings');
+
+      rateCategories.savings.indicators.forEach((indicator, index) => {
+        const number = index + 1;
+        document.getElementById(`rate-prob-${number}-label`).textContent = indicator.title;
+        const value = document.getElementById(`rate-prob-${number}`);
+        value.textContent = indicator.value;
+        value.style.color = indicator.color;
+      });
+
+      renderRateRows(data.rows);
+    }
+
+    function selectGICType(type) {
+      const data = gicTypes[type] || gicTypes.nonRedeemable;
+      activeGICType = type;
+
+      document.querySelectorAll('[data-gic-type]').forEach(button => {
+        button.classList.toggle('active', button.dataset.gicType === type);
+      });
+
+      document.getElementById('rate-title').textContent = data.title;
+      const trend = document.getElementById('rate-trend');
+      trend.textContent = rateCategories.gic.trend;
+      trend.style.color = rateCategories.gic.color;
+      document.getElementById('rate-summary').textContent = data.summary;
+      document.getElementById('rate-why').textContent = `Why this matters: ${data.why}`;
+      document.getElementById('rate-freshness').textContent = categoryFreshness('gic');
+
+      rateCategories.gic.indicators.forEach((indicator, index) => {
         const number = index + 1;
         document.getElementById(`rate-prob-${number}-label`).textContent = indicator.title;
         const value = document.getElementById(`rate-prob-${number}`);
@@ -2673,14 +2985,73 @@
       return principal * (monthlyRate * Math.pow(1 + monthlyRate, payments)) / (Math.pow(1 + monthlyRate, payments) - 1);
     }
 
-    function quoteBenchmark(product, term, gicType) {
+    function mortgageRateAdjustment(propertyUse, insuranceStatus) {
+      const useAdjustment = propertyUse === 'rental' ? 0.25 : 0;
+      const insuranceAdjustment = insuranceStatus === 'insured' ? -0.15 : insuranceStatus === 'uninsured' ? 0.15 : 0;
+      return useAdjustment + insuranceAdjustment;
+    }
+
+    function mortgageAdjustmentDetail(propertyUse, insuranceStatus, adjustment) {
+      const parts = [];
+      parts.push(propertyUse === 'rental'
+        ? 'Rental/investment properties use a +0.25% sample premium.'
+        : 'Owner-occupied properties use the base property-use assumption.');
+      if (insuranceStatus === 'insured') {
+        parts.push('Default-insured mortgages use a -0.15% sample adjustment.');
+      } else if (insuranceStatus === 'uninsured') {
+        parts.push('Uninsured/uninsurable mortgages use a +0.15% sample adjustment.');
+      } else {
+        parts.push('Conventional/insurable mortgages use the base insurance assumption.');
+      }
+      parts.push(`Total mortgage adjustment: ${adjustment >= 0 ? '+' : ''}${adjustment.toFixed(2)}%.`);
+      parts.push('Adjustment model informed by Canadian rate categories for insured, insurable, uninsurable, and rental mortgages.');
+      return parts.join(' ');
+    }
+
+    function gicAdjustment(gicType) {
+      if (gicType === 'cashable') return 0.75;
+      if (gicType === 'redeemable') return 0.50;
+      return 0;
+    }
+
+    function gicAdjustmentDetail(gicType, adjustment) {
+      if (gicType === 'cashable') {
+        return ' Cashable GICs apply a 0.75% sample adjustment because added access typically lowers the rate.';
+      }
+      if (gicType === 'redeemable') {
+        return ' Redeemable GICs apply a 0.50% sample adjustment because early redemption flexibility typically lowers the rate.';
+      }
+      return ' Non-redeemable GICs use the base benchmark because they usually offer the highest posted GIC rates.';
+    }
+
+    function locAdjustment(locType) {
+      return locType === 'secured' ? -1.50 : 0;
+    }
+
+    function locBenchmarkSpread(locType) {
+      return locType === 'secured'
+        ? rateDataCatalog.quoteBenchmarks.lineOfCredit.securedSpread
+        : rateDataCatalog.quoteBenchmarks.lineOfCredit.unsecuredSpread;
+    }
+
+    function locAdjustmentDetail(locType) {
+      return locType === 'secured'
+        ? ' Secured LOC/HELOC samples use a Prime +0.50% benchmark because collateral can support lower spreads.'
+        : ' Unsecured LOC samples use a Prime +2.00% benchmark because no collateral is pledged.';
+    }
+
+    const weightedComparableDetail = ' Comparable-rate benchmark gives more weight to RBC, TD, BMO, CIBC, and Scotiabank rows; smaller, promo, and online institution samples are included with lower weight until verified feeds are connected.';
+
+    function quoteBenchmark(product, term, gicType, propertyUse = 'ownerOccupied', insuranceStatus = 'insurable', locType = 'unsecured', savingsType = 'highInterest') {
       const catalog = rateDataCatalog.quoteBenchmarks;
 
       if (product === 'mortgage') {
         const record = catalog.mortgage[term] ?? catalog.mortgage.fiveYear;
+        const adjustment = mortgageRateAdjustment(propertyUse, insuranceStatus);
         return {
-          rate: record.rate,
-          detail: record.detail,
+          rate: Math.max(record.rate + adjustment, 0),
+          display: percent(Math.max(record.rate + adjustment, 0)),
+          detail: `${record.detail} ${mortgageAdjustmentDetail(propertyUse, insuranceStatus, adjustment)}${weightedComparableDetail}`,
           source: catalog.source,
           lastChecked: catalog.lastChecked,
           status: rateTrustStatus.sample
@@ -2689,20 +3060,36 @@
 
       if (product === 'gic') {
         const record = catalog.gic[term] ?? catalog.gic.fiveYear;
-        const adjustment = gicType === 'redeemable' ? 0.50 : 0;
+        const adjustment = gicAdjustment(gicType);
         return {
           rate: Math.max(record.rate - adjustment, 0),
-          detail: `${record.detail}${adjustment ? ' Redeemable GICs apply a 0.50% sample adjustment.' : ''}`,
+          display: percent(Math.max(record.rate - adjustment, 0)),
+          detail: `${record.detail}${gicAdjustmentDetail(gicType, adjustment)}${weightedComparableDetail}`,
           source: catalog.source,
           lastChecked: catalog.lastChecked,
           status: rateTrustStatus.sample
         };
       }
 
-      const record = product === 'savings' ? catalog.savings : catalog.lineOfCredit;
+      if (product === 'lineOfCredit') {
+        const spread = locBenchmarkSpread(locType);
+        const primeRate = parseFloat(rateDataCatalog.primeRate.value);
+        const allInRate = primeRate + spread;
+        return {
+          rate: spread,
+          display: `Prime +${percent(spread)}`,
+          detail: `${catalog.lineOfCredit.detail}${locAdjustmentDetail(locType)} At the current prime reference of ${rateDataCatalog.primeRate.value}, this sample implies an all-in rate near ${percent(allInRate)}. Major-bank and secured/unsecured spread assumptions carry the highest weight until verified lender feeds are connected.`,
+          source: catalog.source,
+          lastChecked: catalog.lastChecked,
+          status: rateTrustStatus.sample
+        };
+      }
+
+      const record = catalog.savings[savingsType] ?? catalog.savings.highInterest;
       return {
         rate: record.rate,
-        detail: record.detail,
+        display: percent(record.rate),
+        detail: `${record.detail} Online and promo savings samples are included with lower weight than major-bank comparables until verified feeds are connected.`,
         source: catalog.source,
         lastChecked: catalog.lastChecked,
         status: rateTrustStatus.sample
@@ -2710,31 +3097,75 @@
     }
 
     function quoteRating(delta) {
+      if (delta >= 0.50) return { label: 'Excellent', color: 'var(--green)', index: 4 };
       if (delta >= 0.25) return { label: 'Very Good', color: 'var(--green)', index: 3 };
       if (delta >= 0) return { label: 'Good', color: 'var(--blue)', index: 2 };
       if (delta >= -0.50) return { label: 'Fair', color: 'var(--amber)', index: 1 };
       return { label: 'Poor', color: '#db4d56', index: 0 };
     }
 
+    function quoteOptionValue(field) {
+      return document.querySelector(`[data-quote-field="${field}"].active`)?.dataset.value;
+    }
+
+    function setQuoteOption(field, value) {
+      document.querySelectorAll(`[data-quote-field="${field}"]`).forEach(button => {
+        button.classList.toggle('active', button.dataset.value === value);
+      });
+    }
+
+    function defaultQuoteValue(product) {
+      if (product === 'lineOfCredit') return locBenchmarkSpread(quoteOptionValue('locType') || 'unsecured');
+      if (product === 'gic') return 3.90;
+      if (product === 'savings') return 2.94;
+      return 4.79;
+    }
+
+    function chooseQuoteOption(button) {
+      setQuoteOption(button.dataset.quoteField, button.dataset.value);
+      const activeProduct = quoteOptionValue('product') || 'mortgage';
+      if (button.dataset.quoteField === 'product' || (activeProduct === 'lineOfCredit' && button.dataset.quoteField === 'locType')) {
+        document.getElementById('quote-rate').value = defaultQuoteValue(activeProduct).toFixed(2);
+      }
+      updateRateCheck();
+    }
+
     function updateRateCheck() {
-      const product = document.getElementById('quote-product').value;
-      const term = document.getElementById('quote-term').value;
-      const gicType = document.getElementById('quote-gic-type').value;
+      const product = quoteOptionValue('product') || 'mortgage';
+      const term = quoteOptionValue('term') || 'fiveYear';
+      const gicType = quoteOptionValue('gicType') || 'nonRedeemable';
+      const mortgageUse = quoteOptionValue('mortgageUse') || 'ownerOccupied';
+      const mortgageInsurance = quoteOptionValue('mortgageInsurance') || 'insurable';
+      const locType = quoteOptionValue('locType') || 'unsecured';
+      const savingsType = quoteOptionValue('savingsType') || 'highInterest';
       const quotedRate = Number(document.getElementById('quote-rate').value);
       const termWrap = document.getElementById('quote-term-wrap');
       const gicTypeWrap = document.getElementById('quote-gic-type-wrap');
-      const variableOption = document.querySelector('#quote-term option[value="fiveYearVariable"]');
+      const mortgageUseWrap = document.getElementById('quote-mortgage-use-wrap');
+      const mortgageInsuranceWrap = document.getElementById('quote-mortgage-insurance-wrap');
+      const locTypeWrap = document.getElementById('quote-loc-type-wrap');
+      const savingsTypeWrap = document.getElementById('quote-savings-type-wrap');
+      const variableButton = document.querySelector('[data-quote-field="term"][data-value="fiveYearVariable"]');
+      const quotedRateInput = document.getElementById('quote-rate');
+      const quotedRateLabel = document.getElementById('quote-rate-label');
 
       termWrap.hidden = product === 'savings' || product === 'lineOfCredit';
       gicTypeWrap.hidden = product !== 'gic';
-      variableOption.disabled = product === 'gic';
+      mortgageUseWrap.hidden = product !== 'mortgage';
+      mortgageInsuranceWrap.hidden = product !== 'mortgage';
+      locTypeWrap.hidden = product !== 'lineOfCredit';
+      savingsTypeWrap.hidden = product !== 'savings';
+      variableButton.hidden = product === 'gic';
+      quotedRateLabel.textContent = product === 'lineOfCredit' ? 'Quoted spread over prime' : 'Quoted rate';
+      quotedRateInput.min = product === 'lineOfCredit' ? '0' : '0.5';
+      quotedRateInput.max = product === 'lineOfCredit' ? '6' : '10';
 
       if (product === 'gic' && term === 'fiveYearVariable') {
-        document.getElementById('quote-term').value = 'fiveYear';
+        setQuoteOption('term', 'fiveYear');
       }
 
-      const activeTerm = document.getElementById('quote-term').value;
-      const benchmark = quoteBenchmark(product, activeTerm, gicType);
+      const activeTerm = quoteOptionValue('term') || 'fiveYear';
+      const benchmark = quoteBenchmark(product, activeTerm, gicType, mortgageUse, mortgageInsurance, locType, savingsType);
       const lowerIsBetter = product === 'mortgage' || product === 'lineOfCredit';
       const delta = lowerIsBetter ? benchmark.rate - quotedRate : quotedRate - benchmark.rate;
       const rating = quoteRating(delta);
@@ -2743,9 +3174,9 @@
 
       document.getElementById('quote-rating').textContent = rating.label;
       document.getElementById('quote-rating').style.color = rating.color;
-      document.getElementById('quote-benchmark').textContent = `Benchmark ${percent(benchmark.rate)}`;
+      document.getElementById('quote-benchmark').textContent = `Benchmark ${benchmark.display || percent(benchmark.rate)}`;
       document.getElementById('quote-detail').textContent =
-        `Compared with a ${percent(benchmark.rate)} sample benchmark, this quote is ${comparison} the current sample view. For this product, a ${direction} rate is generally stronger, but terms, penalties, deposit insurance, and restrictions still matter.`;
+        `Compared with a ${benchmark.display || percent(benchmark.rate)} weighted sample benchmark, this quote is ${comparison} the current sample view. For this product, a ${product === 'lineOfCredit' ? 'lower spread over prime' : `${direction} rate`} is generally stronger, but terms, penalties, deposit insurance, and restrictions still matter.`;
       document.getElementById('quote-source-note').textContent =
         `${benchmark.source}. ${benchmark.lastChecked}. ${benchmark.detail}`;
 
@@ -2844,7 +3275,11 @@
       input.addEventListener('change', updateImpact);
     });
 
-    document.querySelectorAll('#rate-check input, #rate-check select').forEach(input => {
+    document.querySelectorAll('[data-quote-field]').forEach(button => {
+      button.addEventListener('click', () => chooseQuoteOption(button));
+    });
+
+    document.querySelectorAll('#rate-check input').forEach(input => {
       input.addEventListener('input', updateRateCheck);
       input.addEventListener('change', updateRateCheck);
     });
