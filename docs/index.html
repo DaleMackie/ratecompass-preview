@@ -27,11 +27,12 @@
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
       display: grid;
       place-items: center;
+      padding: 16px;
     }
 
     .phone {
-      width: min(420px, 100vw);
-      height: min(880px, 100vh);
+      width: min(500px, calc(100vw - 32px));
+      height: min(940px, calc(100vh - 32px));
       background: var(--mist);
       overflow: hidden;
       position: relative;
@@ -42,7 +43,7 @@
       display: none;
       height: 100%;
       overflow: auto;
-      padding: 22px 20px 92px;
+      padding: 22px 20px 108px;
     }
 
     .screen.active { display: block; }
@@ -53,7 +54,7 @@
       align-items: center;
       justify-content: center;
       gap: 26px;
-      min-height: 100%;
+      min-height: calc(100% + 130px);
       text-align: center;
       color: white;
       background: linear-gradient(160deg, var(--ink), #073446);
@@ -119,6 +120,14 @@
       max-width: 320px;
     }
 
+    .auth-actions {
+      width: 100%;
+      max-width: 330px;
+      display: grid;
+      gap: 12px;
+      justify-items: stretch;
+    }
+
     .button {
       appearance: none;
       border: 0;
@@ -147,6 +156,19 @@
       cursor: pointer;
     }
 
+    .secondary-inline-button {
+      appearance: none;
+      width: 100%;
+      border: 1px solid rgba(0,104,180,.22);
+      border-radius: 14px;
+      background: white;
+      color: var(--blue);
+      padding: 14px 18px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
     .ghost-button {
       appearance: none;
       border: 0;
@@ -156,6 +178,150 @@
       font-size: 15px;
       font-weight: 700;
       cursor: pointer;
+    }
+
+    .setup-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .setup-progress {
+      display: flex;
+      gap: 6px;
+      margin: 4px 0 16px;
+    }
+
+    .setup-progress span {
+      height: 5px;
+      flex: 1;
+      border-radius: 999px;
+      background: #dfe7ec;
+    }
+
+    .setup-progress span.active {
+      background: var(--blue);
+    }
+
+    .setup-hero-card {
+      display: grid;
+      gap: 16px;
+      padding: 22px;
+    }
+
+    .setup-hero-card h2 {
+      font-size: 28px;
+      line-height: 1.08;
+    }
+
+    .setup-hero-card p {
+      font-size: 17px;
+      line-height: 1.42;
+    }
+
+    .setup-icon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .setup-icon-tile {
+      border-radius: 8px;
+      background: var(--mist);
+      padding: 14px 10px;
+      text-align: center;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .setup-icon-tile span {
+      display: block;
+      color: var(--blue);
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .setup-choice {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid #dfe7ec;
+    }
+
+    .setup-choice span {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(0,104,180,.12);
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .setup-choice b {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .setup-choice p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    button.setup-choice {
+      width: 100%;
+      text-align: left;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    button.setup-choice.selected {
+      border-color: rgba(0,104,180,.62);
+      box-shadow: inset 0 0 0 1px rgba(0,104,180,.22);
+      background: rgba(0,104,180,.06);
+    }
+
+    .setup-snapshot-metric {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 0;
+      border-top: 1px solid #edf2f5;
+    }
+
+    .setup-snapshot-metric:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .setup-snapshot-metric b {
+      display: block;
+      color: var(--ink);
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+
+    .setup-snapshot-metric p {
+      font-size: 13px;
+    }
+
+    .setup-snapshot-metric strong {
+      color: var(--blue);
+      font-size: 18px;
+      text-align: right;
+      white-space: nowrap;
     }
 
     .header {
@@ -421,6 +587,10 @@
       padding: 2px 0;
     }
 
+    .term-strip.two-col {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .term-strip button {
       border: 1px solid #dfe7ec;
       border-radius: 999px;
@@ -447,6 +617,41 @@
       font-size: 12px;
       font-weight: 600;
       line-height: 1.35;
+    }
+
+    .term-card {
+      padding: 14px;
+      border-radius: 8px;
+      background: var(--mist);
+      border: 1px solid #dfe7ec;
+    }
+
+    .term-card h3 {
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    .term-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .term-card + .term-card {
+      margin-top: 10px;
+    }
+
+    .helper-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .reference-top {
@@ -589,7 +794,7 @@
       margin: 0;
     }
 
-    .premium-title input {
+    .premium-title .locked-field {
       width: 100%;
       border: 1px solid #dfe7ec;
       border-radius: 12px;
@@ -643,7 +848,6 @@
       font-weight: 800;
     }
 
-    .quote-field select,
     .quote-field input[type="number"] {
       width: 100%;
       border: 0;
@@ -653,6 +857,38 @@
       padding: 13px;
       font: inherit;
       font-weight: 750;
+    }
+
+    .quote-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .quote-options.compact {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .quote-option {
+      border: 1px solid #dfe7ec;
+      border-radius: 8px;
+      background: var(--mist);
+      color: var(--ink);
+      padding: 10px 8px;
+      min-height: 42px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1.15;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .quote-option.active {
+      border-color: var(--blue);
+      background: rgba(0,104,180,.12);
+      color: var(--blue);
+      box-shadow: inset 0 0 0 1px rgba(0,104,180,.18);
     }
 
     .quote-field[hidden] {
@@ -692,8 +928,8 @@
 
     .meter-bars {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 5px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 4px;
     }
 
     .meter-bars span {
@@ -796,6 +1032,23 @@
       background: var(--mist);
     }
 
+    .upgrade-button,
+    .premium-title.upgrade-button,
+    .watchlist-note.upgrade-button {
+      width: 100%;
+      border: 0;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .upgrade-button:hover,
+    .premium-title.upgrade-button:hover,
+    .watchlist-note.upgrade-button:hover {
+      box-shadow: inset 0 0 0 2px rgba(0,104,180,.14);
+    }
+
     .lock-dot {
       width: 26px;
       height: 26px;
@@ -815,9 +1068,361 @@
       margin-bottom: 3px;
     }
 
+    .plan-card {
+      display: grid;
+      gap: 14px;
+    }
+
+    .plan-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .plan-price {
+      color: var(--blue);
+      font-size: 30px;
+      font-weight: 900;
+      margin-top: 4px;
+    }
+
+    .plan-badge {
+      color: var(--green);
+      background: rgba(36, 174, 124, .14);
+      border-radius: 8px;
+      padding: 6px 9px;
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .plan-features {
+      display: grid;
+      gap: 9px;
+    }
+
+    .plan-feature,
+    .compare-row {
+      display: grid;
+      gap: 8px;
+    }
+
+    .plan-feature {
+      grid-template-columns: 18px 1fr;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .plan-feature span {
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .trial-button {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      background: var(--blue);
+      color: white;
+      padding: 13px;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .trial-button.plus {
+      background: var(--green);
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .compare-pill {
+      padding: 10px;
+      border-radius: 8px;
+      background: var(--mist);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .compare-pill span {
+      display: block;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
+      margin-bottom: 3px;
+    }
+
+    .plan-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .plan-column {
+      border: 1px solid #dfe7ec;
+      border-radius: 8px;
+      background: white;
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .plan-column.plus {
+      border-color: rgba(36, 174, 124, .45);
+      background: rgba(36, 174, 124, .06);
+    }
+
+    .plan-column h2 {
+      font-size: 19px;
+    }
+
+    .plan-column .plan-price {
+      font-size: 24px;
+    }
+
+    .alternate-price {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      margin-top: -4px;
+    }
+
+    .plan-column p {
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .plan-value-preview {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .plan-value-item {
+      border-radius: 8px;
+      background: var(--mist);
+      padding: 12px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .plan-value-item span {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .plan-value-item b {
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .plan-timeline {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .plan-timeline-step {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 12px;
+      border-radius: 8px;
+      background: var(--mist);
+    }
+
+    .plan-timeline-step span {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .plan-timeline-step b {
+      display: block;
+      color: var(--ink);
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .plan-timeline-step p {
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .billing-toggle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      padding: 5px;
+      border-radius: 10px;
+      background: #dfe7ec;
+      margin: 12px 0 0;
+    }
+
+    .billing-toggle button {
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      padding: 10px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .billing-toggle button.active {
+      background: white;
+      color: var(--blue);
+      box-shadow: 0 1px 0 rgba(9, 22, 34, .05);
+    }
+
+    .save-note {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: rgba(244, 163, 32, .16);
+      color: #9a620f;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .feature-compare {
+      display: grid;
+      gap: 0;
+      border: 1px solid #dfe7ec;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .feature-compare-row {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr .85fr;
+      gap: 0;
+      border-top: 1px solid #edf2f5;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .feature-compare-row:first-child {
+      border-top: 0;
+      background: var(--mist);
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .feature-compare-row div {
+      padding: 10px;
+      border-left: 1px solid #edf2f5;
+    }
+
+    .feature-compare-row div:first-child {
+      border-left: 0;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .feature-compare-row div:nth-child(2),
+    .feature-compare-row div:nth-child(3) {
+      text-align: center;
+      font-weight: 750;
+    }
+
+    .question-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .question-button {
+      width: 100%;
+      border: 1px solid #dfe7ec;
+      border-radius: 8px;
+      background: white;
+      color: var(--ink);
+      padding: 14px;
+      font: inherit;
+      font-weight: 800;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .question-button span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    .question-button:hover {
+      border-color: rgba(0,104,180,.34);
+      box-shadow: inset 0 0 0 1px rgba(0,104,180,.12);
+    }
+
+    .insight-result {
+      display: grid;
+      gap: 12px;
+    }
+
+    .insight-result strong {
+      color: var(--blue);
+      font-size: 26px;
+      line-height: 1.05;
+    }
+
+    .benefit-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .benefit-list div {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 13px;
+      font-weight: 750;
+      color: var(--ink);
+    }
+
+    .benefit-list span {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(36, 174, 124, .14);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
     .form {
       display: grid;
       gap: 14px;
+    }
+
+    .form .button {
+      max-width: none;
+      justify-self: stretch;
     }
 
     .field {
@@ -973,9 +1578,11 @@
       bottom: 0;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      background: rgba(255,255,255,.96);
-      border-top: 1px solid #dfe7ec;
-      padding: 9px 6px 16px;
+      background: #ffffff;
+      border-top: 1px solid #cfdce5;
+      padding: 11px 6px 18px;
+      box-shadow: 0 -10px 26px rgba(9, 22, 34, .12);
+      z-index: 20;
     }
 
     .tabbar[hidden] {
@@ -985,9 +1592,9 @@
     .tabbar button {
       border: 0;
       background: transparent;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
+      color: #4f6070;
+      font-size: 12px;
+      font-weight: 800;
       cursor: pointer;
       display: grid;
       justify-items: center;
@@ -1004,25 +1611,30 @@
     .emoji {
       display: inline-grid;
       place-items: center;
-      width: 26px;
-      height: 22px;
-      font-size: 20px;
+      width: 32px;
+      height: 28px;
+      font-size: 22px;
       line-height: 1;
+      border-radius: 999px;
     }
 
     .emoji-large {
-      font-size: 25px;
+      font-size: 27px;
+    }
+
+    .tabbar button.active .emoji {
+      background: rgba(0,104,180,.12);
     }
 
     .profile-icon {
-      width: 26px;
-      height: 22px;
+      width: 32px;
+      height: 28px;
       font-size: 0;
     }
 
     .profile-icon svg {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       display: block;
     }
 
@@ -1054,9 +1666,11 @@
           <h1>Welcome to RateCompass</h1>
           <p>Sign in to save your profile, rate alerts, and personal impact estimates.</p>
         </div>
-        <button class="button" onclick="showScreen('signup')">Create Account</button>
-        <button class="secondary-button" onclick="showScreen('login')">Sign In</button>
-        <button class="ghost-button" onclick="showApp()">Preview Without Account</button>
+        <div class="auth-actions">
+          <button class="button" onclick="showScreen('signup')">Create Account</button>
+          <button class="secondary-button" onclick="showScreen('login')">Sign In</button>
+          <button class="ghost-button" onclick="showApp()">Preview Without Account</button>
+        </div>
       </div>
     </section>
 
@@ -1070,6 +1684,7 @@
         <input id="login-password" class="field" type="password" placeholder="Password" autocomplete="current-password" />
         <button id="login-submit" class="button" onclick="validateLogin()">Sign In</button>
         <div id="login-note" class="form-note">Prototype sign-in only; no password is sent yet.</div>
+        <button class="secondary-inline-button" onclick="showApp()">Preview Without Account</button>
         <button class="link-button" onclick="showScreen('auth')">Back</button>
       </div>
       <div class="card" style="margin-top:18px;">
@@ -1090,12 +1705,129 @@
         <input id="signup-confirm" class="field" type="password" placeholder="Confirm Password" autocomplete="new-password" />
         <button id="signup-submit" class="button" onclick="validateSignup()" disabled>Create Account</button>
         <div id="signup-note" class="form-note error">Enter your name to continue.</div>
+        <button class="secondary-inline-button" onclick="showApp()">Preview Without Account</button>
         <button class="link-button" onclick="showScreen('auth')">Back</button>
       </div>
       <div class="card" style="margin-top:18px;">
         <h2>What this enables</h2>
         <p>Rate alerts, saved impact assumptions, renewal timing, and future RateCompass Plus reports.</p>
       </div>
+    </section>
+
+    <section id="account-setup-value" class="screen">
+      <div class="header">
+        <h1>Quick Setup</h1>
+        <div class="sub">Make RateCompass fit your situation</div>
+      </div>
+      <div class="setup-progress"><span class="active"></span><span></span><span></span><span></span><span></span></div>
+      <div class="card setup-hero-card">
+        <h2>Rates can affect more than one part of your money.</h2>
+        <p>Answer a few quick questions and RateCompass will show the tools that matter most for you.</p>
+        <div class="setup-icon-grid">
+          <div class="setup-icon-tile"><span>⌂</span>Mortgage</div>
+          <div class="setup-icon-tile"><span>%</span>Savings</div>
+          <div class="setup-icon-tile"><span>↔</span>Debt</div>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showScreen('account-setup-priorities')">Start setup</button>
+      <button class="link-button" type="button" onclick="showApp()">Skip setup</button>
+    </section>
+
+    <section id="account-setup-priorities" class="screen">
+      <div class="header">
+        <h1>Your Mortgage Picture</h1>
+        <div class="sub">Step 1 of 4</div>
+      </div>
+      <div class="setup-progress"><span class="active"></span><span class="active"></span><span></span><span></span><span></span></div>
+      <div class="card">
+        <h2>Do you currently have a mortgage?</h2>
+        <div class="setup-list" style="margin-top:14px;">
+          <button class="setup-choice selected" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'one', this)"><span>1</span><p><b>Yes, one mortgage</b>Track one renewal and compare quotes.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'multiple', this)"><span>2</span><p><b>Yes, more than one</b>Multiple renewals and properties.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'future', this)"><span>3</span><p><b>Not yet, I may buy</b>Prepare before speaking with a lender.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'none', this)"><span>4</span><p><b>No mortgage focus</b>Show savings, GICs, debt, and rate alerts.</p></button>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showScreen('account-setup-timing')">Continue</button>
+      <button class="link-button" type="button" onclick="showScreen('account-setup-value')">Back</button>
+    </section>
+
+    <section id="account-setup-timing" class="screen">
+      <div class="header">
+        <h1>Timing Matters</h1>
+        <div class="sub">Step 2 of 4</div>
+      </div>
+      <div class="setup-progress"><span class="active"></span><span class="active"></span><span class="active"></span><span></span><span></span></div>
+      <div class="card">
+        <h2>Any mortgage decision in the next year?</h2>
+        <div class="setup-list" style="margin-top:14px;">
+          <button class="setup-choice selected" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'oneYear', this)"><span>✓</span><p><b>Yes, within 12 months</b>Useful for reminders and quote checks.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'later', this)"><span>2</span><p><b>Later than a year</b>Watch trends before it gets urgent.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'notSure', this)"><span>?</span><p><b>Not sure yet</b>Keep the big rate signals visible.</p></button>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showScreen('account-setup-savings')">Continue</button>
+      <button class="link-button" type="button" onclick="showScreen('account-setup-priorities')">Back</button>
+    </section>
+
+    <section id="account-setup-savings" class="screen">
+      <div class="header">
+        <h1>Savings & GICs</h1>
+        <div class="sub">Step 3 of 4</div>
+      </div>
+      <div class="setup-progress"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span></span></div>
+      <div class="card">
+        <h2>Do you hold savings or GICs?</h2>
+        <div class="setup-list" style="margin-top:14px;">
+          <button class="setup-choice selected" type="button" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'both', this)"><span>%</span><p><b>Yes, savings and GICs</b>Compare rates and maturity timing.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'savings', this)"><span>$</span><p><b>Savings only</b>Watch everyday and high-interest rates.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'gic', this)"><span>G</span><p><b>GICs only</b>Track maturity and reinvestment windows.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'none', this)"><span>-</span><p><b>Not right now</b>Keep this lighter in your setup.</p></button>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showScreen('account-setup-goal')">Continue</button>
+      <button class="link-button" type="button" onclick="showScreen('account-setup-timing')">Back</button>
+    </section>
+
+    <section id="account-setup-goal" class="screen">
+      <div class="header">
+        <h1>Your Main Goal</h1>
+        <div class="sub">Step 4 of 4</div>
+      </div>
+      <div class="setup-progress"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span></div>
+      <div class="card">
+        <h2>What matters most right now?</h2>
+        <div class="setup-list" style="margin-top:14px;">
+          <button class="setup-choice selected" type="button" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'lowerPayments', this)"><span>↓</span><p><b>Lower payments</b>Focus on mortgage and debt impact.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'growSavings', this)"><span>↑</span><p><b>Grow savings</b>Find better savings and GIC opportunities.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'reduceDebt', this)"><span>↔</span><p><b>Reduce debt costs</b>Watch prime-linked borrowing.</p></button>
+          <button class="setup-choice" type="button" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'stayInformed', this)"><span>i</span><p><b>Stay informed</b>Keep important rate moves visible.</p></button>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showSetupSummary()">See my snapshot</button>
+      <button class="link-button" type="button" onclick="showScreen('account-setup-savings')">Back</button>
+    </section>
+
+    <section id="account-setup-summary" class="screen">
+      <div class="header">
+        <h1>Your Snapshot</h1>
+        <div class="sub">A calmer starting point</div>
+      </div>
+      <div class="card setup-hero-card">
+        <h2 id="setup-summary-title">Your first focus is mortgage timing.</h2>
+        <p id="setup-summary-copy">RateCompass will help you watch renewal timing, compare quotes, and understand rate movement before the decision feels rushed.</p>
+      </div>
+      <div class="card">
+        <h2>Recommended focus</h2>
+        <div style="margin-top:10px;">
+          <div class="setup-snapshot-metric"><div><b id="setup-benefit-one-title">Renewal visibility</b><p id="setup-benefit-one">Track rate direction and what it could mean for payment planning.</p></div><strong id="setup-metric-one">High</strong></div>
+          <div class="setup-snapshot-metric"><div><b id="setup-benefit-two-title">Rate Check</b><p id="setup-benefit-two">Compare bank quotes before accepting them.</p></div><strong id="setup-metric-two">Useful</strong></div>
+          <div class="setup-snapshot-metric"><div><b id="setup-benefit-three-title">Alerts</b><p id="setup-benefit-three">Watch Bank of Canada decisions and personal rate moments.</p></div><strong id="setup-metric-three">2 Core</strong></div>
+        </div>
+      </div>
+      <button id="snapshot-see-plans" class="trial-button plus" type="button" onclick="goToPlansFromSnapshot()">See plans</button>
+      <button id="snapshot-continue-preview" class="secondary-inline-button" type="button" onclick="continueFromSnapshot()">Continue with preview</button>
+      <button class="link-button" type="button" onclick="showScreen('account-setup-goal')">Back</button>
     </section>
 
     <section id="home" class="screen">
@@ -1120,18 +1852,18 @@
             <strong id="home-reference-rates">2.25% / 4.45%</strong>
           </div>
         </div>
-        <p id="home-trust-note" class="source-note">Reference values checked Jun 5-6, 2026. Institution rows remain sample until live feeds are connected.</p>
+        <p id="home-trust-note" class="source-note">Reference values checked Jun 5-10, 2026. Institution rows remain sample until live feeds are connected.</p>
       </div>
 
       <div class="card">
         <h2>Next Bank of Canada Decision</h2>
-        <p id="next-boc-date" style="margin-top:4px;">Jun 10, 2026</p>
+        <p id="next-boc-date" style="margin-top:4px;">Jul 15, 2026</p>
         <div class="prob-grid">
           <div class="pill"><span>Policy rate</span><strong id="home-policy-rate">2.25%</strong></div>
           <div class="pill"><span>Last decision</span><strong style="color:var(--cyan)">Hold</strong></div>
           <div class="pill"><span>Movement</span><strong style="color:var(--green)">Unchanged</strong></div>
         </div>
-        <p id="home-policy-note" style="margin-top:12px;font-size:12px;">Held Apr 29, 2026. Last cut Oct 29, 2025. Forecast probabilities are hidden until a live model is connected.</p>
+        <p id="home-policy-note" style="margin-top:12px;font-size:12px;">Held Jun 10, 2026. Last cut Oct 29, 2025. Forecast probabilities are hidden until a live model is connected.</p>
         <p class="source-note">Verified source: Bank of Canada policy-rate reference.</p>
       </div>
 
@@ -1179,6 +1911,26 @@
           <button data-mortgage-term="fiveYearVariable" onclick="selectMortgageTerm('fiveYearVariable')">5Y Variable</button>
         </div>
         <div class="term-note">V1 includes common term views. Personalized term-fit guidance stays a future Plus feature.</div>
+        <div class="helper-row"><span>New to rate terms?</span><button class="link-button" type="button" onclick="openTerms('rates')">View terms</button></div>
+      </div>
+      <div id="savings-type-panel" class="term-panel" hidden>
+        <div class="term-label">Savings Type</div>
+        <div class="term-strip two-col" aria-label="Savings type options">
+          <button data-savings-type="standard" onclick="selectSavingsType('standard')">Standard</button>
+          <button class="active" data-savings-type="highInterest" onclick="selectSavingsType('highInterest')">High Interest</button>
+        </div>
+        <div class="term-note">Promo rates are sample rows and may have short expiry windows or conditions.</div>
+        <div class="helper-row"><span>Standard, high interest, promo?</span><button class="link-button" type="button" onclick="openTerms('rates')">View terms</button></div>
+      </div>
+      <div id="gic-type-panel" class="term-panel" hidden>
+        <div class="term-label">GIC Type</div>
+        <div class="term-strip" aria-label="GIC type options">
+          <button class="active" data-gic-type="nonRedeemable" onclick="selectGICType('nonRedeemable')">Non-red.</button>
+          <button data-gic-type="redeemable" onclick="selectGICType('redeemable')">Redeemable</button>
+          <button data-gic-type="cashable" onclick="selectGICType('cashable')">Cashable</button>
+        </div>
+        <div class="term-note">Redeemable and cashable GICs usually trade a lower rate for earlier access.</div>
+        <div class="helper-row"><span>Unsure which GIC type fits?</span><button class="link-button" type="button" onclick="openTerms('rates')">View terms</button></div>
       </div>
       <div id="prime-reference-card" class="card" hidden>
         <div class="reference-top">
@@ -1189,14 +1941,14 @@
           <div class="reference-metric"><span>Bank of Canada policy rate</span><strong style="color:var(--cyan)">2.25%</strong></div>
           <div class="reference-metric"><span>Major bank prime rate</span><strong>4.45%</strong></div>
         </div>
-        <p style="font-size:12px;">Held Apr 29, 2026. Prime as of Jun 5, 2026. The Bank of Canada does not set prime directly; banks set prime, usually in response to policy-rate changes.</p>
+        <p style="font-size:12px;">Held Jun 10, 2026. Prime as of Jun 5, 2026. The Bank of Canada does not set prime directly; banks set prime, usually in response to policy-rate changes.</p>
       </div>
       <div class="card">
         <h2 id="rate-title">Mortgage Outlook</h2>
         <h1 id="rate-trend" style="color:var(--green);font-size:30px;margin-top:6px;">Likely Lower</h1>
         <p id="rate-summary">Fixed mortgage rates are watched through lender pricing and bond-yield trends.</p>
         <p id="rate-why" class="why-note">Why this matters: Your renewal timing can change how useful fixed-rate trends are.</p>
-        <p id="rate-freshness" class="source-note">Last checked: Jun 5-6, 2026. Institution rows are sample until live feeds are connected.</p>
+        <p id="rate-freshness" class="source-note">Last checked: Jun 5-10, 2026. Institution rows are sample until live feeds are connected.</p>
         <div class="prob-grid">
           <div class="pill"><span id="rate-prob-1-label">Direction</span><strong id="rate-prob-1" style="color:var(--green)">Likely Lower</strong></div>
           <div class="pill"><span id="rate-prob-2-label">Primary driver</span><strong id="rate-prob-2">Bond yields</strong></div>
@@ -1204,10 +1956,10 @@
         </div>
       </div>
       <div class="section-title">Institution Watchlist</div>
-      <div class="watchlist-note">
+      <button class="watchlist-note upgrade-button" type="button" onclick="openPlans('Custom institution order')">
         <span>Drag rows to preview a custom order. Saving this order belongs in RateCompass Plus.</span>
         <span class="plus-badge">Plus</span>
-      </div>
+      </button>
       <div id="rate-list"></div>
     </section>
 
@@ -1226,18 +1978,18 @@
           <label>Renewal date</label>
           <input id="mortgage-renewal" type="date" />
         </div>
-        <div class="premium-title">
+        <button class="premium-title upgrade-button" type="button" onclick="openPlans('Custom mortgage title')">
           <div class="premium-title-top">
             <label>Custom title</label>
             <span class="plus-badge">Plus</span>
           </div>
-          <input type="text" value="Home mortgage" disabled aria-label="Custom mortgage title requires RateCompass Plus" />
+          <div class="locked-field" aria-label="Home mortgage custom title preview">Home mortgage</div>
           <p>Rename saved items, such as Home mortgage or Rental renewal, with RateCompass Plus.</p>
-        </div>
-        <div class="upgrade-row">
+        </button>
+        <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Add another mortgage')">
           <span class="lock-dot">◆</span>
           <p><b>Add another mortgage</b>Track multiple properties with RateCompass Plus.</p>
-        </div>
+        </button>
       </div>
       <div class="card slider-card">
         <h2>GIC 1</h2>
@@ -1249,18 +2001,18 @@
           <label>Maturity date</label>
           <input id="gic-maturity" type="date" />
         </div>
-        <div class="premium-title">
+        <button class="premium-title upgrade-button" type="button" onclick="openPlans('Custom GIC title')">
           <div class="premium-title-top">
             <label>Custom title</label>
             <span class="plus-badge">Plus</span>
           </div>
-          <input type="text" value="Emergency fund GIC" disabled aria-label="Custom GIC title requires RateCompass Plus" />
+          <div class="locked-field" aria-label="Emergency fund GIC custom title preview">Emergency fund GIC</div>
           <p>Rename saved GICs, such as Emergency fund GIC or Ladder year 2, with RateCompass Plus.</p>
-        </div>
-        <div class="upgrade-row">
+        </button>
+        <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Add another GIC')">
           <span class="lock-dot">◆</span>
           <p><b>Add another GIC</b>Track multiple GICs and maturity dates with RateCompass Plus.</p>
-        </div>
+        </button>
       </div>
       <div class="card slider-card">
         <h2>Debt Profile</h2>
@@ -1298,33 +2050,63 @@
         <h2>Quote Details</h2>
         <p>Compare a quoted rate from your bank against the current sample benchmark.</p>
         <div class="quote-field">
-          <label for="quote-product">Product</label>
-          <select id="quote-product">
-            <option value="mortgage">Mortgage</option>
-            <option value="gic">GIC</option>
-            <option value="savings">Savings</option>
-            <option value="lineOfCredit">LOC / HELOC</option>
-          </select>
+          <label>Product</label>
+          <div class="quote-options" id="quote-product-options">
+            <button class="quote-option active" type="button" data-quote-field="product" data-value="mortgage">Mortgage</button>
+            <button class="quote-option" type="button" data-quote-field="product" data-value="gic">GIC</button>
+            <button class="quote-option" type="button" data-quote-field="product" data-value="savings">Savings</button>
+            <button class="quote-option" type="button" data-quote-field="product" data-value="lineOfCredit">LOC / HELOC</button>
+          </div>
+        </div>
+        <div id="quote-mortgage-use-wrap" class="quote-field">
+          <label>Property use</label>
+          <div class="quote-options">
+            <button class="quote-option active" type="button" data-quote-field="mortgageUse" data-value="ownerOccupied">Owner-occupied</button>
+            <button class="quote-option" type="button" data-quote-field="mortgageUse" data-value="rental">Rental / investment</button>
+          </div>
+        </div>
+        <div id="quote-mortgage-insurance-wrap" class="quote-field">
+          <label>Default insurance</label>
+          <div class="quote-options compact">
+            <button class="quote-option" type="button" data-quote-field="mortgageInsurance" data-value="insured">Default insured</button>
+            <button class="quote-option active" type="button" data-quote-field="mortgageInsurance" data-value="insurable">Conventional / insurable</button>
+            <button class="quote-option" type="button" data-quote-field="mortgageInsurance" data-value="uninsured">Uninsured / uninsurable</button>
+          </div>
         </div>
         <div id="quote-term-wrap" class="quote-field">
-          <label for="quote-term">Term</label>
-          <select id="quote-term">
-            <option value="oneYear">1 year</option>
-            <option value="twoYear">2 year</option>
-            <option value="threeYear">3 year</option>
-            <option value="fiveYear" selected>5 year</option>
-            <option value="fiveYearVariable">5 year variable</option>
-          </select>
+          <label>Term</label>
+          <div class="quote-options compact" id="quote-term-options">
+            <button class="quote-option" type="button" data-quote-field="term" data-value="oneYear">1 year</button>
+            <button class="quote-option" type="button" data-quote-field="term" data-value="twoYear">2 year</button>
+            <button class="quote-option" type="button" data-quote-field="term" data-value="threeYear">3 year</button>
+            <button class="quote-option active" type="button" data-quote-field="term" data-value="fiveYear">5 year</button>
+            <button class="quote-option" type="button" data-quote-field="term" data-value="fiveYearVariable">5 year variable</button>
+          </div>
         </div>
         <div id="quote-gic-type-wrap" class="quote-field" hidden>
-          <label for="quote-gic-type">GIC type</label>
-          <select id="quote-gic-type">
-            <option value="nonRedeemable">Non-redeemable</option>
-            <option value="redeemable">Redeemable</option>
-          </select>
+          <label>GIC type</label>
+          <div class="quote-options compact">
+            <button class="quote-option active" type="button" data-quote-field="gicType" data-value="nonRedeemable">Non-redeemable</button>
+            <button class="quote-option" type="button" data-quote-field="gicType" data-value="redeemable">Redeemable</button>
+            <button class="quote-option" type="button" data-quote-field="gicType" data-value="cashable">Cashable</button>
+          </div>
+        </div>
+        <div id="quote-loc-type-wrap" class="quote-field" hidden>
+          <label>LOC type</label>
+          <div class="quote-options">
+            <button class="quote-option" type="button" data-quote-field="locType" data-value="secured">Secured</button>
+            <button class="quote-option active" type="button" data-quote-field="locType" data-value="unsecured">Unsecured</button>
+          </div>
+        </div>
+        <div id="quote-savings-type-wrap" class="quote-field" hidden>
+          <label>Savings type</label>
+          <div class="quote-options">
+            <button class="quote-option" type="button" data-quote-field="savingsType" data-value="standard">Standard savings</button>
+            <button class="quote-option active" type="button" data-quote-field="savingsType" data-value="highInterest">High interest savings</button>
+          </div>
         </div>
         <div class="quote-field">
-          <label for="quote-rate">Quoted rate</label>
+          <label id="quote-rate-label" for="quote-rate">Quoted rate</label>
           <input id="quote-rate" type="number" min="0.5" max="10" step="0.05" value="4.79" />
         </div>
         <div class="quote-meter">
@@ -1335,21 +2117,23 @@
             </div>
             <span id="quote-benchmark" class="benchmark-pill">Benchmark 4.39%</span>
           </div>
-          <div id="quote-bars" class="meter-bars"><span></span><span></span><span></span><span></span></div>
-          <p id="quote-detail">Compared with a 4.39% sample benchmark, this quote is weaker than the current sample view but still within the fair range.</p>
+          <div id="quote-bars" class="meter-bars"><span></span><span></span><span></span><span></span><span></span></div>
+          <p id="quote-detail">Compared with a 4.39% weighted sample benchmark, this quote is weaker than the current sample view but still within the fair range.</p>
         </div>
-        <p id="quote-source-note" class="source-note">Prototype benchmark catalog. Last checked: Jun 5-6, 2026. 5-year fixed sample benchmark.</p>
+        <p id="quote-source-note" class="source-note">Weighted sample benchmark catalog. Last checked: Jun 12-14, 2026. 5-year fixed sample benchmark.</p>
       </div>
       <div class="card">
         <h2>How To Use It</h2>
-        <div class="source-row"><span class="status-pill sample">Tip</span><p>Mortgage and LOC quotes score better when they are lower.</p></div>
+        <div class="source-row"><span class="status-pill sample">Tip</span><p>Mortgage rates and LOC/HELOC prime spreads score better when they are lower.</p></div>
         <div class="source-row"><span class="status-pill sample">Tip</span><p>GIC and savings quotes score better when they are higher.</p></div>
+        <div class="source-row"><span class="status-pill sample">Tip</span><p>The benchmark quietly gives more weight to major Canadian bank comparables.</p></div>
         <div class="source-row"><span class="status-pill sample">Tip</span><p>Restrictions, penalties, deposit insurance, and promo expiry still matter.</p></div>
+        <button class="link-button" type="button" onclick="openTerms('rate-check')">View Terms Index</button>
       </div>
-      <div class="upgrade-row">
+      <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Save quote history')">
         <span class="lock-dot">◆</span>
         <p><b>Save quote history</b>Save multiple quotes and compare changes over time with RateCompass Plus.</p>
-      </div>
+      </button>
     </section>
 
     <section id="guidance" class="screen">
@@ -1427,10 +2211,45 @@
           <div class="guide-step"><span>3</span>How would this choice change if rates moved by 0.50%?</div>
         </div>
       </div>
-      <div class="upgrade-row">
+      <button class="upgrade-row upgrade-button" type="button" onclick="openPlans('Personalized action plan')">
         <span class="lock-dot">◆</span>
         <p><b>Personalized action plan</b>Future RateCompass Plus can turn saved mortgages, GICs, debts, and watchlists into a monthly next-steps report.</p>
+      </button>
+      <button class="upgrade-row" type="button" onclick="openTerms('guidance')">
+        <span class="lock-dot" style="background:rgba(0,104,180,.12);color:var(--blue);">i</span>
+        <p><b>Terms Index</b>Plain-language explanations for mortgage, GIC, savings, and prime-rate terminology.</p>
+      </button>
+    </section>
+
+    <section id="terms" class="screen">
+      <div class="header">
+        <h1>Terms Index</h1>
+        <div class="sub">Plain-language rate terminology</div>
+        <button class="link-button" onclick="closeTerms()">Back</button>
       </div>
+      <div class="card">
+        <h2>Mortgages And Debt</h2>
+        <div class="term-card"><h3>Default insured mortgage</h3><p>A mortgage where insurance protects the lender if the borrower cannot repay. These rates can differ from uninsured mortgages because lender risk is different.</p></div>
+        <div class="term-card"><h3>Uninsured mortgage</h3><p>A mortgage that does not have default insurance. Rates may be higher when the loan, property, or borrower profile creates more lender risk.</p></div>
+        <div class="term-card"><h3>Variable mortgage</h3><p>A mortgage where the rate is tied to prime. The cost can change when lenders change prime after Bank of Canada decisions.</p></div>
+        <div class="term-card"><h3>Prime rate</h3><p>A reference lending rate set by banks, often influenced by Bank of Canada policy-rate changes. Variable mortgages, HELOCs, and lines of credit are commonly priced from prime.</p></div>
+        <div class="term-card"><h3>Prime + spread</h3><p>A rate shown as prime plus an extra amount, such as Prime +0.50%. HELOCs and lines of credit are often quoted this way.</p></div>
+        <div class="term-card"><h3>HELOC</h3><p>A home equity line of credit secured by your property. It is usually quoted as a spread over prime.</p></div>
+      </div>
+      <div class="card">
+        <h2>GICs</h2>
+        <div class="term-card"><h3>Non-redeemable GIC</h3><p>A GIC where the money is usually locked in until maturity. The tradeoff is often a stronger posted rate.</p></div>
+        <div class="term-card"><h3>Redeemable GIC</h3><p>A GIC that may allow early access before maturity. The tradeoff is usually a lower rate than a non-redeemable GIC.</p></div>
+        <div class="term-card"><h3>Cashable GIC</h3><p>A GIC designed for easier access to funds, often after a short waiting period. The rate is usually lower because flexibility has value.</p></div>
+      </div>
+      <div class="card">
+        <h2>Savings And Comparisons</h2>
+        <div class="term-card"><h3>High-interest savings account</h3><p>A savings account that aims to pay more than a standard account. The rate can depend on the institution, balance, and conditions.</p></div>
+        <div class="term-card"><h3>Promo rate</h3><p>A temporary savings or GIC offer. It can be attractive, but expiry dates, limits, and conditions matter.</p></div>
+        <div class="term-card"><h3>Weighted benchmark</h3><p>A sample comparison point that gives more influence to major Canadian bank rates while still considering smaller or online institution samples.</p></div>
+        <div class="term-card"><h3>Quote rating</h3><p>A plain-language score that compares a quoted rate or prime spread against the current sample benchmark.</p></div>
+      </div>
+      <button class="link-button" onclick="closeTerms()">Back</button>
     </section>
 
     <section id="profile" class="screen">
@@ -1440,6 +2259,7 @@
       </div>
       <div class="card">
         <h2>Notification Toggles</h2>
+        <p class="source-note">Core includes 2 active alerts. RateCompass Plus unlocks unlimited alerts and saved alert history.</p>
         <div class="toggle">
           <span class="toggle-copy">Bank of Canada announcements <span class="info-dot" tabindex="0" aria-label="More about Bank of Canada announcements" onclick="event.stopPropagation(); setTooltipState(this, true)" onmouseenter="setTooltipState(this, true)" onmouseleave="setTooltipState(this, false)" onfocus="setTooltipState(this, true)" onblur="setTooltipState(this, false)">i</span><span class="tooltip">Receive reminders before scheduled Bank of Canada decisions and a plain-English summary when the rate decision is released.</span></span>
           <button class="switch" type="button" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
@@ -1470,13 +2290,158 @@
         <div id="data-source-list"></div>
       </div>
       <div class="card">
+        <h2>Learning Preferences</h2>
+        <p>Keep plain-language terms available while you are learning the app.</p>
+        <button class="link-button" type="button" onclick="openTerms('profile')">Open Terms Index</button>
+        <button class="upgrade-row upgrade-button" style="margin-top:12px;" type="button" onclick="openPlans('Hide term helpers')">
+          <span class="lock-dot">◆</span>
+          <p><b>Hide term helpers</b>RateCompass Plus can turn off the helper prompts once the terminology feels familiar.</p>
+        </button>
+      </div>
+      <div class="card">
         <h2>V1 Scope</h2>
         <p>Canada-first launch. Consumer users first. Professional users later. No ads in the premium experience.</p>
       </div>
       <div class="card">
-        <h2>RateCompass Plus</h2>
-        <p>Future premium tier for saved custom watchlists, multiple mortgages and GICs, personalized term-fit guidance, deeper forecasts, smart timing tools, and monthly opportunity reports.</p>
+        <h2>RateCompass Plans</h2>
+        <div class="summary-row"><div><b>RateCompass Core</b><p>Rate dashboards, basic Rate Check, one mortgage, one GIC, and 2 active alerts.</p></div><strong>$23.95/yr</strong></div>
+        <div class="summary-row"><div><b>RateCompass Plus</b><p>Multiple saved items, unlimited alerts, quote history, custom watchlists, and personalized opportunity reports.</p></div><strong>$38.95/yr</strong></div>
+        <p class="source-note">Both plans include a 14-day free trial. No ads in the paid experience.</p>
+        <button class="trial-button" type="button" onclick="openPlans('Compare plans')">Compare Plans</button>
       </div>
+    </section>
+
+    <section id="paywall-discovery" class="screen">
+      <div class="header">
+        <h1>Before You Choose</h1>
+        <div class="sub">See where RateCompass can help</div>
+        <button class="link-button" onclick="closePlans()">Back</button>
+      </div>
+      <div class="card">
+        <h2 id="paywall-discovery-context">RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.</h2>
+        <p>Pick the situation that feels most familiar. The app will show how it can help before you choose a plan.</p>
+        <div class="question-stack">
+          <button class="question-button" type="button" onclick="selectPaywallConcern('gic')">
+            Have you ever had a GIC mature and sit in cash?
+            <span>Even a short delay can mean missed interest or an auto-renewal you did not really choose.</span>
+          </button>
+          <button class="question-button" type="button" onclick="selectPaywallConcern('banker')">
+            Do you ever feel unprepared discussing rates with your banker?
+            <span>RateCompass can help you compare the quote, understand the context, and ask better questions.</span>
+          </button>
+          <button class="question-button" type="button" onclick="selectPaywallConcern('renewal')">
+            Has a mortgage renewal ever felt rushed?
+            <span>Renewal timing, fixed-versus-variable choices, and rate movement can be easier to review ahead of time.</span>
+          </button>
+          <button class="question-button" type="button" onclick="selectPaywallConcern('savings')">
+            Have you missed a savings or promo-rate change?
+            <span>Rates can change quietly. Alerts and watchlists help keep important moves visible.</span>
+          </button>
+        </div>
+      </div>
+      <button class="trial-button" type="button" onclick="showPlansChoice()">Skip to plans</button>
+    </section>
+
+    <section id="paywall-insight" class="screen">
+      <div class="header">
+        <h1>Your Rate Moment</h1>
+        <div class="sub">What the app helps prevent</div>
+        <button class="link-button" onclick="backFromPlans()">Back</button>
+      </div>
+      <div class="card insight-result">
+        <span id="paywall-fit" class="plan-badge" style="justify-self:start;">Best fit</span>
+        <strong id="paywall-insight-title">Rates are easier when you know what to ask.</strong>
+        <p id="paywall-insight-copy">RateCompass gives you a clearer view before you make a decision.</p>
+      </div>
+      <div class="card">
+        <h2>How RateCompass Helps</h2>
+        <div class="benefit-list">
+          <div><span>1</span><p id="paywall-benefit-one">Compare the rate against a benchmark before accepting it.</p></div>
+          <div><span>2</span><p id="paywall-benefit-two">See how the decision may affect your own mortgage, GIC, savings, or debt.</p></div>
+          <div><span>3</span><p id="paywall-benefit-three">Use reminders and saved context so important dates do not slip by.</p></div>
+        </div>
+      </div>
+      <button class="trial-button plus" type="button" onclick="showPlansChoice()">See recommended plans</button>
+      <button class="link-button" type="button" onclick="showScreen('paywall-discovery')">Answer a different question</button>
+    </section>
+
+    <section id="plans" class="screen">
+      <div class="header">
+        <h1>Your setup is ready</h1>
+        <div class="sub">Start with 14 days free</div>
+        <button class="link-button" onclick="backFromPlans()">Back</button>
+      </div>
+      <div class="card">
+        <h2 id="plans-context">RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.</h2>
+        <div class="plan-value-preview">
+          <div class="plan-value-item"><span>Compare</span><b>Check a quoted rate before accepting it</b></div>
+          <div class="plan-value-item"><span>Watch</span><b>Track Bank of Canada and prime moves</b></div>
+          <div class="plan-value-item"><span>Plan</span><b>See mortgage, GIC, savings, and debt impact</b></div>
+          <div class="plan-value-item"><span>Alert</span><b>Keep important rate moments visible</b></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>How RateCompass helps over time</h2>
+        <div class="plan-timeline">
+          <div class="plan-timeline-step"><span>Today</span><div><b>See your rate snapshot</b><p>Start with the rate categories and alerts that match your setup.</p></div></div>
+          <div class="plan-timeline-step"><span>Before</span><div><b>Prepare for the bank conversation</b><p>Use Rate Check and the terms index before accepting a quote.</p></div></div>
+          <div class="plan-timeline-step"><span>Later</span><div><b>Stay ahead of renewal or maturity dates</b><p>Use saved items, scenarios, and alerts as decisions get closer.</p></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Choose your access</h2>
+        <p>Yearly is selected by default for the best value. Monthly is available for flexibility.</p>
+        <div class="billing-toggle" aria-label="Billing options">
+          <button id="billing-yearly" class="active" type="button" onclick="setBilling('yearly')">Yearly</button>
+          <button id="billing-monthly" type="button" onclick="setBilling('monthly')">Monthly</button>
+        </div>
+      </div>
+      <div class="plan-compare">
+        <div class="plan-column">
+          <span class="plan-badge" style="justify-self:start;color:var(--blue);background:rgba(0,104,180,.14);">Best start</span>
+          <div>
+            <h2>RateCompass Core</h2>
+            <div id="core-price" class="plan-price">$23.95/yr</div>
+          </div>
+          <div id="core-alt-price" class="alternate-price">Monthly option: $2.99/mo</div>
+          <span id="core-save-note" class="save-note">Save 33% yearly</span>
+          <p>For checking rates, impact, and two key alerts.</p>
+          <button id="core-trial-button" class="trial-button" type="button" onclick="startTrial('RateCompass Core')">Start Core yearly trial</button>
+        </div>
+        <div class="plan-column plus">
+          <span class="plan-badge" style="justify-self:start;">More personal</span>
+          <div>
+            <h2>RateCompass Plus</h2>
+            <div id="plus-price" class="plan-price" style="color:var(--green);">$38.95/yr</div>
+          </div>
+          <div id="plus-alt-price" class="alternate-price">Monthly option: $4.99/mo</div>
+          <span id="plus-save-note" class="save-note">Save 35% yearly</span>
+          <p>For multiple items, unlimited alerts, and deeper reports.</p>
+          <button id="plus-trial-button" class="trial-button plus" type="button" onclick="startTrial('RateCompass Plus')">Start Plus yearly trial</button>
+        </div>
+      </div>
+      <div class="card" style="margin-top:14px;">
+        <h2>Side-by-side features</h2>
+        <div class="feature-compare" style="margin-top:12px;">
+          <div class="feature-compare-row"><div>Feature</div><div>Core</div><div>Plus</div></div>
+          <div class="feature-compare-row"><div>Rates dashboard</div><div>Yes</div><div>Yes</div></div>
+          <div class="feature-compare-row"><div>Bank of Canada watch</div><div>Yes</div><div>Yes</div></div>
+          <div class="feature-compare-row"><div>Prime outlook</div><div>Yes</div><div>Yes</div></div>
+          <div class="feature-compare-row"><div>Rate Check</div><div>Basic</div><div>Saved history</div></div>
+          <div class="feature-compare-row"><div>Quote rating</div><div>Yes</div><div>Yes</div></div>
+          <div class="feature-compare-row"><div>Terms index</div><div>Yes</div><div>Yes</div></div>
+          <div class="feature-compare-row"><div>Data source notes</div><div>Yes</div><div>Yes</div></div>
+          <div class="feature-compare-row"><div>Mortgages</div><div>1</div><div>Multiple</div></div>
+          <div class="feature-compare-row"><div>GICs</div><div>1</div><div>Multiple</div></div>
+          <div class="feature-compare-row"><div>Alerts</div><div>2 active</div><div>Unlimited</div></div>
+          <div class="feature-compare-row"><div>Scenario testing</div><div>Basic</div><div>Deeper</div></div>
+          <div class="feature-compare-row"><div>Opportunity reports</div><div>-</div><div>Included</div></div>
+          <div class="feature-compare-row"><div>Custom order</div><div>-</div><div>Included</div></div>
+        </div>
+        <p id="core-trial-note" class="source-note">Prototype only. Purchase flow will connect later.</p>
+        <p id="plus-trial-note" class="source-note">Prototype only. Purchase flow will connect later.</p>
+      </div>
+      <button class="link-button" type="button" onclick="showApp()">Continue with free preview</button>
     </section>
 
     <nav class="tabbar" id="tabs" hidden>
@@ -1497,8 +2462,8 @@
     };
 
     const rateDataCatalog = {
-      checkedRange: "Jun 5-6, 2026",
-      policyLastDecision: "Held Apr 29, 2026",
+      checkedRange: "Jun 5-10, 2026",
+      policyLastDecision: "Held Jun 10, 2026",
       policyLastChange: "Last cut Oct 29, 2025",
       primeAsOf: "Prime as of Jun 5, 2026",
       policyRate: {
@@ -1506,13 +2471,13 @@
         title: "Bank of Canada policy rate",
         value: "2.25%",
         status: rateTrustStatus.verified,
-        detail: "Held Apr 29, 2026.",
+        detail: "Held Jun 10, 2026.",
         source: "Bank of Canada policy-rate reference"
       },
       nextDecision: {
         id: "next-boc-decision",
         title: "Next Bank of Canada decision",
-        value: "Jun 10, 2026",
+        value: "Jul 15, 2026",
         status: rateTrustStatus.verified,
         detail: "Scheduled policy-rate decision date.",
         source: "Bank of Canada decision calendar"
@@ -1542,8 +2507,8 @@
           title: "Rate Check benchmarks",
           value: "Sample benchmarks",
           status: rateTrustStatus.sample,
-          detail: "Used to score quoted rates until verified lender feeds are connected.",
-          source: "Prototype benchmark catalog"
+          detail: "Weighted toward major Canadian bank comparables until verified lender feeds are connected.",
+          source: "Weighted sample benchmark catalog"
         },
         {
           id: "floating-spread-ranges",
@@ -1563,8 +2528,8 @@
         }
       ],
       freshness: {
-        sampleRows: "Last checked: Jun 5-6, 2026. Institution rows are sample until live feeds are connected.",
-        verifiedReferences: "Last checked: Jun 5-6, 2026. Policy and prime references are verified."
+        sampleRows: "Last checked: Jun 5-10, 2026. Institution rows are sample until live feeds are connected.",
+        verifiedReferences: "Last checked: Jun 5-10, 2026. Policy and prime references are verified."
       },
       mortgageRows: {
         oneYearFixed: [
@@ -1610,23 +2575,45 @@
           ["Scotiabank", "Prime +0.63%", "5.08%"]
         ]
       },
-      savingsRows: [
-        ["EQ Bank", "HISA", "4.00%"],
-        ["Tangerine", "Promo savings", "4.25%"],
-        ["RBC", "Savings", "1.70%"],
-        ["TD", "Savings", "1.85%"],
-        ["BMO", "Savings", "1.75%"],
-        ["CIBC", "Savings", "1.80%"],
-        ["Scotiabank", "Savings", "1.70%"]
-      ],
-      gicRows: [
-        ["EQ Bank", "1-year GIC", "4.15%"],
-        ["CIBC", "2-year GIC", "3.95%"],
-        ["TD", "5-year GIC", "3.65%"],
-        ["BMO", "3-year GIC", "3.80%"],
-        ["RBC", "1-year GIC", "3.90%"],
-        ["Scotiabank", "2-year GIC", "3.85%"]
-      ],
+      savingsRows: {
+        standard: [
+          ["RBC", "Standard savings", "1.70%"],
+          ["TD", "Standard savings", "1.85%"],
+          ["BMO", "Standard savings", "1.75%"],
+          ["CIBC", "Standard savings", "1.80%"],
+          ["Scotiabank", "Standard savings", "1.70%"]
+        ],
+        highInterest: [
+          ["EQ Bank", "High interest savings", "4.00%"],
+          ["Tangerine", "Promo savings", "4.25%"],
+          ["RBC", "High interest savings", "1.70%"],
+          ["TD", "High interest savings", "1.85%"],
+          ["CIBC", "High interest savings", "1.80%"]
+        ]
+      },
+      gicRows: {
+        nonRedeemable: [
+          ["EQ Bank", "1-year non-redeemable GIC", "4.15%"],
+          ["CIBC", "2-year non-redeemable GIC", "3.95%"],
+          ["TD", "5-year non-redeemable GIC", "3.65%"],
+          ["BMO", "3-year non-redeemable GIC", "3.80%"],
+          ["RBC", "1-year non-redeemable GIC", "3.90%"]
+        ],
+        redeemable: [
+          ["EQ Bank", "1-year redeemable GIC", "3.65%"],
+          ["CIBC", "2-year redeemable GIC", "3.45%"],
+          ["TD", "5-year redeemable GIC", "3.15%"],
+          ["BMO", "3-year redeemable GIC", "3.30%"],
+          ["RBC", "1-year redeemable GIC", "3.40%"]
+        ],
+        cashable: [
+          ["EQ Bank", "1-year cashable GIC", "3.40%"],
+          ["CIBC", "2-year cashable GIC", "3.20%"],
+          ["TD", "5-year cashable GIC", "2.90%"],
+          ["BMO", "3-year cashable GIC", "3.05%"],
+          ["RBC", "1-year cashable GIC", "3.15%"]
+        ]
+      },
       primeRows: [
         ["RBC", "Prime rate", "4.45%"],
         ["TD", "Prime rate", "4.45%"],
@@ -1646,16 +2633,19 @@
           fiveYearVariable: { rate: 5.05, detail: "5-year variable sample benchmark based on the floating-rate profile." }
         },
         gic: {
-          oneYear: { rate: 4.15, detail: "1-year GIC sample benchmark." },
-          twoYear: { rate: 3.95, detail: "2-year GIC sample benchmark." },
-          threeYear: { rate: 3.80, detail: "3-year GIC sample benchmark." },
-          fiveYear: { rate: 3.65, detail: "5-year GIC sample benchmark." },
-          fiveYearVariable: { rate: 3.65, detail: "5-year GIC sample benchmark." }
+          oneYear: { rate: 3.96, detail: "1-year GIC weighted sample benchmark." },
+          twoYear: { rate: 3.90, detail: "2-year GIC weighted sample benchmark." },
+          threeYear: { rate: 3.80, detail: "3-year GIC weighted sample benchmark." },
+          fiveYear: { rate: 3.65, detail: "5-year GIC weighted sample benchmark." },
+          fiveYearVariable: { rate: 3.65, detail: "5-year GIC weighted sample benchmark." }
         },
-        savings: { rate: 4.00, detail: "High-interest savings sample benchmark." },
-        lineOfCredit: { rate: 6.45, detail: "Line of credit sample benchmark based on the prime-rate spread profile." },
-        source: "Prototype benchmark catalog",
-        lastChecked: "Last checked: Jun 5-6, 2026"
+        savings: {
+          standard: { rate: 1.75, detail: "Standard savings sample benchmark." },
+          highInterest: { rate: 2.94, detail: "High-interest savings weighted sample benchmark." }
+        },
+        lineOfCredit: { unsecuredSpread: 2.00, securedSpread: 0.50, detail: "LOC/HELOC sample benchmark based on the prime-rate spread profile." },
+        source: "Weighted sample benchmark catalog",
+        lastChecked: "Last checked: Jun 12-14, 2026"
       }
     };
 
@@ -1695,7 +2685,7 @@
           return [
             rateIndicator("Policy rate", rateDataCatalog.policyRate.value, "var(--blue)"),
             rateIndicator("Prime", rateDataCatalog.primeRate.value, "var(--cyan)"),
-            rateIndicator("Next decision", "Jun 10", "var(--amber)")
+            rateIndicator("Next decision", "Jul 15", "var(--amber)")
           ];
         default:
           return [
@@ -1716,8 +2706,86 @@
     };
 
     let activeMortgageTerm = "fiveYearFixed";
+    let activeSavingsType = "highInterest";
+    let activeGICType = "nonRedeemable";
     let activeRateRows = [];
     let draggedRateIndex = null;
+    let planReturnScreen = "profile";
+    let plansBackScreen = "paywall-discovery";
+    let pendingPlanContext = "";
+    let termReturnScreen = "guidance";
+    let activeBilling = "yearly";
+    const planPricing = {
+      yearly: {
+        core: "$23.95/yr",
+        plus: "$38.95/yr",
+        coreAlt: "Monthly option: $2.99/mo",
+        plusAlt: "Monthly option: $4.99/mo",
+        coreNote: "Save 33% yearly",
+        plusNote: "Save 35% yearly",
+        coreButton: "Start Core yearly trial",
+        plusButton: "Start Plus yearly trial"
+      },
+      monthly: {
+        core: "$2.99/mo",
+        plus: "$4.99/mo",
+        coreAlt: "Yearly option: $23.95/yr",
+        plusAlt: "Yearly option: $38.95/yr",
+        coreNote: "$35.88/yr if paid monthly",
+        plusNote: "$59.88/yr if paid monthly",
+        coreButton: "Start Core monthly trial",
+        plusButton: "Start Plus monthly trial"
+      }
+    };
+    const setupAnswers = {
+      mortgage: "one",
+      timing: "oneYear",
+      savings: "both",
+      goal: "lowerPayments"
+    };
+
+    const paywallInsights = {
+      gic: {
+        fit: "Best fit: RateCompass Plus",
+        title: "Idle cash can quietly shrink your return.",
+        copy: "A matured GIC can lose momentum if it sits in cash or renews without a fresh comparison. RateCompass Plus is built for tracking more GICs, maturity dates, and reinvestment decisions.",
+        benefits: [
+          "Save multiple GICs and maturity dates in one place.",
+          "Compare the quoted reinvestment rate against the current sample benchmark.",
+          "Use alerts so maturity windows and better-rate opportunities are harder to miss."
+        ]
+      },
+      banker: {
+        fit: "Best fit: RateCompass Core",
+        title: "A clearer rate view can change the conversation.",
+        copy: "When you know the benchmark, the trend, and the questions to ask, a bank meeting can feel less like guessing and more like comparing.",
+        benefits: [
+          "Check a quoted mortgage, GIC, savings, or LOC rate before accepting it.",
+          "See whether the quote looks poor, fair, good, or very good against sample benchmarks.",
+          "Bring better questions into the conversation around fees, penalties, restrictions, and timing."
+        ]
+      },
+      renewal: {
+        fit: "Best fit: RateCompass Plus",
+        title: "Renewals are easier when you start before the deadline.",
+        copy: "A rushed renewal can make it harder to compare terms, test scenarios, or understand what a rate change means for your payment.",
+        benefits: [
+          "Track renewal timing and compare common mortgage terms.",
+          "Estimate how a rate move could affect your monthly payment.",
+          "Save more mortgage details and run deeper scenarios with RateCompass Plus."
+        ]
+      },
+      savings: {
+        fit: "Best fit: RateCompass Core",
+        title: "Small rate gaps can add up over time.",
+        copy: "Savings and promo rates can change quietly. RateCompass helps keep rate movement and opportunities visible so cash does not drift unnoticed.",
+        benefits: [
+          "Watch savings and GIC rate movement from one Canada-first dashboard.",
+          "Keep two active alerts in Core for the rate moments that matter most.",
+          "Upgrade to Plus later if you want unlimited alerts and saved alert history."
+        ]
+      }
+    };
 
     const mortgageTerms = {
       oneYearFixed: {
@@ -1776,6 +2844,42 @@
       }
     };
 
+    const savingsTypes = {
+      standard: {
+        title: "Standard Savings Outlook",
+        summary: "Standard savings accounts tend to move slowly and may lag promotional or online alternatives.",
+        why: "A low everyday savings rate can quietly reduce return on cash that is sitting idle.",
+        rows: rateDataCatalog.savingsRows.standard
+      },
+      highInterest: {
+        title: "High Interest Savings Outlook",
+        summary: "High-interest savings accounts and promos can be stronger, but conditions and expiry dates matter.",
+        why: "Promo and online rates can be useful, but they should be compared against terms, limits, and expiry windows.",
+        rows: rateDataCatalog.savingsRows.highInterest
+      }
+    };
+
+    const gicTypes = {
+      nonRedeemable: {
+        title: "Non-redeemable GIC Outlook",
+        summary: "Non-redeemable GICs usually offer stronger posted rates because the funds are locked in for the term.",
+        why: "Locking in can improve yield, but the maturity date needs to match your cash timeline.",
+        rows: rateDataCatalog.gicRows.nonRedeemable
+      },
+      redeemable: {
+        title: "Redeemable GIC Outlook",
+        summary: "Redeemable GICs trade some yield for the option to access funds before maturity.",
+        why: "Flexibility may be worth a lower rate if you may need the money before maturity.",
+        rows: rateDataCatalog.gicRows.redeemable
+      },
+      cashable: {
+        title: "Cashable GIC Outlook",
+        summary: "Cashable GICs focus on access and flexibility, so the posted rate is usually lower than locked-in GICs.",
+        why: "Cashable products can be useful for liquidity, but the rate gap should be visible before choosing one.",
+        rows: rateDataCatalog.gicRows.cashable
+      }
+    };
+
     const rateCategories = {
       mortgage: {
         title: "Mortgage Outlook",
@@ -1793,7 +2897,7 @@
         summary: "Savings and TFSA rates can change quickly when promotional offers expire.",
         why: "Savings rates can lag policy moves and promo rates can expire quickly.",
         indicators: categoryIndicators('savings'),
-        rows: rateDataCatalog.savingsRows
+        rows: rateDataCatalog.savingsRows.highInterest
       },
       gic: {
         title: "GIC Outlook",
@@ -1802,7 +2906,7 @@
         summary: "GIC rates depend heavily on term length and where the market expects rates to go next.",
         why: "Term choice matters because locking in too early or too late can change annual interest.",
         indicators: categoryIndicators('gic'),
-        rows: rateDataCatalog.gicRows
+        rows: rateDataCatalog.gicRows.nonRedeemable
       },
       prime: {
         title: "Prime Outlook",
@@ -1831,6 +2935,97 @@
     function showScreen(id) {
       document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+      if (id === 'plans') setBilling(activeBilling);
+    }
+
+    function setBilling(billing) {
+      activeBilling = billing;
+      const pricing = planPricing[billing];
+      document.getElementById('billing-yearly')?.classList.toggle('active', billing === 'yearly');
+      document.getElementById('billing-monthly')?.classList.toggle('active', billing === 'monthly');
+      document.getElementById('core-price').textContent = pricing.core;
+      document.getElementById('plus-price').textContent = pricing.plus;
+      document.getElementById('core-alt-price').textContent = pricing.coreAlt;
+      document.getElementById('plus-alt-price').textContent = pricing.plusAlt;
+      document.getElementById('core-save-note').textContent = pricing.coreNote;
+      document.getElementById('plus-save-note').textContent = pricing.plusNote;
+      document.getElementById('core-trial-button').textContent = pricing.coreButton;
+      document.getElementById('plus-trial-button').textContent = pricing.plusButton;
+    }
+
+    function selectSetupAnswer(group, value, button) {
+      setupAnswers[group] = value;
+      document.querySelectorAll(`[data-setup-group="${group}"]`).forEach(option => option.classList.remove('selected'));
+      button.classList.add('selected');
+    }
+
+    function showSetupSummary() {
+      const hasMortgage = setupAnswers.mortgage === 'one' || setupAnswers.mortgage === 'multiple';
+      const multipleMortgages = setupAnswers.mortgage === 'multiple';
+      const futureBuyer = setupAnswers.mortgage === 'future';
+      const urgentTiming = setupAnswers.timing === 'oneYear';
+      const hasGIC = setupAnswers.savings === 'both' || setupAnswers.savings === 'gic';
+      const hasSavings = setupAnswers.savings === 'both' || setupAnswers.savings === 'savings';
+      const savingsFocused = setupAnswers.goal === 'growSavings' || hasGIC || hasSavings;
+      const debtFocused = setupAnswers.goal === 'reduceDebt';
+
+      const title = debtFocused
+        ? "Your first focus is watching prime-linked costs."
+        : setupAnswers.goal === 'growSavings'
+          ? "Your first focus is finding better return on cash."
+          : multipleMortgages
+            ? "You may benefit from tracking more than one rate decision."
+            : hasMortgage && urgentTiming
+              ? "Your first focus is renewal timing."
+              : futureBuyer
+                ? "Your first focus is getting prepared before you shop."
+                : "Your first focus is watching rate opportunities.";
+
+      const copy = debtFocused
+        ? "RateCompass can keep Bank of Canada decisions, prime, HELOCs, and lines of credit easier to monitor."
+        : savingsFocused && !hasMortgage
+          ? "RateCompass can help you compare savings and GIC opportunities before cash sits idle or renews without a fresh look."
+          : multipleMortgages
+            ? "RateCompass can help compare terms, keep renewal dates visible, and show when Plus features like multiple saved mortgages may be useful."
+            : hasMortgage
+              ? "RateCompass will help you watch renewal timing, compare quotes, and understand rate movement before the decision feels rushed."
+              : futureBuyer
+                ? "RateCompass can help you understand rate direction, compare future quotes, and feel more prepared before speaking with a lender."
+                : "RateCompass can help you monitor Bank of Canada decisions, savings, GICs, and rate quotes even if mortgages are not your focus right now.";
+
+      document.getElementById('setup-summary-title').textContent = title;
+      document.getElementById('setup-summary-copy').textContent = copy;
+
+      document.getElementById('setup-benefit-one-title').textContent = debtFocused ? "Prime watch" : futureBuyer ? "Buyer readiness" : hasMortgage ? "Renewal visibility" : "Rate awareness";
+      document.getElementById('setup-benefit-one').textContent = debtFocused
+        ? "Watch prime and rate decisions that can affect variable debt."
+        : futureBuyer
+          ? "Watch fixed, variable, and prime-linked movement before you start shopping."
+          : hasMortgage
+            ? "Track rate direction and what it could mean for payment planning."
+            : "Follow Bank of Canada decisions and how they can affect savings, GICs, and debt.";
+      document.getElementById('setup-metric-one').textContent = urgentTiming || debtFocused ? "High" : "Helpful";
+
+      document.getElementById('setup-benefit-two-title').textContent = savingsFocused ? "Savings and GIC watch" : "Rate Check";
+      document.getElementById('setup-benefit-two').textContent = savingsFocused
+        ? hasGIC
+          ? "Compare GIC quotes and keep maturity timing visible."
+          : "Compare standard and high-interest savings options."
+        : futureBuyer
+          ? "Use Rate Check when a lender gives you a future quote."
+          : "Compare bank quotes before accepting them.";
+      document.getElementById('setup-metric-two').textContent = savingsFocused ? "Good fit" : "Useful";
+
+      const plusFit = multipleMortgages || (hasMortgage && hasGIC) || setupAnswers.savings === 'both';
+      document.getElementById('setup-benefit-three-title').textContent = plusFit ? "Plus fit" : "Alerts";
+      document.getElementById('setup-benefit-three').textContent = plusFit
+        ? "Multiple saved items and unlimited alerts may be worth comparing against Core."
+        : urgentTiming
+          ? "Use alerts so the next 12 months do not sneak up on you."
+          : "Keep the important rate moments visible while your timing becomes clearer.";
+      document.getElementById('setup-metric-three').textContent = plusFit ? "Compare" : "2 Core";
+
+      showScreen('account-setup-summary');
     }
 
     function updateGreeting() {
@@ -1845,7 +3040,7 @@
 
     function validateSignup() {
       if (!isSignupValid()) return;
-      showApp();
+      showScreen('account-setup-value');
     }
 
     function signupValidationMessage() {
@@ -1894,16 +3089,113 @@
       document.querySelector('#tabs button[onclick*="home"]')?.classList.add('active');
     }
 
+    function openTerms(returnScreen) {
+      termReturnScreen = returnScreen || document.querySelector('.screen.active')?.id || 'guidance';
+      showScreen('terms');
+    }
+
+    function closeTerms() {
+      showScreen(termReturnScreen || 'guidance');
+    }
+
+    function openPlans(context) {
+      planReturnScreen = document.querySelector('.screen.active')?.id || 'profile';
+      plansBackScreen = 'paywall-discovery';
+      pendingPlanContext = context || "";
+      const contextLine = context && context !== 'Compare plans'
+        ? `${context} is included with RateCompass Plus. Choose a plan to start with 14 days free.`
+        : 'RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.';
+      document.getElementById('paywall-discovery-context').textContent = contextLine;
+      document.getElementById('plans-context').textContent = contextLine;
+      showScreen('paywall-discovery');
+    }
+
+    function openPlansDirect(context) {
+      planReturnScreen = document.querySelector('.screen.active')?.id || 'profile';
+      plansBackScreen = planReturnScreen;
+      pendingPlanContext = context || "";
+      const contextLine = context
+        ? `${context} is ready. Compare Core and Plus, then start with 14 days free.`
+        : 'RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.';
+      document.getElementById('plans-context').textContent = contextLine;
+      showScreen('plans');
+    }
+
+    function goToPlansFromSnapshot() {
+      document.getElementById('tabs').hidden = true;
+      planReturnScreen = 'account-setup-summary';
+      plansBackScreen = 'account-setup-summary';
+      pendingPlanContext = 'Your personalized setup';
+      document.getElementById('plans-context').textContent = 'Your personalized setup is ready. Compare Core and Plus, then start with 14 days free.';
+      showScreen('plans');
+    }
+
+    function continueFromSnapshot() {
+      showApp();
+    }
+
+    function closePlans() {
+      showScreen(planReturnScreen || 'profile');
+    }
+
+    function backFromPlans() {
+      showScreen(plansBackScreen || 'paywall-discovery');
+    }
+
+    function selectPaywallConcern(concern) {
+      const insight = paywallInsights[concern] || paywallInsights.banker;
+      document.getElementById('paywall-fit').textContent = insight.fit;
+      document.getElementById('paywall-insight-title').textContent = insight.title;
+      document.getElementById('paywall-insight-copy').textContent = insight.copy;
+      document.getElementById('paywall-benefit-one').textContent = insight.benefits[0];
+      document.getElementById('paywall-benefit-two').textContent = insight.benefits[1];
+      document.getElementById('paywall-benefit-three').textContent = insight.benefits[2];
+      showScreen('paywall-insight');
+    }
+
+    function showPlansChoice() {
+      plansBackScreen = document.querySelector('.screen.active')?.id || 'paywall-discovery';
+      const contextLine = pendingPlanContext && pendingPlanContext !== 'Compare plans'
+        ? `${pendingPlanContext} is included with RateCompass Plus. Choose a plan to start with 14 days free.`
+        : 'RateCompass helps you compare rate offers, track renewal timing, and understand what rate changes mean for your money.';
+      document.getElementById('plans-context').textContent = contextLine;
+      showScreen('plans');
+    }
+
+    function startTrial(planName) {
+      const noteId = planName === 'RateCompass Core' ? 'core-trial-note' : 'plus-trial-note';
+      document.getElementById(noteId).textContent = `${planName} trial selected for prototype review. Purchase flow will connect later.`;
+    }
+
     function selectRateCategory(category, button) {
       document.querySelectorAll('[data-rate-tab]').forEach(tab => tab.classList.remove('active'));
       if (button) button.classList.add('active');
 
       const termPanel = document.getElementById('mortgage-term-panel');
+      const savingsTypePanel = document.getElementById('savings-type-panel');
+      const gicTypePanel = document.getElementById('gic-type-panel');
       const primeReferenceCard = document.getElementById('prime-reference-card');
+      savingsTypePanel.hidden = category !== 'savings';
+      gicTypePanel.hidden = category !== 'gic';
+
       if (category === 'mortgage') {
         termPanel.hidden = false;
         primeReferenceCard.hidden = true;
         selectMortgageTerm(activeMortgageTerm);
+        return;
+      }
+
+      if (category === 'savings') {
+        termPanel.hidden = true;
+        primeReferenceCard.hidden = true;
+        selectSavingsType(activeSavingsType);
+        return;
+      }
+
+      if (category === 'gic') {
+        termPanel.hidden = true;
+        primeReferenceCard.hidden = true;
+        selectGICType(activeGICType);
         return;
       }
 
@@ -1948,6 +3240,60 @@
       document.getElementById('rate-freshness').textContent = rateDataCatalog.freshness.sampleRows;
 
       mortgageIndicators(data).forEach((indicator, index) => {
+        const number = index + 1;
+        document.getElementById(`rate-prob-${number}-label`).textContent = indicator.title;
+        const value = document.getElementById(`rate-prob-${number}`);
+        value.textContent = indicator.value;
+        value.style.color = indicator.color;
+      });
+
+      renderRateRows(data.rows);
+    }
+
+    function selectSavingsType(type) {
+      const data = savingsTypes[type] || savingsTypes.highInterest;
+      activeSavingsType = type;
+
+      document.querySelectorAll('[data-savings-type]').forEach(button => {
+        button.classList.toggle('active', button.dataset.savingsType === type);
+      });
+
+      document.getElementById('rate-title').textContent = data.title;
+      const trend = document.getElementById('rate-trend');
+      trend.textContent = rateCategories.savings.trend;
+      trend.style.color = rateCategories.savings.color;
+      document.getElementById('rate-summary').textContent = data.summary;
+      document.getElementById('rate-why').textContent = `Why this matters: ${data.why}`;
+      document.getElementById('rate-freshness').textContent = categoryFreshness('savings');
+
+      rateCategories.savings.indicators.forEach((indicator, index) => {
+        const number = index + 1;
+        document.getElementById(`rate-prob-${number}-label`).textContent = indicator.title;
+        const value = document.getElementById(`rate-prob-${number}`);
+        value.textContent = indicator.value;
+        value.style.color = indicator.color;
+      });
+
+      renderRateRows(data.rows);
+    }
+
+    function selectGICType(type) {
+      const data = gicTypes[type] || gicTypes.nonRedeemable;
+      activeGICType = type;
+
+      document.querySelectorAll('[data-gic-type]').forEach(button => {
+        button.classList.toggle('active', button.dataset.gicType === type);
+      });
+
+      document.getElementById('rate-title').textContent = data.title;
+      const trend = document.getElementById('rate-trend');
+      trend.textContent = rateCategories.gic.trend;
+      trend.style.color = rateCategories.gic.color;
+      document.getElementById('rate-summary').textContent = data.summary;
+      document.getElementById('rate-why').textContent = `Why this matters: ${data.why}`;
+      document.getElementById('rate-freshness').textContent = categoryFreshness('gic');
+
+      rateCategories.gic.indicators.forEach((indicator, index) => {
         const number = index + 1;
         document.getElementById(`rate-prob-${number}-label`).textContent = indicator.title;
         const value = document.getElementById(`rate-prob-${number}`);
@@ -2079,14 +3425,73 @@
       return principal * (monthlyRate * Math.pow(1 + monthlyRate, payments)) / (Math.pow(1 + monthlyRate, payments) - 1);
     }
 
-    function quoteBenchmark(product, term, gicType) {
+    function mortgageRateAdjustment(propertyUse, insuranceStatus) {
+      const useAdjustment = propertyUse === 'rental' ? 0.25 : 0;
+      const insuranceAdjustment = insuranceStatus === 'insured' ? -0.15 : insuranceStatus === 'uninsured' ? 0.15 : 0;
+      return useAdjustment + insuranceAdjustment;
+    }
+
+    function mortgageAdjustmentDetail(propertyUse, insuranceStatus, adjustment) {
+      const parts = [];
+      parts.push(propertyUse === 'rental'
+        ? 'Rental/investment properties use a +0.25% sample premium.'
+        : 'Owner-occupied properties use the base property-use assumption.');
+      if (insuranceStatus === 'insured') {
+        parts.push('Default-insured mortgages use a -0.15% sample adjustment.');
+      } else if (insuranceStatus === 'uninsured') {
+        parts.push('Uninsured/uninsurable mortgages use a +0.15% sample adjustment.');
+      } else {
+        parts.push('Conventional/insurable mortgages use the base insurance assumption.');
+      }
+      parts.push(`Total mortgage adjustment: ${adjustment >= 0 ? '+' : ''}${adjustment.toFixed(2)}%.`);
+      parts.push('Adjustment model informed by Canadian rate categories for insured, insurable, uninsurable, and rental mortgages.');
+      return parts.join(' ');
+    }
+
+    function gicAdjustment(gicType) {
+      if (gicType === 'cashable') return 0.75;
+      if (gicType === 'redeemable') return 0.50;
+      return 0;
+    }
+
+    function gicAdjustmentDetail(gicType, adjustment) {
+      if (gicType === 'cashable') {
+        return ' Cashable GICs apply a 0.75% sample adjustment because added access typically lowers the rate.';
+      }
+      if (gicType === 'redeemable') {
+        return ' Redeemable GICs apply a 0.50% sample adjustment because early redemption flexibility typically lowers the rate.';
+      }
+      return ' Non-redeemable GICs use the base benchmark because they usually offer the highest posted GIC rates.';
+    }
+
+    function locAdjustment(locType) {
+      return locType === 'secured' ? -1.50 : 0;
+    }
+
+    function locBenchmarkSpread(locType) {
+      return locType === 'secured'
+        ? rateDataCatalog.quoteBenchmarks.lineOfCredit.securedSpread
+        : rateDataCatalog.quoteBenchmarks.lineOfCredit.unsecuredSpread;
+    }
+
+    function locAdjustmentDetail(locType) {
+      return locType === 'secured'
+        ? ' Secured LOC/HELOC samples use a Prime +0.50% benchmark because collateral can support lower spreads.'
+        : ' Unsecured LOC samples use a Prime +2.00% benchmark because no collateral is pledged.';
+    }
+
+    const weightedComparableDetail = ' Comparable-rate benchmark gives more weight to RBC, TD, BMO, CIBC, and Scotiabank rows; smaller, promo, and online institution samples are included with lower weight until verified feeds are connected.';
+
+    function quoteBenchmark(product, term, gicType, propertyUse = 'ownerOccupied', insuranceStatus = 'insurable', locType = 'unsecured', savingsType = 'highInterest') {
       const catalog = rateDataCatalog.quoteBenchmarks;
 
       if (product === 'mortgage') {
         const record = catalog.mortgage[term] ?? catalog.mortgage.fiveYear;
+        const adjustment = mortgageRateAdjustment(propertyUse, insuranceStatus);
         return {
-          rate: record.rate,
-          detail: record.detail,
+          rate: Math.max(record.rate + adjustment, 0),
+          display: percent(Math.max(record.rate + adjustment, 0)),
+          detail: `${record.detail} ${mortgageAdjustmentDetail(propertyUse, insuranceStatus, adjustment)}${weightedComparableDetail}`,
           source: catalog.source,
           lastChecked: catalog.lastChecked,
           status: rateTrustStatus.sample
@@ -2095,20 +3500,36 @@
 
       if (product === 'gic') {
         const record = catalog.gic[term] ?? catalog.gic.fiveYear;
-        const adjustment = gicType === 'redeemable' ? 0.50 : 0;
+        const adjustment = gicAdjustment(gicType);
         return {
           rate: Math.max(record.rate - adjustment, 0),
-          detail: `${record.detail}${adjustment ? ' Redeemable GICs apply a 0.50% sample adjustment.' : ''}`,
+          display: percent(Math.max(record.rate - adjustment, 0)),
+          detail: `${record.detail}${gicAdjustmentDetail(gicType, adjustment)}${weightedComparableDetail}`,
           source: catalog.source,
           lastChecked: catalog.lastChecked,
           status: rateTrustStatus.sample
         };
       }
 
-      const record = product === 'savings' ? catalog.savings : catalog.lineOfCredit;
+      if (product === 'lineOfCredit') {
+        const spread = locBenchmarkSpread(locType);
+        const primeRate = parseFloat(rateDataCatalog.primeRate.value);
+        const allInRate = primeRate + spread;
+        return {
+          rate: spread,
+          display: `Prime +${percent(spread)}`,
+          detail: `${catalog.lineOfCredit.detail}${locAdjustmentDetail(locType)} At the current prime reference of ${rateDataCatalog.primeRate.value}, this sample implies an all-in rate near ${percent(allInRate)}. Major-bank and secured/unsecured spread assumptions carry the highest weight until verified lender feeds are connected.`,
+          source: catalog.source,
+          lastChecked: catalog.lastChecked,
+          status: rateTrustStatus.sample
+        };
+      }
+
+      const record = catalog.savings[savingsType] ?? catalog.savings.highInterest;
       return {
         rate: record.rate,
-        detail: record.detail,
+        display: percent(record.rate),
+        detail: `${record.detail} Online and promo savings samples are included with lower weight than major-bank comparables until verified feeds are connected.`,
         source: catalog.source,
         lastChecked: catalog.lastChecked,
         status: rateTrustStatus.sample
@@ -2116,31 +3537,75 @@
     }
 
     function quoteRating(delta) {
+      if (delta >= 0.50) return { label: 'Excellent', color: 'var(--green)', index: 4 };
       if (delta >= 0.25) return { label: 'Very Good', color: 'var(--green)', index: 3 };
       if (delta >= 0) return { label: 'Good', color: 'var(--blue)', index: 2 };
       if (delta >= -0.50) return { label: 'Fair', color: 'var(--amber)', index: 1 };
       return { label: 'Poor', color: '#db4d56', index: 0 };
     }
 
+    function quoteOptionValue(field) {
+      return document.querySelector(`[data-quote-field="${field}"].active`)?.dataset.value;
+    }
+
+    function setQuoteOption(field, value) {
+      document.querySelectorAll(`[data-quote-field="${field}"]`).forEach(button => {
+        button.classList.toggle('active', button.dataset.value === value);
+      });
+    }
+
+    function defaultQuoteValue(product) {
+      if (product === 'lineOfCredit') return locBenchmarkSpread(quoteOptionValue('locType') || 'unsecured');
+      if (product === 'gic') return 3.90;
+      if (product === 'savings') return 2.94;
+      return 4.79;
+    }
+
+    function chooseQuoteOption(button) {
+      setQuoteOption(button.dataset.quoteField, button.dataset.value);
+      const activeProduct = quoteOptionValue('product') || 'mortgage';
+      if (button.dataset.quoteField === 'product' || (activeProduct === 'lineOfCredit' && button.dataset.quoteField === 'locType')) {
+        document.getElementById('quote-rate').value = defaultQuoteValue(activeProduct).toFixed(2);
+      }
+      updateRateCheck();
+    }
+
     function updateRateCheck() {
-      const product = document.getElementById('quote-product').value;
-      const term = document.getElementById('quote-term').value;
-      const gicType = document.getElementById('quote-gic-type').value;
+      const product = quoteOptionValue('product') || 'mortgage';
+      const term = quoteOptionValue('term') || 'fiveYear';
+      const gicType = quoteOptionValue('gicType') || 'nonRedeemable';
+      const mortgageUse = quoteOptionValue('mortgageUse') || 'ownerOccupied';
+      const mortgageInsurance = quoteOptionValue('mortgageInsurance') || 'insurable';
+      const locType = quoteOptionValue('locType') || 'unsecured';
+      const savingsType = quoteOptionValue('savingsType') || 'highInterest';
       const quotedRate = Number(document.getElementById('quote-rate').value);
       const termWrap = document.getElementById('quote-term-wrap');
       const gicTypeWrap = document.getElementById('quote-gic-type-wrap');
-      const variableOption = document.querySelector('#quote-term option[value="fiveYearVariable"]');
+      const mortgageUseWrap = document.getElementById('quote-mortgage-use-wrap');
+      const mortgageInsuranceWrap = document.getElementById('quote-mortgage-insurance-wrap');
+      const locTypeWrap = document.getElementById('quote-loc-type-wrap');
+      const savingsTypeWrap = document.getElementById('quote-savings-type-wrap');
+      const variableButton = document.querySelector('[data-quote-field="term"][data-value="fiveYearVariable"]');
+      const quotedRateInput = document.getElementById('quote-rate');
+      const quotedRateLabel = document.getElementById('quote-rate-label');
 
       termWrap.hidden = product === 'savings' || product === 'lineOfCredit';
       gicTypeWrap.hidden = product !== 'gic';
-      variableOption.disabled = product === 'gic';
+      mortgageUseWrap.hidden = product !== 'mortgage';
+      mortgageInsuranceWrap.hidden = product !== 'mortgage';
+      locTypeWrap.hidden = product !== 'lineOfCredit';
+      savingsTypeWrap.hidden = product !== 'savings';
+      variableButton.hidden = product === 'gic';
+      quotedRateLabel.textContent = product === 'lineOfCredit' ? 'Quoted spread over prime' : 'Quoted rate';
+      quotedRateInput.min = product === 'lineOfCredit' ? '0' : '0.5';
+      quotedRateInput.max = product === 'lineOfCredit' ? '6' : '10';
 
       if (product === 'gic' && term === 'fiveYearVariable') {
-        document.getElementById('quote-term').value = 'fiveYear';
+        setQuoteOption('term', 'fiveYear');
       }
 
-      const activeTerm = document.getElementById('quote-term').value;
-      const benchmark = quoteBenchmark(product, activeTerm, gicType);
+      const activeTerm = quoteOptionValue('term') || 'fiveYear';
+      const benchmark = quoteBenchmark(product, activeTerm, gicType, mortgageUse, mortgageInsurance, locType, savingsType);
       const lowerIsBetter = product === 'mortgage' || product === 'lineOfCredit';
       const delta = lowerIsBetter ? benchmark.rate - quotedRate : quotedRate - benchmark.rate;
       const rating = quoteRating(delta);
@@ -2149,9 +3614,9 @@
 
       document.getElementById('quote-rating').textContent = rating.label;
       document.getElementById('quote-rating').style.color = rating.color;
-      document.getElementById('quote-benchmark').textContent = `Benchmark ${percent(benchmark.rate)}`;
+      document.getElementById('quote-benchmark').textContent = `Benchmark ${benchmark.display || percent(benchmark.rate)}`;
       document.getElementById('quote-detail').textContent =
-        `Compared with a ${percent(benchmark.rate)} sample benchmark, this quote is ${comparison} the current sample view. For this product, a ${direction} rate is generally stronger, but terms, penalties, deposit insurance, and restrictions still matter.`;
+        `Compared with a ${benchmark.display || percent(benchmark.rate)} weighted sample benchmark, this quote is ${comparison} the current sample view. For this product, a ${product === 'lineOfCredit' ? 'lower spread over prime' : `${direction} rate`} is generally stronger, but terms, penalties, deposit insurance, and restrictions still matter.`;
       document.getElementById('quote-source-note').textContent =
         `${benchmark.source}. ${benchmark.lastChecked}. ${benchmark.detail}`;
 
@@ -2250,7 +3715,11 @@
       input.addEventListener('change', updateImpact);
     });
 
-    document.querySelectorAll('#rate-check input, #rate-check select').forEach(input => {
+    document.querySelectorAll('[data-quote-field]').forEach(button => {
+      button.addEventListener('click', () => chooseQuoteOption(button));
+    });
+
+    document.querySelectorAll('#rate-check input').forEach(input => {
       input.addEventListener('input', updateRateCheck);
       input.addEventListener('change', updateRateCheck);
     });
