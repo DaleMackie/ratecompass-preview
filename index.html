@@ -15,6 +15,7 @@
       --text: #243342;
       --muted: #6b7886;
       --card: #ffffff;
+      --app-height: 100vh;
     }
 
     * { box-sizing: border-box; }
@@ -1661,13 +1662,13 @@
 
       .phone {
         width: 100vw;
-        height: 100dvh;
+        height: var(--app-height);
         min-height: 100vh;
         box-shadow: none;
       }
 
       .screen {
-        padding: 18px 16px 96px;
+        padding: 18px 16px calc(96px + env(safe-area-inset-bottom));
       }
 
       .onboarding {
@@ -1919,7 +1920,7 @@
       }
 
       .tabbar {
-        padding: 7px 4px 9px;
+        padding: 7px 4px calc(9px + env(safe-area-inset-bottom));
       }
 
       .tabbar button {
@@ -1942,6 +1943,119 @@
         width: 21px;
         height: 21px;
       }
+    }
+
+    body[data-device-size="small-phone"] h1 {
+      font-size: 26px;
+    }
+
+    body[data-device-size="small-phone"] h2 {
+      font-size: 16px;
+    }
+
+    body[data-device-size="small-phone"] p {
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    body[data-device-size="small-phone"] .screen {
+      padding: 12px 10px calc(74px + env(safe-area-inset-bottom));
+    }
+
+    body[data-device-size="small-phone"] .card {
+      padding: 10px;
+      margin-bottom: 8px;
+    }
+
+    body[data-device-size="small-phone"] .header {
+      margin-bottom: 8px;
+    }
+
+    body[data-device-size="small-phone"] .button,
+    body[data-device-size="small-phone"] .secondary-button,
+    body[data-device-size="small-phone"] .secondary-inline-button,
+    body[data-device-size="small-phone"] .trial-button {
+      padding: 10px 11px;
+      font-size: 12.5px;
+    }
+
+    body[data-device-size="small-phone"] .setup-choice {
+      padding: 8px;
+      gap: 7px;
+    }
+
+    body[data-device-size="small-phone"] .setup-choice b,
+    body[data-device-size="small-phone"] .setup-snapshot-metric b,
+    body[data-device-size="small-phone"] .setup-snapshot-metric strong {
+      font-size: 12.5px;
+    }
+
+    body[data-device-size="small-phone"] .setup-choice p {
+      font-size: 11.5px;
+    }
+
+    body[data-device-size="small-phone"] .onboarding h1 {
+      font-size: 31px;
+    }
+
+    body[data-device-size="small-phone"] .logo {
+      width: 92px;
+      height: 92px;
+    }
+
+    body[data-device-size="small-phone"] .arrow {
+      border-left-width: 14px;
+      border-right-width: 14px;
+      border-bottom-width: 48px;
+    }
+
+    body[data-device-size="small-phone"] .plan-column {
+      padding: 8px;
+    }
+
+    body[data-device-size="small-phone"] .plan-column .plan-price {
+      font-size: 17px;
+    }
+
+    body[data-device-size="small-phone"] .feature-compare-row {
+      font-size: 9.8px;
+    }
+
+    body[data-device-size="small-phone"] .tabbar {
+      padding: 6px 4px calc(7px + env(safe-area-inset-bottom));
+    }
+
+    body[data-device-size="small-phone"] .tabbar button {
+      font-size: 9.5px;
+    }
+
+    body[data-device-size="large-phone"] .screen {
+      padding: 16px 14px calc(88px + env(safe-area-inset-bottom));
+    }
+
+    body[data-device-size="large-phone"] h1 {
+      font-size: 30px;
+    }
+
+    body[data-device-size="large-phone"] h2 {
+      font-size: 19px;
+    }
+
+    body[data-phone-height="short"] .card {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    body[data-phone-height="short"] .section-title {
+      margin-top: 12px;
+    }
+
+    body[data-orientation="landscape"] .phone {
+      height: var(--app-height);
+    }
+
+    body[data-orientation="landscape"] .onboarding {
+      justify-content: flex-start;
     }
   </style>
 </head>
@@ -3004,6 +3118,30 @@
       primeAsOf: rateDataCatalog.primeAsOf
     };
 
+    function updateDeviceViewport() {
+      const viewport = window.visualViewport || window;
+      const width = Math.round(viewport.width || window.innerWidth || document.documentElement.clientWidth);
+      const height = Math.round(viewport.height || window.innerHeight || document.documentElement.clientHeight);
+      const shortSide = Math.min(width, height);
+      const longSide = Math.max(width, height);
+      const isPhone = shortSide < 700;
+      let deviceSize = 'tablet';
+
+      if (isPhone && (shortSide <= 374 || longSide <= 700)) {
+        deviceSize = 'small-phone';
+      } else if (isPhone && shortSide <= 430) {
+        deviceSize = 'regular-phone';
+      } else if (isPhone) {
+        deviceSize = 'large-phone';
+      }
+
+      document.documentElement.style.setProperty('--app-height', `${height}px`);
+      document.body.dataset.deviceSize = deviceSize;
+      document.body.dataset.orientation = width > height ? 'landscape' : 'portrait';
+      document.body.dataset.phoneHeight = isPhone && height < 720 ? 'short' : height > 860 ? 'tall' : 'regular';
+      document.body.dataset.pixelDensity = window.devicePixelRatio >= 3 ? 'high' : 'standard';
+    }
+
     let activeMortgageTerm = "fiveYearFixed";
     let activeSavingsType = "highInterest";
     let activeGICType = "nonRedeemable";
@@ -4040,6 +4178,12 @@
         clearTooltips();
       }
     });
+
+    updateDeviceViewport();
+    window.addEventListener('resize', updateDeviceViewport);
+    window.addEventListener('orientationchange', updateDeviceViewport);
+    window.visualViewport?.addEventListener('resize', updateDeviceViewport);
+    window.visualViewport?.addEventListener('scroll', updateDeviceViewport);
 
     initializeDates();
     updateTrustCopy();
