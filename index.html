@@ -2950,42 +2950,48 @@
           ["TD", "1-year fixed", "5.24%"],
           ["BMO", "1-year fixed", "5.14%"],
           ["CIBC", "1-year fixed", "5.18%"],
-          ["Scotiabank", "1-year fixed", "5.21%"]
+          ["Scotiabank", "1-year fixed", "5.21%"],
+          ["National Bank", "1-year fixed", "5.16%"]
         ],
         twoYearFixed: [
           ["RBC", "2-year fixed", "4.89%"],
           ["TD", "2-year fixed", "4.94%"],
           ["BMO", "2-year fixed", "4.84%"],
           ["CIBC", "2-year fixed", "4.88%"],
-          ["Scotiabank", "2-year fixed", "4.91%"]
+          ["Scotiabank", "2-year fixed", "4.91%"],
+          ["National Bank", "2-year fixed", "4.86%"]
         ],
         threeYearFixed: [
           ["RBC", "3-year fixed", "4.59%"],
           ["TD", "3-year fixed", "4.64%"],
           ["BMO", "3-year fixed", "4.54%"],
           ["CIBC", "3-year fixed", "4.58%"],
-          ["Scotiabank", "3-year fixed", "4.61%"]
+          ["Scotiabank", "3-year fixed", "4.61%"],
+          ["National Bank", "3-year fixed", "4.56%"]
         ],
         fourYearFixed: [
           ["RBC", "4-year fixed", "4.49%"],
           ["TD", "4-year fixed", "4.54%"],
           ["BMO", "4-year fixed", "4.44%"],
           ["CIBC", "4-year fixed", "4.48%"],
-          ["Scotiabank", "4-year fixed", "4.51%"]
+          ["Scotiabank", "4-year fixed", "4.51%"],
+          ["National Bank", "4-year fixed", "4.46%"]
         ],
         fiveYearFixed: [
           ["RBC", "5-year fixed", "4.39%"],
           ["TD", "5-year fixed", "4.44%"],
           ["BMO", "5-year fixed", "4.35%"],
           ["CIBC", "5-year fixed", "4.38%"],
-          ["Scotiabank", "5-year fixed", "4.42%"]
+          ["Scotiabank", "5-year fixed", "4.42%"],
+          ["National Bank", "5-year fixed", "4.37%"]
         ],
         fiveYearVariable: [
           ["RBC", "Prime +0.60%", "5.05%"],
           ["TD", "Prime +0.65%", "5.10%"],
           ["BMO", "Prime +0.55%", "5.00%"],
           ["CIBC", "Prime +0.59%", "5.04%"],
-          ["Scotiabank", "Prime +0.63%", "5.08%"]
+          ["Scotiabank", "Prime +0.63%", "5.08%"],
+          ["National Bank", "Prime +0.58%", "5.03%"]
         ]
       },
       savingsRows: {
@@ -2994,14 +3000,16 @@
           ["TD", "Standard savings", "1.85%"],
           ["BMO", "Standard savings", "1.75%"],
           ["CIBC", "Standard savings", "1.80%"],
-          ["Scotiabank", "Standard savings", "1.70%"]
+          ["Scotiabank", "Standard savings", "1.70%"],
+          ["Simplii", "Standard savings", "1.75%"]
         ],
         highInterest: [
           ["EQ Bank", "High interest savings", "4.00%"],
           ["Tangerine", "Promo savings", "4.25%"],
           ["RBC", "High interest savings", "1.70%"],
           ["TD", "High interest savings", "1.85%"],
-          ["CIBC", "High interest savings", "1.80%"]
+          ["CIBC", "High interest savings", "1.80%"],
+          ["Simplii", "Promo savings", "4.10%"]
         ]
       },
       gicRows: {
@@ -3010,21 +3018,24 @@
           ["CIBC", "2-year non-redeemable GIC", "3.95%"],
           ["TD", "5-year non-redeemable GIC", "3.65%"],
           ["BMO", "3-year non-redeemable GIC", "3.80%"],
-          ["RBC", "1-year non-redeemable GIC", "3.90%"]
+          ["RBC", "1-year non-redeemable GIC", "3.90%"],
+          ["Scotiabank", "1-year non-redeemable GIC", "4.00%"]
         ],
         redeemable: [
           ["EQ Bank", "1-year redeemable GIC", "3.65%"],
           ["CIBC", "2-year redeemable GIC", "3.45%"],
           ["TD", "5-year redeemable GIC", "3.15%"],
           ["BMO", "3-year redeemable GIC", "3.30%"],
-          ["RBC", "1-year redeemable GIC", "3.40%"]
+          ["RBC", "1-year redeemable GIC", "3.40%"],
+          ["Scotiabank", "1-year redeemable GIC", "3.50%"]
         ],
         cashable: [
           ["EQ Bank", "1-year cashable GIC", "3.40%"],
           ["CIBC", "2-year cashable GIC", "3.20%"],
           ["TD", "5-year cashable GIC", "2.90%"],
           ["BMO", "3-year cashable GIC", "3.05%"],
-          ["RBC", "1-year cashable GIC", "3.15%"]
+          ["RBC", "1-year cashable GIC", "3.15%"],
+          ["Scotiabank", "1-year cashable GIC", "3.25%"]
         ]
       },
       primeRows: [
@@ -3035,7 +3046,8 @@
         ["Scotiabank", "Prime rate", "4.45%"],
         ["Variable mortgage", "Prime +0.50% to +1.50%", "4.95%-5.95%"],
         ["HELOC", "Prime +0.50% to +1.00%", "4.95%-5.45%"],
-        ["Line of credit", "Prime +2.00% to +6.00%", "6.45%-10.45%"]
+        ["Line of credit", "Prime +2.00% to +6.00%", "6.45%-10.45%"],
+        ["Personal loan", "Prime +3.00% to +8.00%", "7.45%-12.45%"]
       ],
       quoteBenchmarks: {
         mortgage: {
@@ -3917,7 +3929,7 @@
         : ' Unsecured LOC samples use a Prime +2.00% benchmark because no collateral is pledged.';
     }
 
-    const weightedComparableDetail = ' Comparable-rate benchmark gives more weight to RBC, TD, BMO, CIBC, and Scotiabank rows; smaller, promo, and online institution samples are included with lower weight until verified feeds are connected.';
+    const weightedComparableDetail = ' Comparable-rate benchmark gives more weight to major-bank rows, including RBC, TD, BMO, CIBC, Scotiabank, and National Bank; smaller, promo, and online institution samples are included with lower weight until verified feeds are connected.';
 
     function quoteBenchmark(product, term, gicType, propertyUse = 'ownerOccupied', insuranceStatus = 'insurable', locType = 'unsecured', savingsType = 'highInterest') {
       const catalog = rateDataCatalog.quoteBenchmarks;
