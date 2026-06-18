@@ -11,6 +11,7 @@
       --cyan: #00aebe;
       --green: #24ae7c;
       --amber: #f4a320;
+      --red: #db4d56;
       --mist: #f1f6f9;
       --text: #243342;
       --muted: #6b7886;
@@ -46,6 +47,8 @@
     }
 
     .screen {
+      --screen-pad-x: 20px;
+      --screen-pad-top: 22px;
       display: none;
       height: 100%;
       overflow: auto;
@@ -340,6 +343,21 @@
       font-weight: 600;
       color: var(--muted);
       margin-top: 4px;
+    }
+
+    :is(#home, #rates, #impact, #rate-check, #profile) > .header {
+      margin: calc(-1 * var(--screen-pad-top)) calc(-1 * var(--screen-pad-x)) 16px;
+      padding: 18px var(--screen-pad-x) 16px;
+      background: var(--blue);
+      border-bottom: 3px solid var(--cyan);
+    }
+
+    :is(#home, #rates, #impact, #rate-check, #profile) > .header h1 {
+      color: white;
+    }
+
+    :is(#home, #rates, #impact, #rate-check, #profile) > .header .sub {
+      color: rgba(255, 255, 255, .82);
     }
 
     .card {
@@ -758,6 +776,16 @@
       margin: -2px 0 12px;
     }
 
+    .rates-outlook-card {
+      border-top: 3px solid rgba(0, 104, 180, .55);
+    }
+
+    .watchlist-section-title {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid #d7e2e8;
+    }
+
     .plus-badge {
       border-radius: 8px;
       background: rgba(244, 163, 32, .16);
@@ -835,7 +863,49 @@
     }
 
     .scenario-card {
-      margin-top: 0;
+      margin: 24px calc(-1 * var(--screen-pad-x)) 0;
+      padding: 18px var(--screen-pad-x);
+      border-radius: 0;
+      border-top: 1px solid rgba(0, 104, 180, .20);
+      border-bottom: 1px solid rgba(0, 104, 180, .20);
+      background: rgba(0, 104, 180, .07);
+      box-shadow: none;
+    }
+
+    .impact-group-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 4px 0 10px;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 850;
+    }
+
+    .impact-group-title::before {
+      content: "";
+      width: 4px;
+      height: 22px;
+      border-radius: 2px;
+      background: var(--blue);
+    }
+
+    .impact-account-card {
+      border-left: 4px solid var(--impact-accent);
+    }
+
+    .impact-account-card.mortgage-account { --impact-accent: var(--blue); }
+    .impact-account-card.gic-account { --impact-accent: var(--cyan); }
+    .impact-account-card.debt-account { --impact-accent: var(--amber); }
+
+    .impact-snapshot-card {
+      margin-top: 24px;
+      border-top: 3px solid rgba(0, 104, 180, .30);
+    }
+
+    .impact-opportunity-card {
+      margin-top: 24px;
+      border-top: 3px solid rgba(36, 174, 124, .55);
     }
 
     .quote-grid {
@@ -920,6 +990,60 @@
       border-radius: 8px;
       background: var(--mist);
     }
+
+    .quote-result-band {
+      --result-accent: var(--amber);
+      --result-background: rgba(244, 163, 32, .10);
+      margin: 24px calc(-1 * var(--screen-pad-x)) 0;
+      padding: 18px var(--screen-pad-x);
+      border-top: 1px solid color-mix(in srgb, var(--result-accent) 35%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--result-accent) 35%, transparent);
+      background: var(--result-background);
+    }
+
+    .quote-result-band[data-rating="good"] {
+      --result-accent: var(--blue);
+      --result-background: rgba(0, 104, 180, .08);
+    }
+
+    .quote-result-band[data-rating="very-good"],
+    .quote-result-band[data-rating="excellent"] {
+      --result-accent: var(--green);
+      --result-background: rgba(36, 174, 124, .10);
+    }
+
+    .quote-result-band[data-rating="poor"] {
+      --result-accent: var(--red);
+      --result-background: rgba(219, 77, 86, .09);
+    }
+
+    .quote-result-band .quote-meter {
+      background: rgba(255, 255, 255, .72);
+      border-left: 4px solid var(--result-accent);
+    }
+
+    .quote-result-band .source-note {
+      margin-bottom: 0;
+    }
+
+    .rate-check-help-card {
+      margin-top: 24px;
+      border-left: 4px solid var(--blue);
+    }
+
+    .profile-section-card {
+      border-left: 4px solid var(--profile-accent);
+    }
+
+    #profile .profile-section-card + .profile-section-card {
+      margin-top: 18px;
+    }
+
+    .profile-notifications { --profile-accent: var(--blue); }
+    .profile-data { --profile-accent: var(--cyan); }
+    .profile-learning { --profile-accent: var(--cyan); }
+    .profile-scope { --profile-accent: #9aa7b2; }
+    .profile-plans { --profile-accent: var(--amber); }
 
     .quote-meter-top {
       display: flex;
@@ -1679,6 +1803,8 @@
       }
 
       .screen {
+        --screen-pad-x: 16px;
+        --screen-pad-top: 18px;
         padding: 18px 16px calc(96px + env(safe-area-inset-bottom));
       }
 
@@ -1718,6 +1844,8 @@
       }
 
       .screen {
+        --screen-pad-x: 12px;
+        --screen-pad-top: 14px;
         padding: 14px 12px 82px;
       }
 
@@ -2367,7 +2495,7 @@
         </div>
         <p style="font-size:12px;">Held Jun 10, 2026. Prime as of Jun 5, 2026. The Bank of Canada does not set prime directly; banks set prime, usually in response to policy-rate changes.</p>
       </div>
-      <div class="card">
+      <div class="card rates-outlook-card">
         <h2 id="rate-title">Mortgage Outlook</h2>
         <h1 id="rate-trend" style="color:var(--green);font-size:30px;margin-top:6px;">Likely Lower</h1>
         <p id="rate-summary">Fixed mortgage rates are watched through lender pricing and bond-yield trends.</p>
@@ -2379,7 +2507,7 @@
           <div class="pill"><span id="rate-prob-3-label">Rate rows</span><strong id="rate-prob-3" style="color:var(--amber)">Sample</strong></div>
         </div>
       </div>
-      <div class="section-title">Institution Watchlist</div>
+      <div class="section-title watchlist-section-title">Institution Watchlist</div>
       <button class="watchlist-note upgrade-button" type="button" onclick="openPlans('Custom institution order')">
         <span>Drag rows to preview a custom order. Saving this order belongs in RateCompass Plus.</span>
         <span class="plus-badge">Plus</span>
@@ -2392,7 +2520,8 @@
         <h1>My Impact</h1>
         <div class="sub">Personalized estimates from sample data</div>
       </div>
-      <div class="card slider-card">
+      <div class="impact-group-title">Your Accounts</div>
+      <div class="card slider-card impact-account-card mortgage-account">
         <h2>Mortgage 1</h2>
         <label>Mortgage balance <span id="mortgage-balance-label">$475,000</span></label>
         <input id="mortgage-balance" type="range" min="50000" max="1200000" step="5000" value="475000" />
@@ -2415,7 +2544,7 @@
           <p><b>Add another mortgage</b>Track multiple properties with RateCompass Plus.</p>
         </button>
       </div>
-      <div class="card slider-card">
+      <div class="card slider-card impact-account-card gic-account">
         <h2>GIC 1</h2>
         <label>GIC balance <span id="gic-balance-label">$25,000</span></label>
         <input id="gic-balance" type="range" min="0" max="250000" step="1000" value="25000" />
@@ -2438,13 +2567,13 @@
           <p><b>Add another GIC</b>Track multiple GICs and maturity dates with RateCompass Plus.</p>
         </button>
       </div>
-      <div class="card slider-card">
+      <div class="card slider-card impact-account-card debt-account">
         <h2>Debt Profile</h2>
         <label>LOC balance <span id="loc-balance-label">$18,000</span></label>
         <input id="loc-balance" type="range" min="0" max="100000" step="1000" value="18000" />
       </div>
-      <div class="card">
-        <h2>Personal Summary</h2>
+      <div class="card impact-snapshot-card">
+        <h2>Current Snapshot</h2>
         <div class="summary-row"><div><b>Mortgage 1</b><p id="summary-mortgage-detail">Renewal is 6 months away.</p></div><strong id="summary-mortgage-value">$475,000 at 4.90%</strong></div>
         <div class="summary-row"><div><b>GIC 1</b><p id="summary-gic-detail">Maturity is 12 months away.</p></div><strong id="summary-gic-value">$25,000 at 4.15%</strong></div>
         <div class="summary-row"><div><b>Prime-linked debt</b><p>Watch for policy-rate and prime-rate changes.</p></div><strong id="summary-debt-value">$18,000</strong></div>
@@ -2454,13 +2583,13 @@
         <label id="scenario-label">Rates down 0.50% <span id="scenario-rate-label">-0.50%</span></label>
         <input id="scenario-rate-move" type="range" min="-1" max="1" step="0.25" value="-0.5" />
         <div class="metric"><div><b>Mortgage 1</b><p id="scenario-mortgage-detail">At 4.40%, your payment would decrease.</p></div><strong id="scenario-mortgage-value">$142/mo</strong></div>
-        <div class="metric"><div><b>GIC 1</b><p id="scenario-gic-detail">At 3.65%, annual interest changes.</p></div><strong id="scenario-gic-value" style="color:var(--blue)">$913/yr</strong></div>
+        <div class="metric"><div><b>GIC 1</b><p id="scenario-gic-detail">At 3.65%, annual interest would decrease by about $125, to about $913 per year before tax.</p></div><strong id="scenario-gic-value" style="color:var(--amber)">-$125/yr</strong></div>
         <div class="metric"><div><b>Prime-linked debt</b><p id="scenario-debt-detail">Lower rates reduce interest cost.</p></div><strong id="scenario-debt-value" style="color:var(--amber)">-$90/yr</strong></div>
       </div>
-      <div class="card">
+      <div class="card impact-opportunity-card">
         <h2>Opportunity Report</h2>
         <div class="metric"><div><b>Mortgage</b><p id="mortgage-impact-detail">If renewal rates move from 4.90% to 4.40%, payment impact is clearer because we know your balance and timing.</p></div><strong id="mortgage-impact-value">$142/mo</strong></div>
-        <div class="metric"><div><b>GIC</b><p id="gic-impact-detail">Your current GIC estimates about $1,038/year. At maturity, a 0.75% better reinvestment rate could add about $188/year.</p></div><strong id="gic-impact-value" style="color:var(--blue)">$1,038/yr</strong></div>
+        <div class="metric"><div><b>GIC</b><p id="gic-impact-detail">Your current GIC estimates about $1,038/year. At maturity, a 0.75% better reinvestment rate could add about $188/year.</p></div><strong id="gic-impact-value" style="color:var(--green)">+$188/yr</strong></div>
         <div class="metric"><div><b>Debt</b><p id="debt-impact-detail">$18,000 in prime-linked debt should stay visible.</p></div><strong style="color:var(--amber)">Prioritize</strong></div>
       </div>
     </section>
@@ -2533,6 +2662,8 @@
           <label id="quote-rate-label" for="quote-rate">Quoted rate</label>
           <input id="quote-rate" type="number" min="0.5" max="10" step="0.05" value="4.79" />
         </div>
+      </div>
+      <div id="quote-result-band" class="quote-result-band" data-rating="fair">
         <div class="quote-meter">
           <div class="quote-meter-top">
             <div>
@@ -2546,7 +2677,7 @@
         </div>
         <p id="quote-source-note" class="source-note">Weighted sample benchmark catalog. Last checked: Jun 12-14, 2026. 5-year fixed sample benchmark.</p>
       </div>
-      <div class="card">
+      <div class="card rate-check-help-card">
         <h2>How To Use It</h2>
         <div class="source-row"><span class="status-pill sample">Tip</span><p>Mortgage rates and LOC/HELOC prime spreads score better when they are lower.</p></div>
         <div class="source-row"><span class="status-pill sample">Tip</span><p>GIC and savings quotes score better when they are higher.</p></div>
@@ -2681,7 +2812,7 @@
         <h1>Profile</h1>
         <div class="sub">Settings for a focused MVP</div>
       </div>
-      <div class="card">
+      <div class="card profile-section-card profile-notifications">
         <h2>Notification Toggles</h2>
         <p class="source-note">Core includes 2 active alerts. RateCompass Plus unlocks unlimited alerts and saved alert history.</p>
         <div class="toggle">
@@ -2709,11 +2840,11 @@
           <button class="switch off" type="button" aria-pressed="false" aria-label="Notification disabled" onclick="toggleNotification(this)"></button>
         </div>
       </div>
-      <div class="card">
+      <div class="card profile-section-card profile-data">
         <h2>Data Sources</h2>
         <div id="data-source-list"></div>
       </div>
-      <div class="card">
+      <div class="card profile-section-card profile-learning">
         <h2>Learning Preferences</h2>
         <p>Keep plain-language terms available while you are learning the app.</p>
         <button class="link-button" type="button" onclick="openTerms('profile')">Open Terms Index</button>
@@ -2722,11 +2853,11 @@
           <p><b>Hide term helpers</b>RateCompass Plus can turn off the helper prompts once the terminology feels familiar.</p>
         </button>
       </div>
-      <div class="card">
+      <div class="card profile-section-card profile-scope">
         <h2>V1 Scope</h2>
         <p>Canada-first launch. Consumer users first. Professional users later. No ads in the premium experience.</p>
       </div>
-      <div class="card">
+      <div class="card profile-section-card profile-plans">
         <h2>RateCompass Plans</h2>
         <div class="summary-row"><div><b>RateCompass Core</b><p>Rate dashboards, basic Rate Check, one mortgage, one GIC, and 2 active alerts.</p></div><strong>$23.95/yr</strong></div>
         <div class="summary-row"><div><b>RateCompass Plus</b><p>Multiple saved items, unlimited alerts, quote history, custom watchlists, and personalized opportunity reports.</p></div><strong>$38.95/yr</strong></div>
@@ -4074,6 +4205,7 @@
 
       document.getElementById('quote-rating').textContent = rating.label;
       document.getElementById('quote-rating').style.color = rating.color;
+      document.getElementById('quote-result-band').dataset.rating = rating.label.toLowerCase().replaceAll(' ', '-');
       document.getElementById('quote-benchmark').textContent = `Benchmark ${benchmark.display || percent(benchmark.rate)}`;
       document.getElementById('quote-detail').textContent =
         `Compared with a ${benchmark.display || percent(benchmark.rate)} weighted sample benchmark, this quote is ${comparison} the current sample view. For this product, a ${product === 'lineOfCredit' ? 'lower spread over prime' : `${direction} rate`} is generally stronger, but terms, penalties, deposit insurance, and restrictions still matter.`;
@@ -4127,6 +4259,7 @@
       const mortgageScenarioChange = scenarioPayment - currentPayment;
       const scenarioGicRate = Math.max(gicRate + scenarioMove, 0);
       const scenarioGicInterest = gicBalance * scenarioGicRate / 100;
+      const scenarioGicInterestChange = scenarioGicInterest - gicAnnualInterest;
       const debtAnnualChange = locBalance * scenarioMove / 100;
       const scenarioDirection = scenarioMove < 0 ? 'down' : scenarioMove > 0 ? 'up' : 'unchanged';
 
@@ -4149,9 +4282,10 @@
       document.getElementById('scenario-mortgage-detail').textContent =
         `At ${percent(scenarioMortgageRate)}, your estimated payment would ${mortgageScenarioChange >= 0 ? 'increase' : 'decrease'} by about ${money(Math.abs(mortgageScenarioChange))} per month.`;
 
-      document.getElementById('scenario-gic-value').textContent = `${money(scenarioGicInterest)}/yr`;
+      document.getElementById('scenario-gic-value').textContent = `${signedMoney(scenarioGicInterestChange)}/yr`;
+      document.getElementById('scenario-gic-value').style.color = scenarioGicInterestChange >= 0 ? 'var(--green)' : 'var(--amber)';
       document.getElementById('scenario-gic-detail').textContent =
-        `At ${percent(scenarioGicRate)}, this GIC would estimate about ${money(scenarioGicInterest)} per year before tax.`;
+        `At ${percent(scenarioGicRate)}, annual interest would ${scenarioGicInterestChange === 0 ? 'stay unchanged' : `${scenarioGicInterestChange > 0 ? 'increase' : 'decrease'} by about ${money(Math.abs(scenarioGicInterestChange))}`}, to about ${money(scenarioGicInterest)} per year before tax.`;
 
       document.getElementById('scenario-debt-value').textContent = `${signedMoney(debtAnnualChange)}/yr`;
       document.getElementById('scenario-debt-value').style.color = debtAnnualChange <= 0 ? 'var(--green)' : 'var(--amber)';
@@ -4162,7 +4296,8 @@
       document.getElementById('mortgage-impact-detail').textContent =
         `If renewal rates move from ${percent(mortgageRate)} to ${percent(comparisonRate)}, your estimated payment could change by about ${money(mortgageSavings)} per month. Renewal is ${monthsUntil(renewalDate)}.`;
 
-      document.getElementById('gic-impact-value').textContent = `${money(gicAnnualInterest)}/yr`;
+      document.getElementById('gic-impact-value').textContent = `+${money(gicUpside)}/yr`;
+      document.getElementById('gic-impact-value').style.color = 'var(--green)';
       document.getElementById('gic-impact-detail').textContent =
         `Your current GIC estimates about ${money(gicAnnualInterest)} per year. At maturity ${monthsUntil(maturityDate)}, a 0.75% better reinvestment rate could add about ${money(gicUpside)} per year.`;
 
