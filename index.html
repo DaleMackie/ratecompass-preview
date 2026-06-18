@@ -1339,6 +1339,11 @@
       cursor: pointer;
     }
 
+    .trial-button:disabled {
+      opacity: .48;
+      cursor: default;
+    }
+
     .trial-button.plus {
       background: var(--green);
     }
@@ -2268,24 +2273,13 @@
       <div class="onboarding">
         <div class="logo"><div class="arrow"></div></div>
         <div>
-          <h1>RateCompass</h1>
-          <p>Know what interest rates mean for your money.</p>
-        </div>
-        <button class="button" onclick="showAuth()">Open RateCompass</button>
-      </div>
-    </section>
-
-    <section id="auth" class="screen">
-      <div class="onboarding">
-        <div class="logo"><div class="arrow"></div></div>
-        <div>
           <h1>Welcome to RateCompass</h1>
-          <p>Sign in to save your profile, rate alerts, and personal impact estimates.</p>
+          <p>Know what interest rates mean for your money.</p>
         </div>
         <div class="auth-actions">
           <button class="button" onclick="showScreen('signup')">Create Account</button>
           <button class="secondary-button" onclick="showScreen('login')">Sign In</button>
-          <button class="ghost-button" onclick="showApp()">Preview Without Account</button>
+          <button class="ghost-button" onclick="startPreviewSetup()">Preview Without Account</button>
         </div>
       </div>
     </section>
@@ -2300,8 +2294,8 @@
         <input id="login-password" class="field" type="password" placeholder="Password" autocomplete="current-password" />
         <button id="login-submit" class="button" onclick="validateLogin()">Sign In</button>
         <div id="login-note" class="form-note">Prototype sign-in only; no password is sent yet.</div>
-        <button class="secondary-inline-button" onclick="showApp()">Preview Without Account</button>
-        <button class="link-button" onclick="showScreen('auth')">Back</button>
+        <button class="secondary-inline-button" onclick="startPreviewSetup()">Preview Without Account</button>
+        <button class="link-button" onclick="showScreen('onboarding')">Back</button>
       </div>
       <div class="card" style="margin-top:18px;">
         <h2>Saved to your profile</h2>
@@ -2321,8 +2315,8 @@
         <input id="signup-confirm" class="field" type="password" placeholder="Confirm Password" autocomplete="new-password" />
         <button id="signup-submit" class="button" onclick="validateSignup()" disabled>Create Account</button>
         <div id="signup-note" class="form-note error">Enter your name to continue.</div>
-        <button class="secondary-inline-button" onclick="showApp()">Preview Without Account</button>
-        <button class="link-button" onclick="showScreen('auth')">Back</button>
+        <button class="secondary-inline-button" onclick="startPreviewSetup()">Preview Without Account</button>
+        <button class="link-button" onclick="showScreen('onboarding')">Back</button>
       </div>
       <div class="card" style="margin-top:18px;">
         <h2>What this enables</h2>
@@ -2330,42 +2324,24 @@
       </div>
     </section>
 
-    <section id="account-setup-value" class="screen">
-      <div class="header">
-        <h1>Quick Setup</h1>
-        <div class="sub">Make RateCompass fit your situation</div>
-      </div>
-      <div class="setup-progress"><span class="active"></span><span></span><span></span><span></span><span></span></div>
-      <div class="card setup-hero-card">
-        <h2>Rates can affect more than one part of your money.</h2>
-        <p>Answer a few quick questions and RateCompass will show the tools that matter most for you.</p>
-        <div class="setup-icon-grid">
-          <div class="setup-icon-tile"><span>⌂</span>Mortgage</div>
-          <div class="setup-icon-tile"><span>%</span>Savings</div>
-          <div class="setup-icon-tile"><span>↔</span>Debt</div>
-        </div>
-      </div>
-      <button class="trial-button" type="button" onclick="showScreen('account-setup-priorities')">Start setup</button>
-      <button class="link-button" type="button" onclick="showApp()">Skip setup</button>
-    </section>
-
     <section id="account-setup-priorities" class="screen">
       <div class="header">
         <h1>Your Mortgage Picture</h1>
         <div class="sub">Step 1 of 4</div>
       </div>
-      <div class="setup-progress"><span class="active"></span><span class="active"></span><span></span><span></span><span></span></div>
+      <div class="setup-progress" role="progressbar" aria-label="Setup progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span class="active"></span><span></span><span></span><span></span></div>
       <div class="card">
         <h2>Do you currently have a mortgage?</h2>
         <div class="setup-list" style="margin-top:14px;">
-          <button class="setup-choice selected" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'one', this)"><span>1</span><p><b>Yes, one mortgage</b>Track one renewal and compare quotes.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'multiple', this)"><span>2</span><p><b>Yes, more than one</b>Multiple renewals and properties.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'future', this)"><span>3</span><p><b>Not yet, I may buy</b>Prepare before speaking with a lender.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'none', this)"><span>4</span><p><b>No mortgage focus</b>Show savings, GICs, debt, and rate alerts.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'one', this)"><span>1</span><p><b>Yes, one mortgage</b>Track one renewal and compare quotes.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'multiple', this)"><span>2</span><p><b>Yes, more than one</b>Multiple renewals and properties.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'future', this)"><span>3</span><p><b>Not yet, I may buy</b>Prepare before speaking with a lender.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="mortgage" onclick="selectSetupAnswer('mortgage', 'none', this)"><span>4</span><p><b>No mortgage focus</b>Show savings, GICs, debt, and rate alerts.</p></button>
         </div>
       </div>
-      <button class="trial-button" type="button" onclick="showScreen('account-setup-timing')">Continue</button>
-      <button class="link-button" type="button" onclick="showScreen('account-setup-value')">Back</button>
+      <button id="setup-mortgage-continue" class="trial-button" type="button" onclick="continueFromMortgageSetup()" disabled>Continue</button>
+      <button class="link-button" type="button" onclick="showScreen('onboarding')">Back</button>
+      <button class="link-button" type="button" onclick="showApp()">Skip setup</button>
     </section>
 
     <section id="account-setup-timing" class="screen">
@@ -2373,17 +2349,18 @@
         <h1>Timing Matters</h1>
         <div class="sub">Step 2 of 4</div>
       </div>
-      <div class="setup-progress"><span class="active"></span><span class="active"></span><span class="active"></span><span></span><span></span></div>
+      <div class="setup-progress" role="progressbar" aria-label="Setup progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="2"><span class="active"></span><span class="active"></span><span></span><span></span></div>
       <div class="card">
         <h2>Any mortgage decision in the next year?</h2>
         <div class="setup-list" style="margin-top:14px;">
-          <button class="setup-choice selected" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'oneYear', this)"><span>✓</span><p><b>Yes, within 12 months</b>Useful for reminders and quote checks.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'later', this)"><span>2</span><p><b>Later than a year</b>Watch trends before it gets urgent.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'notSure', this)"><span>?</span><p><b>Not sure yet</b>Keep the big rate signals visible.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'oneYear', this)"><span>✓</span><p><b>Yes, within 12 months</b>Useful for reminders and quote checks.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'later', this)"><span>2</span><p><b>Later than a year</b>Watch trends before it gets urgent.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="timing" onclick="selectSetupAnswer('timing', 'notSure', this)"><span>?</span><p><b>Not sure yet</b>Keep the big rate signals visible.</p></button>
         </div>
       </div>
-      <button class="trial-button" type="button" onclick="showScreen('account-setup-savings')">Continue</button>
+      <button id="setup-timing-continue" class="trial-button" type="button" onclick="showScreen('account-setup-savings')" disabled>Continue</button>
       <button class="link-button" type="button" onclick="showScreen('account-setup-priorities')">Back</button>
+      <button class="link-button" type="button" onclick="showApp()">Skip setup</button>
     </section>
 
     <section id="account-setup-savings" class="screen">
@@ -2391,18 +2368,19 @@
         <h1>Savings & GICs</h1>
         <div class="sub">Step 3 of 4</div>
       </div>
-      <div class="setup-progress"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span></span></div>
+      <div class="setup-progress" role="progressbar" aria-label="Setup progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="3"><span class="active"></span><span class="active"></span><span class="active"></span><span></span></div>
       <div class="card">
         <h2>Do you hold savings or GICs?</h2>
         <div class="setup-list" style="margin-top:14px;">
-          <button class="setup-choice selected" type="button" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'both', this)"><span>%</span><p><b>Yes, savings and GICs</b>Compare rates and maturity timing.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'savings', this)"><span>$</span><p><b>Savings only</b>Watch everyday and high-interest rates.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'gic', this)"><span>G</span><p><b>GICs only</b>Track maturity and reinvestment windows.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'none', this)"><span>-</span><p><b>Not right now</b>Keep this lighter in your setup.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'both', this)"><span>%</span><p><b>Yes, savings and GICs</b>Compare rates and maturity timing.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'savings', this)"><span>$</span><p><b>Savings only</b>Watch everyday and high-interest rates.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'gic', this)"><span>G</span><p><b>GICs only</b>Track maturity and reinvestment windows.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="savings" onclick="selectSetupAnswer('savings', 'none', this)"><span>-</span><p><b>Not right now</b>Keep this lighter in your setup.</p></button>
         </div>
       </div>
-      <button class="trial-button" type="button" onclick="showScreen('account-setup-goal')">Continue</button>
-      <button class="link-button" type="button" onclick="showScreen('account-setup-timing')">Back</button>
+      <button id="setup-savings-continue" class="trial-button" type="button" onclick="showScreen('account-setup-goal')" disabled>Continue</button>
+      <button class="link-button" type="button" onclick="backFromSavingsSetup()">Back</button>
+      <button class="link-button" type="button" onclick="showApp()">Skip setup</button>
     </section>
 
     <section id="account-setup-goal" class="screen">
@@ -2410,18 +2388,19 @@
         <h1>Your Main Goal</h1>
         <div class="sub">Step 4 of 4</div>
       </div>
-      <div class="setup-progress"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span></div>
+      <div class="setup-progress" role="progressbar" aria-label="Setup progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="4"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span></div>
       <div class="card">
         <h2>What matters most right now?</h2>
         <div class="setup-list" style="margin-top:14px;">
-          <button class="setup-choice selected" type="button" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'lowerPayments', this)"><span>↓</span><p><b>Lower payments</b>Focus on mortgage and debt impact.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'growSavings', this)"><span>↑</span><p><b>Grow savings</b>Find better savings and GIC opportunities.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'reduceDebt', this)"><span>↔</span><p><b>Reduce debt costs</b>Watch prime-linked borrowing.</p></button>
-          <button class="setup-choice" type="button" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'stayInformed', this)"><span>i</span><p><b>Stay informed</b>Keep important rate moves visible.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'lowerPayments', this)"><span>↓</span><p><b>Lower payments</b>Focus on mortgage and debt impact.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'growSavings', this)"><span>↑</span><p><b>Grow savings</b>Find better savings and GIC opportunities.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'reduceDebt', this)"><span>↔</span><p><b>Reduce debt costs</b>Watch prime-linked borrowing.</p></button>
+          <button class="setup-choice" type="button" aria-pressed="false" data-setup-group="goal" onclick="selectSetupAnswer('goal', 'stayInformed', this)"><span>i</span><p><b>Stay informed</b>Keep important rate moves visible.</p></button>
         </div>
       </div>
-      <button class="trial-button" type="button" onclick="showSetupSummary()">See my snapshot</button>
+      <button id="setup-goal-continue" class="trial-button" type="button" onclick="showSetupSummary()" disabled>See my snapshot</button>
       <button class="link-button" type="button" onclick="showScreen('account-setup-savings')">Back</button>
+      <button class="link-button" type="button" onclick="showApp()">Skip setup</button>
     </section>
 
     <section id="account-setup-summary" class="screen">
@@ -2441,8 +2420,8 @@
           <div class="setup-snapshot-metric"><div><b id="setup-benefit-three-title">Alerts</b><p id="setup-benefit-three">Watch Bank of Canada decisions and personal rate moments.</p></div><strong id="setup-metric-three">2 Core</strong></div>
         </div>
       </div>
-      <button id="snapshot-see-plans" class="trial-button plus" type="button" onclick="goToPlansFromSnapshot()">See plans</button>
-      <button id="snapshot-continue-preview" class="secondary-inline-button" type="button" onclick="continueFromSnapshot()">Continue with preview</button>
+      <button id="snapshot-continue-preview" class="trial-button" type="button" onclick="continueFromSnapshot()">Start Using RateCompass</button>
+      <button id="snapshot-see-plans" class="link-button" type="button" onclick="goToPlansFromSnapshot()">Compare plans</button>
       <button class="link-button" type="button" onclick="showScreen('account-setup-goal')">Back</button>
     </section>
 
@@ -2493,9 +2472,11 @@
 
       <div class="card" style="margin-top:14px;">
         <h2>For You</h2>
-        <div class="metric"><div><b>Mortgage renewal</b><p>possible savings if rates soften</p></div><strong>$94/mo</strong></div>
-        <div class="metric"><div><b>Savings account</b><p>possible upside from switching</p></div><strong style="color:var(--blue)">$180/yr</strong></div>
-        <div class="metric"><div><b>Line of credit</b><p>prime-linked debt can move quickly</p></div><strong style="color:var(--amber)">Watch</strong></div>
+        <div id="home-for-you-list">
+          <div class="metric"><div><b>Mortgage renewal</b><p>possible savings if rates soften</p></div><strong>$94/mo</strong></div>
+          <div class="metric"><div><b>Savings account</b><p>possible upside from switching</p></div><strong style="color:var(--blue)">$180/yr</strong></div>
+          <div class="metric"><div><b>Line of credit</b><p>prime-linked debt can move quickly</p></div><strong style="color:var(--amber)">Watch</strong></div>
+        </div>
       </div>
 
       <div class="card">
@@ -2884,27 +2865,27 @@
         <p class="source-note">Core includes 2 active alerts. RateCompass Plus unlocks unlimited alerts and saved alert history.</p>
         <div class="toggle">
           <span class="toggle-copy">Bank of Canada announcements <span class="info-dot" tabindex="0" aria-label="More about Bank of Canada announcements" onclick="event.stopPropagation(); setTooltipState(this, true)" onmouseenter="setTooltipState(this, true)" onmouseleave="setTooltipState(this, false)" onfocus="setTooltipState(this, true)" onblur="setTooltipState(this, false)">i</span><span class="tooltip">Receive reminders before scheduled Bank of Canada decisions and a plain-English summary when the rate decision is released.</span></span>
-          <button class="switch" type="button" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
+          <button class="switch" type="button" data-alert="bank" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
         </div>
         <div class="toggle">
           <span class="toggle-copy">RateCompass signal updates <span class="info-dot" tabindex="0" aria-label="More about RateCompass signal updates" onclick="event.stopPropagation(); setTooltipState(this, true)" onmouseenter="setTooltipState(this, true)" onmouseleave="setTooltipState(this, false)" onfocus="setTooltipState(this, true)" onblur="setTooltipState(this, false)">i</span><span class="tooltip">Get notified when verified rate movement or future forecast signals meaningfully change.</span></span>
-          <button class="switch" type="button" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
+          <button class="switch" type="button" data-alert="signal" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
         </div>
         <div class="toggle">
           <span class="toggle-copy">Personal impact alerts <span class="info-dot" tabindex="0" aria-label="More about personal impact alerts" onclick="event.stopPropagation(); setTooltipState(this, true)" onmouseenter="setTooltipState(this, true)" onmouseleave="setTooltipState(this, false)" onfocus="setTooltipState(this, true)" onblur="setTooltipState(this, false)">i</span><span class="tooltip">Receive alerts tied to your own mortgage renewal, GIC maturity, savings opportunity, or prime-linked debt exposure.</span></span>
-          <button class="switch" type="button" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
+          <button class="switch" type="button" data-alert="impact" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
         </div>
         <div class="toggle">
           <span class="toggle-copy">Mortgage renewal reminders <span class="info-dot" tabindex="0" aria-label="More about mortgage renewal reminders" onclick="event.stopPropagation(); setTooltipState(this, true)" onmouseenter="setTooltipState(this, true)" onmouseleave="setTooltipState(this, false)" onfocus="setTooltipState(this, true)" onblur="setTooltipState(this, false)">i</span><span class="tooltip">Receive reminders as your renewal date approaches, with prompts to compare options, review penalties, and watch the current rate outlook.</span></span>
-          <button class="switch" type="button" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
+          <button class="switch" type="button" data-alert="mortgage" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
         </div>
         <div class="toggle">
           <span class="toggle-copy">GIC maturity reminders <span class="info-dot" tabindex="0" aria-label="More about GIC maturity reminders" onclick="event.stopPropagation(); setTooltipState(this, true)" onmouseenter="setTooltipState(this, true)" onmouseleave="setTooltipState(this, false)" onfocus="setTooltipState(this, true)" onblur="setTooltipState(this, false)">i</span><span class="tooltip">Receive reminders before your GIC matures, with prompts to compare current rates, avoid weak auto-renewals, and review reinvestment options.</span></span>
-          <button class="switch" type="button" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
+          <button class="switch" type="button" data-alert="gic" aria-pressed="true" aria-label="Notification enabled" onclick="toggleNotification(this)"></button>
         </div>
         <div class="toggle">
           <span class="toggle-copy">Wealth Map tips <span class="info-dot" tabindex="0" aria-label="More about Wealth Map tips" onclick="event.stopPropagation(); setTooltipState(this, true)" onmouseenter="setTooltipState(this, true)" onmouseleave="setTooltipState(this, false)" onfocus="setTooltipState(this, true)" onblur="setTooltipState(this, false)">i</span><span class="tooltip">Receive short educational tips from The Wealth Map, such as how rate changes affect mortgages, savings, GICs, and debt.</span></span>
-          <button class="switch off" type="button" aria-pressed="false" aria-label="Notification disabled" onclick="toggleNotification(this)"></button>
+          <button class="switch off" type="button" data-alert="education" aria-pressed="false" aria-label="Notification disabled" onclick="toggleNotification(this)"></button>
         </div>
       </div>
       <div class="card profile-section-card profile-data">
@@ -3397,10 +3378,10 @@
       }
     };
     const setupAnswers = {
-      mortgage: "one",
-      timing: "oneYear",
-      savings: "both",
-      goal: "lowerPayments"
+      mortgage: null,
+      timing: null,
+      savings: null,
+      goal: null
     };
 
     const paywallInsights = {
@@ -3578,17 +3559,78 @@
       }
     };
 
+    function preferredRateCategory() {
+      if (setupAnswers.goal === 'reduceDebt') return 'prime';
+      if (setupAnswers.goal === 'growSavings') return setupAnswers.savings === 'gic' ? 'gic' : 'savings';
+      if (setupAnswers.mortgage === 'none') {
+        if (setupAnswers.savings === 'gic') return 'gic';
+        if (setupAnswers.savings === 'both' || setupAnswers.savings === 'savings') return 'savings';
+        return 'prime';
+      }
+      return 'mortgage';
+    }
+
+    function renderPersonalizedHome() {
+      const mortgageItem = setupAnswers.mortgage === 'future'
+        ? ['Homebuyer readiness', 'watch rates before you start shopping', 'Prepare', 'var(--green)']
+        : ['Mortgage renewal', 'possible savings if rates soften', '$94/mo', 'var(--green)'];
+      const savingsItem = setupAnswers.savings === 'none'
+        ? ['Rate Check', 'check quotes against current benchmarks', 'Compare', 'var(--blue)']
+        : setupAnswers.savings === 'gic'
+          ? ['GIC maturity', 'possible reinvestment upside', '+$188/yr', 'var(--blue)']
+          : ['Savings account', 'possible upside from switching', '$180/yr', 'var(--blue)'];
+      const debtItem = ['Line of credit', 'prime-linked debt can move quickly', 'Watch', 'var(--amber)'];
+      const awarenessItem = ['Rate awareness', 'keep major policy decisions visible', 'Track', 'var(--cyan)'];
+      const mortgageOrAwareness = setupAnswers.mortgage === 'none' ? awarenessItem : mortgageItem;
+      let items;
+
+      if (setupAnswers.goal === 'growSavings') items = [savingsItem, mortgageOrAwareness, debtItem];
+      else if (setupAnswers.goal === 'reduceDebt') items = [debtItem, mortgageOrAwareness, savingsItem];
+      else if (setupAnswers.goal === 'stayInformed') items = [awarenessItem, mortgageOrAwareness === awarenessItem ? savingsItem : mortgageOrAwareness, debtItem];
+      else items = [mortgageOrAwareness, savingsItem, debtItem];
+
+      document.getElementById('home-for-you-list').innerHTML = items.map(item => `
+        <div class="metric"><div><b>${item[0]}</b><p>${item[1]}</p></div><strong style="color:${item[3]}">${item[2]}</strong></div>
+      `).join('');
+    }
+
+    function setAlertState(name, enabled) {
+      const button = document.querySelector(`[data-alert="${name}"]`);
+      if (!button) return;
+      button.setAttribute('aria-pressed', String(enabled));
+      button.setAttribute('aria-label', enabled ? 'Notification enabled' : 'Notification disabled');
+      button.classList.toggle('off', !enabled);
+    }
+
+    function applySetupPersonalization() {
+      renderPersonalizedHome();
+      if (setupAnswers.mortgage === null) return;
+      setAlertState('mortgage', setupAnswers.mortgage !== 'none');
+      setAlertState('gic', setupAnswers.savings === 'both' || setupAnswers.savings === 'gic');
+      setAlertState('impact', setupAnswers.mortgage !== 'none' || setupAnswers.savings !== 'none' || setupAnswers.goal === 'reduceDebt');
+    }
+
     function showApp() {
       document.getElementById('tabs').hidden = false;
       updateTrustCopy();
       updateGreeting();
+      applySetupPersonalization();
       showScreen('home');
-      selectRateCategory('mortgage', document.querySelector('[data-rate-tab="mortgage"]'));
+      const preferredCategory = preferredRateCategory();
+      selectRateCategory(preferredCategory, document.querySelector(`[data-rate-tab="${preferredCategory}"]`));
     }
 
-    function showAuth() {
+    function startPreviewSetup() {
+      Object.keys(setupAnswers).forEach(key => { setupAnswers[key] = null; });
+      document.querySelectorAll('[data-setup-group]').forEach(option => {
+        option.classList.remove('selected');
+        option.setAttribute('aria-pressed', 'false');
+      });
+      ['setup-mortgage-continue', 'setup-timing-continue', 'setup-savings-continue', 'setup-goal-continue'].forEach(id => {
+        document.getElementById(id).disabled = true;
+      });
       document.getElementById('tabs').hidden = true;
-      showScreen('auth');
+      showScreen('account-setup-priorities');
     }
 
     function showScreen(id) {
@@ -3614,8 +3656,23 @@
 
     function selectSetupAnswer(group, value, button) {
       setupAnswers[group] = value;
-      document.querySelectorAll(`[data-setup-group="${group}"]`).forEach(option => option.classList.remove('selected'));
+      document.querySelectorAll(`[data-setup-group="${group}"]`).forEach(option => {
+        option.classList.remove('selected');
+        option.setAttribute('aria-pressed', 'false');
+      });
       button.classList.add('selected');
+      button.setAttribute('aria-pressed', 'true');
+      const continueButton = document.getElementById(`setup-${group}-continue`);
+      if (continueButton) continueButton.disabled = false;
+    }
+
+    function continueFromMortgageSetup() {
+      if (!setupAnswers.mortgage) return;
+      showScreen(setupAnswers.mortgage === 'none' ? 'account-setup-savings' : 'account-setup-timing');
+    }
+
+    function backFromSavingsSetup() {
+      showScreen(setupAnswers.mortgage === 'none' ? 'account-setup-priorities' : 'account-setup-timing');
     }
 
     function showSetupSummary() {
@@ -3675,14 +3732,11 @@
           : "Compare bank quotes before accepting them.";
       document.getElementById('setup-metric-two').textContent = savingsFocused ? "Good fit" : "Useful";
 
-      const plusFit = multipleMortgages || (hasMortgage && hasGIC) || setupAnswers.savings === 'both';
-      document.getElementById('setup-benefit-three-title').textContent = plusFit ? "Plus fit" : "Alerts";
-      document.getElementById('setup-benefit-three').textContent = plusFit
-        ? "Multiple saved items and unlimited alerts may be worth comparing against Core."
-        : urgentTiming
-          ? "Use alerts so the next 12 months do not sneak up on you."
-          : "Keep the important rate moments visible while your timing becomes clearer.";
-      document.getElementById('setup-metric-three').textContent = plusFit ? "Compare" : "2 Core";
+      document.getElementById('setup-benefit-three-title').textContent = "Suggested alerts";
+      document.getElementById('setup-benefit-three').textContent = urgentTiming
+        ? "Turn on reminders so the next 12 months do not sneak up on you."
+        : "Keep important rate moments visible while your timing becomes clearer.";
+      document.getElementById('setup-metric-three').textContent = urgentTiming ? "Priority" : "Helpful";
 
       showScreen('account-setup-summary');
     }
@@ -3699,7 +3753,7 @@
 
     function validateSignup() {
       if (!isSignupValid()) return;
-      showScreen('account-setup-value');
+      startPreviewSetup();
     }
 
     function signupValidationMessage() {
