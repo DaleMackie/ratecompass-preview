@@ -729,18 +729,47 @@
       justify-content: space-between;
       align-items: center;
       background: white;
+      border: 1px solid transparent;
       border-radius: 8px;
       padding: 16px;
       margin-bottom: 10px;
       cursor: grab;
       user-select: none;
-      transition: opacity .14s ease, transform .14s ease, box-shadow .14s ease;
+      transition: opacity .14s ease, transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+      will-change: transform;
     }
 
     .rate-row.dragging {
-      opacity: .52;
-      transform: scale(.99);
-      box-shadow: 0 8px 18px rgba(9, 22, 34, .12);
+      opacity: .92;
+      transform: translateY(-2px) scale(1.015);
+      border-color: rgba(0, 104, 180, .40);
+      box-shadow: 0 12px 24px rgba(9, 22, 34, .18);
+    }
+
+    .rate-row.drag-target {
+      transform: translateY(2px);
+      border-color: rgba(0, 104, 180, .32);
+      box-shadow: inset 0 3px 0 rgba(0, 104, 180, .20);
+    }
+
+    .rate-row.just-dropped {
+      animation: rate-row-snap .20s ease-out;
+    }
+
+    @keyframes rate-row-snap {
+      0% { transform: scale(.985); }
+      65% { transform: scale(1.008); }
+      100% { transform: scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rate-row {
+        transition: none;
+      }
+
+      .rate-row.just-dropped {
+        animation: none;
+      }
     }
 
     .rate-main {
@@ -757,6 +786,10 @@
       line-height: 1;
       cursor: grab;
       flex: 0 0 auto;
+    }
+
+    .rate-row.dragging .drag-handle {
+      color: var(--blue);
     }
 
     .rate-row strong {
@@ -784,6 +817,37 @@
       margin-top: 24px;
       padding-top: 18px;
       border-top: 1px solid #d7e2e8;
+    }
+
+    .watchlist-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .watchlist-heading .section-title {
+      margin: 0;
+    }
+
+    .reset-order-button {
+      width: 34px;
+      height: 34px;
+      border: 1px solid #d7e2e8;
+      border-radius: 8px;
+      background: white;
+      color: var(--blue);
+      font: inherit;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .reset-order-button:disabled {
+      color: var(--muted);
+      opacity: .45;
+      cursor: default;
     }
 
     .plus-badge {
@@ -2507,7 +2571,10 @@
           <div class="pill"><span id="rate-prob-3-label">Rate rows</span><strong id="rate-prob-3" style="color:var(--amber)">Sample</strong></div>
         </div>
       </div>
-      <div class="section-title watchlist-section-title">Institution Watchlist</div>
+      <div class="watchlist-heading watchlist-section-title">
+        <div class="section-title">Institution Watchlist</div>
+        <button id="reset-rate-order" class="reset-order-button" type="button" aria-label="Reset institution order" title="Reset order" onclick="resetRateOrder()" disabled>↺</button>
+      </div>
       <button class="watchlist-note upgrade-button" type="button" onclick="openPlans('Custom institution order')">
         <span>Drag rows to preview a custom order. Saving this order belongs in RateCompass Plus.</span>
         <span class="plus-badge">Plus</span>
@@ -3300,6 +3367,7 @@
     let activeSavingsType = "highInterest";
     let activeGICType = "nonRedeemable";
     let activeRateRows = [];
+    let defaultRateRows = [];
     let draggedRateIndex = null;
     let planReturnScreen = "profile";
     let plansBackScreen = "paywall-discovery";
@@ -3895,10 +3963,13 @@
       renderRateRows(data.rows);
     }
 
-    function renderRateRows(rows) {
+    function renderRateRows(rows, setDefaultOrder = true, settledIndex = null) {
+      if (setDefaultOrder) {
+        defaultRateRows = rows.map(row => [...row]);
+      }
       activeRateRows = rows.map(row => [...row]);
       document.getElementById('rate-list').innerHTML = activeRateRows.map((row, index) => `
-        <div class="rate-row" draggable="true" data-index="${index}" ondragstart="startRateDrag(event)" ondragover="allowRateDrop(event)" ondrop="dropRateRow(event)" ondragend="endRateDrag()">
+        <div class="rate-row" draggable="true" data-index="${index}" ondragstart="startRateDrag(event)" ondragover="allowRateDrop(event)" ondragleave="clearRateDrop(event)" ondrop="dropRateRow(event)" ondragend="endRateDrag()">
           <div class="rate-main">
             <span class="drag-handle" aria-hidden="true">::</span>
             <div><b>${row[0]}</b><p>${row[1]}</p></div>
@@ -3906,6 +3977,14 @@
           <strong>${row[2]}</strong>
         </div>
       `).join('');
+
+      document.getElementById('reset-rate-order').disabled = setDefaultOrder || rowsMatchDefaultOrder();
+
+      if (Number.isInteger(settledIndex)) {
+        const settledRow = document.querySelector(`.rate-row[data-index="${settledIndex}"]`);
+        settledRow?.classList.add('just-dropped');
+        setTimeout(() => settledRow?.classList.remove('just-dropped'), 220);
+      }
     }
 
     function statusClass(status) {
@@ -3942,11 +4021,20 @@
       row.classList.add('dragging');
       event.dataTransfer.effectAllowed = 'move';
       event.dataTransfer.setData('text/plain', String(draggedRateIndex));
+      if (navigator.vibrate) navigator.vibrate(8);
     }
 
     function allowRateDrop(event) {
       event.preventDefault();
       event.dataTransfer.dropEffect = 'move';
+      document.querySelectorAll('.rate-row.drag-target').forEach(row => row.classList.remove('drag-target'));
+      if (Number(event.currentTarget.dataset.index) !== draggedRateIndex) {
+        event.currentTarget.classList.add('drag-target');
+      }
+    }
+
+    function clearRateDrop(event) {
+      event.currentTarget.classList.remove('drag-target');
     }
 
     function dropRateRow(event) {
@@ -3961,13 +4049,24 @@
 
       const [movedRow] = activeRateRows.splice(sourceIndex, 1);
       activeRateRows.splice(targetIndex, 0, movedRow);
-      renderRateRows(activeRateRows);
+      renderRateRows(activeRateRows, false, targetIndex);
+      if (navigator.vibrate) navigator.vibrate(14);
       draggedRateIndex = null;
     }
 
     function endRateDrag() {
-      document.querySelectorAll('.rate-row.dragging').forEach(row => row.classList.remove('dragging'));
+      document.querySelectorAll('.rate-row.dragging, .rate-row.drag-target').forEach(row => row.classList.remove('dragging', 'drag-target'));
       draggedRateIndex = null;
+    }
+
+    function rowsMatchDefaultOrder() {
+      return activeRateRows.length === defaultRateRows.length && activeRateRows.every((row, index) => row[0] === defaultRateRows[index][0] && row[1] === defaultRateRows[index][1]);
+    }
+
+    function resetRateOrder() {
+      if (rowsMatchDefaultOrder()) return;
+      renderRateRows(defaultRateRows, false);
+      if (navigator.vibrate) navigator.vibrate(10);
     }
 
     function toggleNotification(button) {
