@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-11",
+  "sourceSummary": "RateCompass hosted benchmark feed. Values are curated from public Canadian rate pages and should be refreshed when institution rates change.",
+  "benchmarks": [
+    {
+      "product": "Mortgage",
+      "term": "1 year",
+      "rate": 5.19,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian mortgage benchmark for a 1-year fixed term.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": true,
+      "appliesLocalAdjustments": true
+    },
+    {
+      "product": "Mortgage",
+      "term": "2 year",
+      "rate": 4.89,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian mortgage benchmark for a 2-year fixed term.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": true,
+      "appliesLocalAdjustments": true
+    },
+    {
+      "product": "Mortgage",
+      "term": "3 year",
+      "rate": 4.59,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian mortgage benchmark for a 3-year fixed term.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": true,
+      "appliesLocalAdjustments": true
+    },
+    {
+      "product": "Mortgage",
+      "term": "5 year",
+      "rate": 4.39,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year fixed term.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": true,
+      "appliesLocalAdjustments": true
+    },
+    {
+      "product": "Mortgage",
+      "term": "5 year variable",
+      "rate": 5.05,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year variable term.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": true,
+      "appliesLocalAdjustments": true
+    },
+    {
+      "product": "GIC",
+      "term": "1 year",
+      "gicRedeemability": "Non-redeemable",
+      "rate": 4.05,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 1-year non-redeemable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "2 year",
+      "gicRedeemability": "Non-redeemable",
+      "rate": 3.90,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 2-year non-redeemable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "3 year",
+      "gicRedeemability": "Non-redeemable",
+      "rate": 3.80,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 3-year non-redeemable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "5 year",
+      "gicRedeemability": "Non-redeemable",
+      "rate": 3.65,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 5-year non-redeemable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "1 year",
+      "gicRedeemability": "Redeemable",
+      "rate": 3.55,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 1-year redeemable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "2 year",
+      "gicRedeemability": "Redeemable",
+      "rate": 3.40,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 2-year redeemable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "3 year",
+      "gicRedeemability": "Redeemable",
+      "rate": 3.30,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 3-year redeemable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "5 year",
+      "gicRedeemability": "Redeemable",
+      "rate": 3.15,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 5-year redeemable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "1 year",
+      "gicRedeemability": "Cashable",
+      "rate": 3.30,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 1-year cashable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "2 year",
+      "gicRedeemability": "Cashable",
+      "rate": 3.15,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 2-year cashable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "3 year",
+      "gicRedeemability": "Cashable",
+      "rate": 3.05,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 3-year cashable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "GIC",
+      "term": "5 year",
+      "gicRedeemability": "Cashable",
+      "rate": 2.90,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian 5-year cashable GIC benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "Savings",
+      "savingsType": "Standard",
+      "rate": 1.75,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian standard savings benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "Savings",
+      "savingsType": "High interest",
+      "rate": 2.96,
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted Canadian high-interest savings benchmark.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": false
+    },
+    {
+      "product": "LOC / HELOC",
+      "lineOfCreditSecurity": "Secured",
+      "rate": 0.50,
+      "benchmarkLabel": "Prime +0.50%",
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted secured LOC/HELOC benchmark expressed as a spread over prime.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": true
+    },
+    {
+      "product": "LOC / HELOC",
+      "lineOfCreditSecurity": "Unsecured",
+      "rate": 2.00,
+      "benchmarkLabel": "Prime +2.00%",
+      "source": "RateCompass hosted benchmark feed",
+      "sourceDetail": "Weighted unsecured line-of-credit benchmark expressed as a spread over prime.",
+      "lastChecked": "Last updated: 2026-07-11",
+      "status": "Live",
+      "lowerIsBetter": true
+    }
+  ]
+}
