@@ -15,4 +15,18 @@ RateCompass is a SwiftUI iOS starter app affiliated with The Wealth Map. It keep
 
 ## Data Note
 
-The app fetches Bank of Canada policy and prime references from the Bank of Canada Valet API. Rate Check benchmarks are loaded from `docs/rates.json` on GitHub Pages and cached on device. Update `docs/rates.json` whenever benchmark rates are refreshed; the app will use the new hosted values without a new App Store build.
+The app fetches Bank of Canada policy and prime references from the Bank of Canada Valet API. Rate Check benchmarks and consumer comparison rows are loaded from `docs/rates.json` on GitHub Pages and cached on device. Consumer comparison rows are labelled Marketplace unless they are verified directly against an official lender source.
+
+## Refresh Cadence
+
+- Bank of Canada policy and prime references refresh in-app and cache on device.
+- The hosted marketplace feed refreshes once per day through `.github/workflows/refresh-rates.yml`.
+- The workflow can also be run manually from GitHub Actions before screenshots, App Store submissions, marketing pushes, or Bank of Canada decision days.
+- Ratehub, WOWA, and NerdWallet checks are marketplace comparisons, not live lender rates.
+- Yahoo Finance Canada pages are checked as market-signal context only, not lender product rates.
+
+Manual local refresh:
+
+```sh
+node scripts/refresh-marketplace-feed.mjs
+```

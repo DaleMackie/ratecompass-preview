@@ -1,0 +1,38 @@
+name: Refresh marketplace rates
+
+on:
+  schedule:
+    # 11:15 UTC is early morning in Canada and keeps the refresh to once per day.
+    - cron: "15 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Refresh marketplace feed
+        run: node scripts/refresh-marketplace-feed.mjs
+
+      - name: Commit refreshed feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rates.json docs/rates.json "RateCompass-GitHub-Pages-Upload/docs/rates.json" "RateCompass-GitHub-Pages-Upload 2/docs/rates.json"
+          if git diff --cached --quiet; then
+            echo "No feed changes to commit."
+          else
+            git commit -m "Refresh marketplace rate feed"
+            git push
+          fi

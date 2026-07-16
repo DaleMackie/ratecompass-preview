@@ -1,16 +1,16 @@
 {
-  "version": 1,
-  "updatedAt": "2026-07-11",
-  "sourceSummary": "RateCompass hosted benchmark feed. Values are curated from public Canadian rate pages and should be refreshed when institution rates change.",
+  "version": 2,
+  "updatedAt": "2026-07-15",
+  "sourceSummary": "RateCompass hosted marketplace benchmark and consumer comparison feed. Values can include Ratehub, WOWA, and NerdWallet marketplace comparisons plus curated fallback rows; they are not live lender rates unless explicitly marked Verified with an official source.",
   "benchmarks": [
     {
       "product": "Mortgage",
       "term": "1 year",
       "rate": 5.19,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 1-year fixed term.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true
     },
@@ -18,10 +18,10 @@
       "product": "Mortgage",
       "term": "2 year",
       "rate": 4.89,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 2-year fixed term.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true
     },
@@ -29,10 +29,10 @@
       "product": "Mortgage",
       "term": "3 year",
       "rate": 4.59,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 3-year fixed term.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true
     },
@@ -40,10 +40,10 @@
       "product": "Mortgage",
       "term": "5 year",
       "rate": 4.39,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year fixed term.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true
     },
@@ -51,10 +51,10 @@
       "product": "Mortgage",
       "term": "5 year variable",
       "rate": 5.05,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year variable term.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true
     },
@@ -63,32 +63,32 @@
       "term": "1 year",
       "gicRedeemability": "Non-redeemable",
       "rate": 4.05,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year non-redeemable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Non-redeemable",
-      "rate": 3.90,
-      "source": "RateCompass hosted benchmark feed",
+      "rate": 3.9,
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year non-redeemable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "GIC",
       "term": "3 year",
       "gicRedeemability": "Non-redeemable",
-      "rate": 3.80,
-      "source": "RateCompass hosted benchmark feed",
+      "rate": 3.8,
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year non-redeemable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
@@ -96,10 +96,10 @@
       "term": "5 year",
       "gicRedeemability": "Non-redeemable",
       "rate": 3.65,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year non-redeemable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
@@ -107,32 +107,32 @@
       "term": "1 year",
       "gicRedeemability": "Redeemable",
       "rate": 3.55,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year redeemable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Redeemable",
-      "rate": 3.40,
-      "source": "RateCompass hosted benchmark feed",
+      "rate": 3.4,
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year redeemable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "GIC",
       "term": "3 year",
       "gicRedeemability": "Redeemable",
-      "rate": 3.30,
-      "source": "RateCompass hosted benchmark feed",
+      "rate": 3.3,
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year redeemable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
@@ -140,21 +140,21 @@
       "term": "5 year",
       "gicRedeemability": "Redeemable",
       "rate": 3.15,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year redeemable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "GIC",
       "term": "1 year",
       "gicRedeemability": "Cashable",
-      "rate": 3.30,
-      "source": "RateCompass hosted benchmark feed",
+      "rate": 3.3,
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year cashable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
@@ -162,10 +162,10 @@
       "term": "2 year",
       "gicRedeemability": "Cashable",
       "rate": 3.15,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year cashable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
@@ -173,64 +173,1193 @@
       "term": "3 year",
       "gicRedeemability": "Cashable",
       "rate": 3.05,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year cashable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "GIC",
       "term": "5 year",
       "gicRedeemability": "Cashable",
-      "rate": 2.90,
-      "source": "RateCompass hosted benchmark feed",
+      "rate": 2.9,
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year cashable GIC benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "Savings",
       "savingsType": "Standard",
       "rate": 1.75,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian standard savings benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "Savings",
       "savingsType": "High interest",
       "rate": 2.96,
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian high-interest savings benchmark.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": false
     },
     {
       "product": "LOC / HELOC",
       "lineOfCreditSecurity": "Secured",
-      "rate": 0.50,
+      "rate": 0.5,
       "benchmarkLabel": "Prime +0.50%",
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted secured LOC/HELOC benchmark expressed as a spread over prime.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": true
     },
     {
       "product": "LOC / HELOC",
       "lineOfCreditSecurity": "Unsecured",
-      "rate": 2.00,
+      "rate": 2,
       "benchmarkLabel": "Prime +2.00%",
-      "source": "RateCompass hosted benchmark feed",
+      "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted unsecured line-of-credit benchmark expressed as a spread over prime.",
       "lastChecked": "Last updated: 2026-07-11",
-      "status": "Live",
+      "status": "Marketplace",
       "lowerIsBetter": true
+    }
+  ],
+  "institutionRates": [
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "RBC",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.19
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "TD",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.24
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "BMO",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.14
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "CIBC",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.18
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "Scotiabank",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.21
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "National Bank",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.16
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "Desjardins",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.17
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "First National",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.11
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "MCAP",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.09
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "oneYearFixed",
+      "institution": "Tangerine",
+      "productName": "1-year fixed",
+      "note": "Marketplace",
+      "rate": 5.15
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "RBC",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.89
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "TD",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.94
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "BMO",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.84
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "CIBC",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.88
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "Scotiabank",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.91
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "National Bank",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.86
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "Desjardins",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.87
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "First National",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.82
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "MCAP",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.8
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "twoYearFixed",
+      "institution": "Tangerine",
+      "productName": "2-year fixed",
+      "note": "Marketplace",
+      "rate": 4.85
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "RBC",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.59
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "TD",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.64
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "BMO",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.54
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "CIBC",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.58
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "Scotiabank",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.61
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "National Bank",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.56
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "Desjardins",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.57
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "First National",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.52
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "MCAP",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.5
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "threeYearFixed",
+      "institution": "Tangerine",
+      "productName": "3-year fixed",
+      "note": "Marketplace",
+      "rate": 4.55
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "RBC",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.49
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "TD",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.54
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "BMO",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.44
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "CIBC",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.48
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "Scotiabank",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.51
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "National Bank",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.46
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "Desjardins",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.47
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "First National",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.42
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "MCAP",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.4
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fourYearFixed",
+      "institution": "Tangerine",
+      "productName": "4-year fixed",
+      "note": "Marketplace",
+      "rate": 4.45
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "RBC",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.39
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "TD",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.44
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "BMO",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.35
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "CIBC",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.38
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "Scotiabank",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.42
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "National Bank",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.37
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "Desjardins",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.36
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "First National",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.32
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "MCAP",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.3
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "Tangerine",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.34
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "RBC",
+      "productName": "Prime +0.60%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.6
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "TD",
+      "productName": "Prime +0.65%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.65
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "BMO",
+      "productName": "Prime +0.55%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.55
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "CIBC",
+      "productName": "Prime +0.59%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.59
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "Scotiabank",
+      "productName": "Prime +0.63%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.63
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "National Bank",
+      "productName": "Prime +0.58%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.58
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "Desjardins",
+      "productName": "Prime +0.57%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.57
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "First National",
+      "productName": "Prime +0.54%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.54
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "MCAP",
+      "productName": "Prime +0.52%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.52
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "Tangerine",
+      "productName": "Prime +0.56%",
+      "note": "Marketplace",
+      "spreadOverPrime": 0.56
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "RBC",
+      "productName": "Standard savings",
+      "rate": 1.7,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "TD",
+      "productName": "Standard savings",
+      "rate": 1.85,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "BMO",
+      "productName": "Standard savings",
+      "rate": 1.75,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "CIBC",
+      "productName": "Standard savings",
+      "rate": 1.8,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "Scotiabank",
+      "productName": "Standard savings",
+      "rate": 1.7,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "Simplii",
+      "productName": "Standard savings",
+      "rate": 1.75,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "Tangerine",
+      "productName": "Standard savings",
+      "rate": 1.7,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "Alterna Bank",
+      "productName": "Standard savings",
+      "rate": 1.9,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "Standard savings",
+      "institution": "Meridian",
+      "productName": "Standard savings",
+      "rate": 1.85,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "EQ Bank",
+      "productName": "High interest savings",
+      "rate": 4,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "Tangerine",
+      "productName": "Promo savings",
+      "rate": 4.25,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "RBC",
+      "productName": "High interest savings",
+      "rate": 1.7,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "TD",
+      "productName": "High interest savings",
+      "rate": 1.85,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "CIBC",
+      "productName": "High interest savings",
+      "rate": 1.8,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "Simplii",
+      "productName": "Promo savings",
+      "rate": 4.1,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "Motive Financial",
+      "productName": "High interest savings",
+      "rate": 4.1,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "Alterna Bank",
+      "productName": "High interest savings",
+      "rate": 3.8,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "Wealthsimple",
+      "productName": "High interest cash",
+      "rate": 3.75,
+      "note": "Marketplace"
+    },
+    {
+      "category": "Savings",
+      "savingsType": "High interest savings",
+      "institution": "Oaken Financial",
+      "productName": "High interest savings",
+      "rate": 3.7,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "EQ Bank",
+      "productName": "1-year non-redeemable GIC",
+      "rate": 4.15,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "CIBC",
+      "productName": "2-year non-redeemable GIC",
+      "rate": 3.95,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "TD",
+      "productName": "5-year non-redeemable GIC",
+      "rate": 3.65,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "BMO",
+      "productName": "3-year non-redeemable GIC",
+      "rate": 3.8,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "RBC",
+      "productName": "1-year non-redeemable GIC",
+      "rate": 3.9,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "Scotiabank",
+      "productName": "1-year non-redeemable GIC",
+      "rate": 4,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "Oaken Financial",
+      "productName": "1-year non-redeemable GIC",
+      "rate": 4.2,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "Tangerine",
+      "productName": "1-year non-redeemable GIC",
+      "rate": 4.05,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Non-redeemable",
+      "institution": "Motive Financial",
+      "productName": "1-year non-redeemable GIC",
+      "rate": 4.1,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Redeemable",
+      "institution": "EQ Bank",
+      "productName": "1-year redeemable GIC",
+      "rate": 3.65,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Redeemable",
+      "institution": "CIBC",
+      "productName": "2-year redeemable GIC",
+      "rate": 3.45,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Redeemable",
+      "institution": "TD",
+      "productName": "5-year redeemable GIC",
+      "rate": 3.15,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Redeemable",
+      "institution": "BMO",
+      "productName": "3-year redeemable GIC",
+      "rate": 3.3,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Redeemable",
+      "institution": "RBC",
+      "productName": "1-year redeemable GIC",
+      "rate": 3.4,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Redeemable",
+      "institution": "Scotiabank",
+      "productName": "1-year redeemable GIC",
+      "rate": 3.5,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Redeemable",
+      "institution": "Tangerine",
+      "productName": "1-year redeemable GIC",
+      "rate": 3.55,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Redeemable",
+      "institution": "Meridian",
+      "productName": "1-year redeemable GIC",
+      "rate": 3.45,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Cashable",
+      "institution": "EQ Bank",
+      "productName": "1-year cashable GIC",
+      "rate": 3.4,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Cashable",
+      "institution": "CIBC",
+      "productName": "2-year cashable GIC",
+      "rate": 3.2,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Cashable",
+      "institution": "TD",
+      "productName": "5-year cashable GIC",
+      "rate": 2.9,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Cashable",
+      "institution": "BMO",
+      "productName": "3-year cashable GIC",
+      "rate": 3.05,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Cashable",
+      "institution": "RBC",
+      "productName": "1-year cashable GIC",
+      "rate": 3.15,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Cashable",
+      "institution": "Scotiabank",
+      "productName": "1-year cashable GIC",
+      "rate": 3.25,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Cashable",
+      "institution": "Tangerine",
+      "productName": "1-year cashable GIC",
+      "rate": 3.3,
+      "note": "Marketplace"
+    },
+    {
+      "category": "GIC",
+      "gicRedeemability": "Cashable",
+      "institution": "Meridian",
+      "productName": "1-year cashable GIC",
+      "rate": 3.2,
+      "note": "Marketplace"
+    }
+  ],
+  "refreshPolicy": {
+    "automaticCadence": "Daily, early morning Canada time",
+    "manualCadence": "Run before app screenshots, App Store submissions, marketing pushes, and Bank of Canada decision days",
+    "consumerRateLabel": "Marketplace",
+    "marketSignalLabel": "Market signal",
+    "verifiedLabelRule": "Only official lender or Bank of Canada sources with a last-checked date should be labelled Verified."
+  },
+  "marketplaceSources": [
+    {
+      "label": "Ratehub best mortgage rates",
+      "product": "Mortgage",
+      "url": "https://www.ratehub.ca/best-mortgage-rates",
+      "sourceType": "Marketplace",
+      "lastChecked": "2026-07-15",
+      "status": "Checked",
+      "ratesFound": [
+        0.61,
+        0.8,
+        0.85,
+        0.99,
+        1,
+        1.39,
+        1.5,
+        1.54,
+        1.64,
+        1.99,
+        2.25,
+        2.35,
+        2.45,
+        3.35,
+        3.45,
+        3.65,
+        3.74,
+        3.89,
+        3.94,
+        4.29,
+        4.35,
+        4.45,
+        4.55,
+        4.79,
+        5.25,
+        5.3,
+        5.35,
+        5.45,
+        5.68,
+        5.89,
+        6.45
+      ],
+      "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
+    },
+    {
+      "label": "Ratehub 5-year fixed mortgage rates",
+      "product": "Mortgage",
+      "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
+      "sourceType": "Marketplace",
+      "lastChecked": "2026-07-15",
+      "status": "Checked",
+      "ratesFound": [
+        0.85,
+        0.99,
+        1.39,
+        1.54,
+        1.64,
+        1.99,
+        2.25,
+        2.35,
+        2.45,
+        3.35,
+        3.45,
+        3.74,
+        3.89,
+        3.94,
+        4.04,
+        4.09,
+        4.19,
+        4.24,
+        4.29,
+        4.34,
+        4.35,
+        4.45,
+        4.79,
+        5.25,
+        5.3,
+        5.35,
+        5.45,
+        5.68,
+        5.89,
+        6.45
+      ],
+      "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
+    },
+    {
+      "label": "Ratehub 5-year variable mortgage rates",
+      "product": "Mortgage",
+      "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
+      "sourceType": "Marketplace",
+      "lastChecked": "2026-07-15",
+      "status": "Checked",
+      "ratesFound": [
+        0.85,
+        0.99,
+        1,
+        1.39,
+        1.54,
+        1.64,
+        1.99,
+        2.25,
+        2.35,
+        2.45,
+        3.35,
+        3.45,
+        3.59,
+        3.6,
+        3.65,
+        3.74,
+        3.79,
+        3.89,
+        3.94,
+        4.04,
+        4.29,
+        4.35,
+        4.45,
+        4.79,
+        4.94,
+        5.25,
+        5.3,
+        5.35,
+        5.45,
+        5.68,
+        5.89,
+        6.45
+      ],
+      "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
+    },
+    {
+      "label": "Ratehub GIC rates",
+      "product": "GIC",
+      "url": "https://www.ratehub.ca/gics",
+      "sourceType": "Marketplace",
+      "lastChecked": "2026-07-15",
+      "status": "Checked",
+      "ratesFound": [
+        2.25,
+        2.75,
+        3.3,
+        3.35,
+        3.6,
+        4,
+        4.05
+      ],
+      "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
+    },
+    {
+      "label": "Ratehub savings account rates",
+      "product": "Savings",
+      "url": "https://www.ratehub.ca/savings-accounts",
+      "sourceType": "Marketplace",
+      "lastChecked": "2026-07-15",
+      "status": "Checked",
+      "ratesFound": [
+        2.25,
+        2.75,
+        3
+      ],
+      "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
+    },
+    {
+      "label": "WOWA mortgage rates",
+      "product": "Mortgage",
+      "url": "https://wowa.ca/mortgage-rates",
+      "sourceType": "Marketplace",
+      "lastChecked": "2026-07-15",
+      "status": "Checked",
+      "ratesFound": [
+        0.6,
+        1.7,
+        2.4,
+        2.8,
+        3.1,
+        3.25,
+        3.84,
+        3.94,
+        4,
+        4.5,
+        4.6
+      ],
+      "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
+    },
+    {
+      "label": "NerdWallet Canada GIC rates",
+      "product": "GIC",
+      "url": "https://www.nerdwallet.com/ca/p/best/banking/best-gic-rates-in-canada",
+      "sourceType": "Marketplace",
+      "lastChecked": "2026-07-15",
+      "status": "Checked",
+      "ratesFound": [
+        2.35,
+        2.4,
+        2.45,
+        2.5,
+        2.55,
+        2.6,
+        2.65,
+        2.7,
+        2.75,
+        2.8,
+        2.85,
+        2.9,
+        3,
+        3.05,
+        3.1,
+        3.15,
+        3.2,
+        3.25,
+        3.3,
+        3.35,
+        3.4,
+        3.43,
+        3.45,
+        3.5,
+        3.54,
+        3.55,
+        3.6,
+        3.65,
+        3.7,
+        3.75,
+        3.76,
+        3.8,
+        3.85,
+        3.9,
+        3.95,
+        4,
+        4.05,
+        4.1,
+        5
+      ],
+      "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
+    }
+  ],
+  "marketSignalSources": [
+    {
+      "label": "Royal Bank of Canada",
+      "signal": "Canadian bank equity",
+      "url": "https://ca.finance.yahoo.com/quote/RY.TO",
+      "sourceType": "Market signal",
+      "lastChecked": "2026-07-15",
+      "status": "Reachable",
+      "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
+    },
+    {
+      "label": "Toronto-Dominion Bank",
+      "signal": "Canadian bank equity",
+      "url": "https://ca.finance.yahoo.com/quote/TD.TO",
+      "sourceType": "Market signal",
+      "lastChecked": "2026-07-15",
+      "status": "Reachable",
+      "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
+    },
+    {
+      "label": "Bank of Montreal",
+      "signal": "Canadian bank equity",
+      "url": "https://ca.finance.yahoo.com/quote/BMO.TO",
+      "sourceType": "Market signal",
+      "lastChecked": "2026-07-15",
+      "status": "Reachable",
+      "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
+    },
+    {
+      "label": "Bank of Nova Scotia",
+      "signal": "Canadian bank equity",
+      "url": "https://ca.finance.yahoo.com/quote/BNS.TO",
+      "sourceType": "Market signal",
+      "lastChecked": "2026-07-15",
+      "status": "Reachable",
+      "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
+    },
+    {
+      "label": "Canadian Imperial Bank of Commerce",
+      "signal": "Canadian bank equity",
+      "url": "https://ca.finance.yahoo.com/quote/CM.TO",
+      "sourceType": "Market signal",
+      "lastChecked": "2026-07-15",
+      "status": "Reachable",
+      "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
+    },
+    {
+      "label": "CAD/USD",
+      "signal": "Currency",
+      "url": "https://ca.finance.yahoo.com/quote/CADUSD=X",
+      "sourceType": "Market signal",
+      "lastChecked": "2026-07-15",
+      "status": "Reachable",
+      "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     }
   ]
 }
