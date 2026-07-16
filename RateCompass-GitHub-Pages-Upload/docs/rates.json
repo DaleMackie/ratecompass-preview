@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-07-16",
   "sourceSummary": "RateCompass hosted marketplace benchmark and consumer comparison feed. Values can include Ratehub, WOWA, and NerdWallet marketplace comparisons plus curated fallback rows; they are not live lender rates unless explicitly marked Verified with an official source.",
   "benchmarks": [
     {
@@ -1080,7 +1080,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Checked",
       "ratesFound": [
         0.61,
@@ -1100,7 +1100,6 @@
         3.45,
         3.65,
         3.74,
-        3.89,
         3.94,
         4.29,
         4.35,
@@ -1122,7 +1121,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Checked",
       "ratesFound": [
         0.85,
@@ -1137,7 +1136,6 @@
         3.35,
         3.45,
         3.74,
-        3.89,
         3.94,
         4.04,
         4.09,
@@ -1163,7 +1161,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Checked",
       "ratesFound": [
         0.85,
@@ -1183,7 +1181,6 @@
         3.65,
         3.74,
         3.79,
-        3.89,
         3.94,
         4.04,
         4.29,
@@ -1206,7 +1203,7 @@
       "product": "GIC",
       "url": "https://www.ratehub.ca/gics",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Checked",
       "ratesFound": [
         2.25,
@@ -1224,7 +1221,7 @@
       "product": "Savings",
       "url": "https://www.ratehub.ca/savings-accounts",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Checked",
       "ratesFound": [
         2.25,
@@ -1238,7 +1235,7 @@
       "product": "Mortgage",
       "url": "https://wowa.ca/mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Checked",
       "ratesFound": [
         0.6,
@@ -1260,7 +1257,7 @@
       "product": "GIC",
       "url": "https://www.nerdwallet.com/ca/p/best/banking/best-gic-rates-in-canada",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Checked",
       "ratesFound": [
         2.35,
@@ -1281,27 +1278,28 @@
         3.15,
         3.2,
         3.25,
+        3.28,
         3.3,
+        3.33,
         3.35,
         3.4,
-        3.43,
+        3.44,
         3.45,
         3.5,
-        3.54,
         3.55,
         3.6,
         3.65,
         3.7,
         3.75,
-        3.76,
         3.8,
         3.85,
+        3.88,
+        3.89,
         3.9,
         3.95,
         4,
         4.05,
-        4.1,
-        5
+        4.1
       ],
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     }
@@ -1312,7 +1310,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/RY.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1321,7 +1319,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/TD.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1330,7 +1328,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BMO.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1339,7 +1337,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BNS.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1348,7 +1346,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/CM.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1357,7 +1355,7 @@
       "signal": "Currency",
       "url": "https://ca.finance.yahoo.com/quote/CADUSD=X",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-15",
+      "lastChecked": "2026-07-16",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     }
