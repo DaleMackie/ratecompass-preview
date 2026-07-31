@@ -160,6 +160,12 @@ async function checkYahooSource(source, checkedAt) {
 }
 
 function normalizeFeed(feed, checkedAt, marketplaceSources, marketSignalSources) {
+  const checkedProducts = new Set(
+    marketplaceSources
+      .filter((source) => source.status === "Checked")
+      .map((source) => source.product)
+  );
+
   return {
     ...feed,
     updatedAt: checkedAt,
@@ -174,14 +180,25 @@ function normalizeFeed(feed, checkedAt, marketplaceSources, marketSignalSources)
     },
     marketplaceSources,
     marketSignalSources,
-    benchmarks: (feed.benchmarks ?? []).map((benchmark) => ({
-      ...benchmark,
-      source: benchmark.source?.replace("hosted benchmark feed", "hosted marketplace benchmark feed") ?? "RateCompass hosted marketplace benchmark feed",
-      status: benchmark.status === "Verified" ? "Verified" : "Marketplace"
-    })),
+    benchmarks: (feed.benchmarks ?? []).map((benchmark) => {
+      const productWasChecked = checkedProducts.has(benchmark.product) || benchmark.product === "LOC / HELOC";
+
+      return {
+        ...benchmark,
+        source: benchmark.source?.replace("hosted benchmark feed", "hosted marketplace benchmark feed") ?? "RateCompass hosted marketplace benchmark feed",
+        lastChecked: productWasChecked ? `Last checked: ${checkedAt}` : benchmark.lastChecked,
+        status: benchmark.status === "Verified" ? "Verified" : "Marketplace",
+        reviewNote: productWasChecked
+          ? "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
+          : "No current source check was available for this benchmark during the latest refresh."
+      };
+    }),
     institutionRates: (feed.institutionRates ?? []).map((entry) => ({
       ...entry,
-      note: entry.note === "Verified" ? "Verified" : "Marketplace"
+      note: entry.note === "Verified" ? "Verified" : "Marketplace",
+      status: entry.status === "Verified" ? "Verified" : "Marketplace",
+      source: entry.source ?? "RateCompass hosted marketplace benchmark feed",
+      lastChecked: entry.lastChecked ?? checkedAt
     }))
   };
 }

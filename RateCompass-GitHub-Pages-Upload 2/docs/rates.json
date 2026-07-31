@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-07-31",
   "sourceSummary": "RateCompass hosted marketplace benchmark and consumer comparison feed. Values can include Ratehub, WOWA, and NerdWallet marketplace comparisons plus curated fallback rows; they are not live lender rates unless explicitly marked Verified with an official source.",
   "benchmarks": [
     {
@@ -9,10 +9,11 @@
       "rate": 5.19,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 1-year fixed term.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
-      "appliesLocalAdjustments": true
+      "appliesLocalAdjustments": true,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "Mortgage",
@@ -20,10 +21,11 @@
       "rate": 4.89,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 2-year fixed term.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
-      "appliesLocalAdjustments": true
+      "appliesLocalAdjustments": true,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "Mortgage",
@@ -31,10 +33,11 @@
       "rate": 4.59,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 3-year fixed term.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
-      "appliesLocalAdjustments": true
+      "appliesLocalAdjustments": true,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "Mortgage",
@@ -42,10 +45,11 @@
       "rate": 4.39,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year fixed term.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
-      "appliesLocalAdjustments": true
+      "appliesLocalAdjustments": true,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "Mortgage",
@@ -53,10 +57,11 @@
       "rate": 5.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year variable term.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
-      "appliesLocalAdjustments": true
+      "appliesLocalAdjustments": true,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -65,9 +70,10 @@
       "rate": 4.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -76,9 +82,10 @@
       "rate": 3.9,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -87,9 +94,10 @@
       "rate": 3.8,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -98,9 +106,10 @@
       "rate": 3.65,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -109,9 +118,10 @@
       "rate": 3.55,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year redeemable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -120,9 +130,10 @@
       "rate": 3.4,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year redeemable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -131,9 +142,10 @@
       "rate": 3.3,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year redeemable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -142,9 +154,10 @@
       "rate": 3.15,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year redeemable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -153,9 +166,10 @@
       "rate": 3.3,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year cashable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -164,9 +178,10 @@
       "rate": 3.15,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year cashable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -175,9 +190,10 @@
       "rate": 3.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year cashable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "GIC",
@@ -186,9 +202,10 @@
       "rate": 2.9,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year cashable GIC benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "Savings",
@@ -196,9 +213,10 @@
       "rate": 1.75,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian standard savings benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "Savings",
@@ -206,9 +224,10 @@
       "rate": 2.96,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian high-interest savings benchmark.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": false
+      "lowerIsBetter": false,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "LOC / HELOC",
@@ -217,9 +236,10 @@
       "benchmarkLabel": "Prime +0.50%",
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted secured LOC/HELOC benchmark expressed as a spread over prime.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": true
+      "lowerIsBetter": true,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     },
     {
       "product": "LOC / HELOC",
@@ -228,9 +248,10 @@
       "benchmarkLabel": "Prime +2.00%",
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted unsecured line-of-credit benchmark expressed as a spread over prime.",
-      "lastChecked": "Last updated: 2026-07-11",
+      "lastChecked": "Last checked: 2026-07-31",
       "status": "Marketplace",
-      "lowerIsBetter": true
+      "lowerIsBetter": true,
+      "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
     }
   ],
   "institutionRates": [
@@ -240,7 +261,10 @@
       "institution": "RBC",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.19
+      "rate": 5.19,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -248,7 +272,10 @@
       "institution": "TD",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.24
+      "rate": 5.24,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -256,7 +283,10 @@
       "institution": "BMO",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.14
+      "rate": 5.14,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -264,7 +294,10 @@
       "institution": "CIBC",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.18
+      "rate": 5.18,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -272,7 +305,10 @@
       "institution": "Scotiabank",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.21
+      "rate": 5.21,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -280,7 +316,10 @@
       "institution": "National Bank",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.16
+      "rate": 5.16,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -288,7 +327,10 @@
       "institution": "Desjardins",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.17
+      "rate": 5.17,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -296,7 +338,10 @@
       "institution": "First National",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.11
+      "rate": 5.11,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -304,7 +349,10 @@
       "institution": "MCAP",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.09
+      "rate": 5.09,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -312,7 +360,10 @@
       "institution": "Tangerine",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.15
+      "rate": 5.15,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -320,7 +371,10 @@
       "institution": "RBC",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.89
+      "rate": 4.89,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -328,7 +382,10 @@
       "institution": "TD",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.94
+      "rate": 4.94,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -336,7 +393,10 @@
       "institution": "BMO",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.84
+      "rate": 4.84,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -344,7 +404,10 @@
       "institution": "CIBC",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.88
+      "rate": 4.88,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -352,7 +415,10 @@
       "institution": "Scotiabank",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.91
+      "rate": 4.91,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -360,7 +426,10 @@
       "institution": "National Bank",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.86
+      "rate": 4.86,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -368,7 +437,10 @@
       "institution": "Desjardins",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.87
+      "rate": 4.87,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -376,7 +448,10 @@
       "institution": "First National",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.82
+      "rate": 4.82,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -384,7 +459,10 @@
       "institution": "MCAP",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.8
+      "rate": 4.8,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -392,7 +470,10 @@
       "institution": "Tangerine",
       "productName": "2-year fixed",
       "note": "Marketplace",
-      "rate": 4.85
+      "rate": 4.85,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -400,7 +481,10 @@
       "institution": "RBC",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.59
+      "rate": 4.59,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -408,7 +492,10 @@
       "institution": "TD",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.64
+      "rate": 4.64,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -416,7 +503,10 @@
       "institution": "BMO",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.54
+      "rate": 4.54,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -424,7 +514,10 @@
       "institution": "CIBC",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.58
+      "rate": 4.58,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -432,7 +525,10 @@
       "institution": "Scotiabank",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.61
+      "rate": 4.61,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -440,7 +536,10 @@
       "institution": "National Bank",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.56
+      "rate": 4.56,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -448,7 +547,10 @@
       "institution": "Desjardins",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.57
+      "rate": 4.57,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -456,7 +558,10 @@
       "institution": "First National",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.52
+      "rate": 4.52,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -464,7 +569,10 @@
       "institution": "MCAP",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.5
+      "rate": 4.5,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -472,7 +580,10 @@
       "institution": "Tangerine",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.55
+      "rate": 4.55,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -480,7 +591,10 @@
       "institution": "RBC",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.49
+      "rate": 4.49,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -488,7 +602,10 @@
       "institution": "TD",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.54
+      "rate": 4.54,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -496,7 +613,10 @@
       "institution": "BMO",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.44
+      "rate": 4.44,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -504,7 +624,10 @@
       "institution": "CIBC",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.48
+      "rate": 4.48,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -512,7 +635,10 @@
       "institution": "Scotiabank",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.51
+      "rate": 4.51,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -520,7 +646,10 @@
       "institution": "National Bank",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.46
+      "rate": 4.46,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -528,7 +657,10 @@
       "institution": "Desjardins",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.47
+      "rate": 4.47,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -536,7 +668,10 @@
       "institution": "First National",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.42
+      "rate": 4.42,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -544,7 +679,10 @@
       "institution": "MCAP",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.4
+      "rate": 4.4,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -552,7 +690,10 @@
       "institution": "Tangerine",
       "productName": "4-year fixed",
       "note": "Marketplace",
-      "rate": 4.45
+      "rate": 4.45,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -560,7 +701,10 @@
       "institution": "RBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.39
+      "rate": 4.39,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -568,7 +712,10 @@
       "institution": "TD",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.44
+      "rate": 4.44,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -576,7 +723,10 @@
       "institution": "BMO",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.35
+      "rate": 4.35,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -584,7 +734,10 @@
       "institution": "CIBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.38
+      "rate": 4.38,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -592,7 +745,10 @@
       "institution": "Scotiabank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.42
+      "rate": 4.42,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -600,7 +756,10 @@
       "institution": "National Bank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.37
+      "rate": 4.37,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -608,7 +767,10 @@
       "institution": "Desjardins",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.36
+      "rate": 4.36,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -616,7 +778,10 @@
       "institution": "First National",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.32
+      "rate": 4.32,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -624,7 +789,10 @@
       "institution": "MCAP",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.3
+      "rate": 4.3,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -632,7 +800,10 @@
       "institution": "Tangerine",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.34
+      "rate": 4.34,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -640,7 +811,10 @@
       "institution": "RBC",
       "productName": "Prime +0.60%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.6
+      "spreadOverPrime": 0.6,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -648,7 +822,10 @@
       "institution": "TD",
       "productName": "Prime +0.65%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.65
+      "spreadOverPrime": 0.65,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -656,7 +833,10 @@
       "institution": "BMO",
       "productName": "Prime +0.55%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.55
+      "spreadOverPrime": 0.55,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -664,7 +844,10 @@
       "institution": "CIBC",
       "productName": "Prime +0.59%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.59
+      "spreadOverPrime": 0.59,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -672,7 +855,10 @@
       "institution": "Scotiabank",
       "productName": "Prime +0.63%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.63
+      "spreadOverPrime": 0.63,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -680,7 +866,10 @@
       "institution": "National Bank",
       "productName": "Prime +0.58%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.58
+      "spreadOverPrime": 0.58,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -688,7 +877,10 @@
       "institution": "Desjardins",
       "productName": "Prime +0.57%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.57
+      "spreadOverPrime": 0.57,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -696,7 +888,10 @@
       "institution": "First National",
       "productName": "Prime +0.54%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.54
+      "spreadOverPrime": 0.54,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -704,7 +899,10 @@
       "institution": "MCAP",
       "productName": "Prime +0.52%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.52
+      "spreadOverPrime": 0.52,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Mortgage",
@@ -712,7 +910,10 @@
       "institution": "Tangerine",
       "productName": "Prime +0.56%",
       "note": "Marketplace",
-      "spreadOverPrime": 0.56
+      "spreadOverPrime": 0.56,
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -720,7 +921,10 @@
       "institution": "RBC",
       "productName": "Standard savings",
       "rate": 1.7,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -728,7 +932,10 @@
       "institution": "TD",
       "productName": "Standard savings",
       "rate": 1.85,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -736,7 +943,10 @@
       "institution": "BMO",
       "productName": "Standard savings",
       "rate": 1.75,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -744,7 +954,10 @@
       "institution": "CIBC",
       "productName": "Standard savings",
       "rate": 1.8,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -752,7 +965,10 @@
       "institution": "Scotiabank",
       "productName": "Standard savings",
       "rate": 1.7,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -760,7 +976,10 @@
       "institution": "Simplii",
       "productName": "Standard savings",
       "rate": 1.75,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -768,7 +987,10 @@
       "institution": "Tangerine",
       "productName": "Standard savings",
       "rate": 1.7,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -776,7 +998,10 @@
       "institution": "Alterna Bank",
       "productName": "Standard savings",
       "rate": 1.9,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -784,7 +1009,10 @@
       "institution": "Meridian",
       "productName": "Standard savings",
       "rate": 1.85,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -792,7 +1020,10 @@
       "institution": "EQ Bank",
       "productName": "High interest savings",
       "rate": 4,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -800,7 +1031,10 @@
       "institution": "Tangerine",
       "productName": "Promo savings",
       "rate": 4.25,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -808,7 +1042,10 @@
       "institution": "RBC",
       "productName": "High interest savings",
       "rate": 1.7,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -816,7 +1053,10 @@
       "institution": "TD",
       "productName": "High interest savings",
       "rate": 1.85,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -824,7 +1064,10 @@
       "institution": "CIBC",
       "productName": "High interest savings",
       "rate": 1.8,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -832,7 +1075,10 @@
       "institution": "Simplii",
       "productName": "Promo savings",
       "rate": 4.1,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -840,7 +1086,10 @@
       "institution": "Motive Financial",
       "productName": "High interest savings",
       "rate": 4.1,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -848,7 +1097,10 @@
       "institution": "Alterna Bank",
       "productName": "High interest savings",
       "rate": 3.8,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -856,7 +1108,10 @@
       "institution": "Wealthsimple",
       "productName": "High interest cash",
       "rate": 3.75,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "Savings",
@@ -864,7 +1119,10 @@
       "institution": "Oaken Financial",
       "productName": "High interest savings",
       "rate": 3.7,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -872,7 +1130,10 @@
       "institution": "EQ Bank",
       "productName": "1-year non-redeemable GIC",
       "rate": 4.15,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -880,7 +1141,10 @@
       "institution": "CIBC",
       "productName": "2-year non-redeemable GIC",
       "rate": 3.95,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -888,7 +1152,10 @@
       "institution": "TD",
       "productName": "5-year non-redeemable GIC",
       "rate": 3.65,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -896,7 +1163,10 @@
       "institution": "BMO",
       "productName": "3-year non-redeemable GIC",
       "rate": 3.8,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -904,7 +1174,10 @@
       "institution": "RBC",
       "productName": "1-year non-redeemable GIC",
       "rate": 3.9,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -912,7 +1185,10 @@
       "institution": "Scotiabank",
       "productName": "1-year non-redeemable GIC",
       "rate": 4,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -920,7 +1196,10 @@
       "institution": "Oaken Financial",
       "productName": "1-year non-redeemable GIC",
       "rate": 4.2,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -928,7 +1207,10 @@
       "institution": "Tangerine",
       "productName": "1-year non-redeemable GIC",
       "rate": 4.05,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -936,7 +1218,10 @@
       "institution": "Motive Financial",
       "productName": "1-year non-redeemable GIC",
       "rate": 4.1,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -944,7 +1229,10 @@
       "institution": "EQ Bank",
       "productName": "1-year redeemable GIC",
       "rate": 3.65,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -952,7 +1240,10 @@
       "institution": "CIBC",
       "productName": "2-year redeemable GIC",
       "rate": 3.45,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -960,7 +1251,10 @@
       "institution": "TD",
       "productName": "5-year redeemable GIC",
       "rate": 3.15,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -968,7 +1262,10 @@
       "institution": "BMO",
       "productName": "3-year redeemable GIC",
       "rate": 3.3,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -976,7 +1273,10 @@
       "institution": "RBC",
       "productName": "1-year redeemable GIC",
       "rate": 3.4,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -984,7 +1284,10 @@
       "institution": "Scotiabank",
       "productName": "1-year redeemable GIC",
       "rate": 3.5,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -992,7 +1295,10 @@
       "institution": "Tangerine",
       "productName": "1-year redeemable GIC",
       "rate": 3.55,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1000,7 +1306,10 @@
       "institution": "Meridian",
       "productName": "1-year redeemable GIC",
       "rate": 3.45,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1008,7 +1317,10 @@
       "institution": "EQ Bank",
       "productName": "1-year cashable GIC",
       "rate": 3.4,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1016,7 +1328,10 @@
       "institution": "CIBC",
       "productName": "2-year cashable GIC",
       "rate": 3.2,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1024,7 +1339,10 @@
       "institution": "TD",
       "productName": "5-year cashable GIC",
       "rate": 2.9,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1032,7 +1350,10 @@
       "institution": "BMO",
       "productName": "3-year cashable GIC",
       "rate": 3.05,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1040,7 +1361,10 @@
       "institution": "RBC",
       "productName": "1-year cashable GIC",
       "rate": 3.15,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1048,7 +1372,10 @@
       "institution": "Scotiabank",
       "productName": "1-year cashable GIC",
       "rate": 3.25,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1056,7 +1383,10 @@
       "institution": "Tangerine",
       "productName": "1-year cashable GIC",
       "rate": 3.3,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     },
     {
       "category": "GIC",
@@ -1064,7 +1394,10 @@
       "institution": "Meridian",
       "productName": "1-year cashable GIC",
       "rate": 3.2,
-      "note": "Marketplace"
+      "note": "Marketplace",
+      "status": "Marketplace",
+      "source": "RateCompass hosted marketplace benchmark feed",
+      "lastChecked": "2026-07-31"
     }
   ],
   "refreshPolicy": {
@@ -1080,7 +1413,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Checked",
       "ratesFound": [
         0.61,
@@ -1123,7 +1456,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Checked",
       "ratesFound": [
         0.85,
@@ -1162,7 +1495,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Checked",
       "ratesFound": [
         0.85,
@@ -1205,7 +1538,7 @@
       "product": "GIC",
       "url": "https://www.ratehub.ca/gics",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Checked",
       "ratesFound": [
         2.25,
@@ -1222,10 +1555,9 @@
       "product": "Savings",
       "url": "https://www.ratehub.ca/savings-accounts",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Checked",
       "ratesFound": [
-        2.25,
         2.75
       ],
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
@@ -1235,7 +1567,7 @@
       "product": "Mortgage",
       "url": "https://wowa.ca/mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Checked",
       "ratesFound": [
         0.6,
@@ -1243,7 +1575,7 @@
         2.4,
         2.8,
         3.1,
-        3.25,
+        3.35,
         3.84,
         3.94,
         4,
@@ -1257,7 +1589,7 @@
       "product": "GIC",
       "url": "https://www.nerdwallet.com/ca/p/best/banking/best-gic-rates-in-canada",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Checked",
       "ratesFound": [
         2.35,
@@ -1310,7 +1642,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/RY.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1319,7 +1651,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/TD.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1328,7 +1660,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BMO.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1337,7 +1669,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BNS.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1346,7 +1678,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/CM.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1355,7 +1687,7 @@
       "signal": "Currency",
       "url": "https://ca.finance.yahoo.com/quote/CADUSD=X",
       "sourceType": "Market signal",
-      "lastChecked": "2026-07-30",
+      "lastChecked": "2026-07-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     }
