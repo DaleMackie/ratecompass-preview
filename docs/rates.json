@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "sourceSummary": "RateCompass hosted marketplace benchmark and consumer comparison feed. Values can include Ratehub, WOWA, and NerdWallet marketplace comparisons plus curated fallback rows; they are not live lender rates unless explicitly marked Verified with an official source.",
   "benchmarks": [
     {
@@ -9,7 +9,7 @@
       "rate": 5.19,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 1-year fixed term.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -21,7 +21,7 @@
       "rate": 4.89,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 2-year fixed term.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -33,7 +33,7 @@
       "rate": 4.59,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 3-year fixed term.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -45,7 +45,7 @@
       "rate": 4.39,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year fixed term.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -57,7 +57,7 @@
       "rate": 5.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year variable term.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -70,7 +70,7 @@
       "rate": 4.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -82,7 +82,7 @@
       "rate": 3.9,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -94,7 +94,7 @@
       "rate": 3.8,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -106,7 +106,7 @@
       "rate": 3.65,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -118,7 +118,7 @@
       "rate": 3.55,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -130,7 +130,7 @@
       "rate": 3.4,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -142,7 +142,7 @@
       "rate": 3.3,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -154,7 +154,7 @@
       "rate": 3.15,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -166,7 +166,7 @@
       "rate": 3.3,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year cashable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -178,7 +178,7 @@
       "rate": 3.15,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year cashable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -190,7 +190,7 @@
       "rate": 3.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year cashable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -202,7 +202,7 @@
       "rate": 2.9,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year cashable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -213,7 +213,7 @@
       "rate": 1.75,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian standard savings benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -224,7 +224,7 @@
       "rate": 2.96,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian high-interest savings benchmark.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -236,7 +236,7 @@
       "benchmarkLabel": "Prime +0.50%",
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted secured LOC/HELOC benchmark expressed as a spread over prime.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -248,7 +248,7 @@
       "benchmarkLabel": "Prime +2.00%",
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted unsecured line-of-credit benchmark expressed as a spread over prime.",
-      "lastChecked": "Last checked: 2026-08-22",
+      "lastChecked": "Last checked: 2026-08-23",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -1413,7 +1413,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Checked",
       "ratesFound": [
         0.61,
@@ -1456,7 +1456,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Checked",
       "ratesFound": [
         0.85,
@@ -1494,7 +1494,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Checked",
       "ratesFound": [
         0.85,
@@ -1536,7 +1536,7 @@
       "product": "GIC",
       "url": "https://www.ratehub.ca/gics",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Checked",
       "ratesFound": [
         2.25,
@@ -1554,7 +1554,7 @@
       "product": "Savings",
       "url": "https://www.ratehub.ca/savings-accounts",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Checked",
       "ratesFound": [
         2.25,
@@ -1568,7 +1568,7 @@
       "product": "Mortgage",
       "url": "https://wowa.ca/mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Checked",
       "ratesFound": [
         0.6,
@@ -1590,7 +1590,7 @@
       "product": "GIC",
       "url": "https://www.nerdwallet.com/ca/p/best/banking/best-gic-rates-in-canada",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Checked",
       "ratesFound": [
         2.35,
@@ -1643,7 +1643,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/RY.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1652,7 +1652,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/TD.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1661,7 +1661,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BMO.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1670,7 +1670,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BNS.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1679,7 +1679,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/CM.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1688,7 +1688,7 @@
       "signal": "Currency",
       "url": "https://ca.finance.yahoo.com/quote/CADUSD=X",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-22",
+      "lastChecked": "2026-08-23",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     }
