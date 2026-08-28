@@ -198,7 +198,7 @@ function normalizeFeed(feed, checkedAt, marketplaceSources, marketSignalSources)
       note: entry.note === "Verified" ? "Verified" : "Marketplace",
       status: entry.status === "Verified" ? "Verified" : "Marketplace",
       source: entry.source ?? "RateCompass hosted marketplace benchmark feed",
-      lastChecked: entry.lastChecked ?? checkedAt
+      lastChecked: entry.note === "Verified" || entry.status === "Verified" ? (entry.lastChecked ?? checkedAt) : checkedAt
     }))
   };
 }
