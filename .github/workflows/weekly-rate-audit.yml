@@ -1,0 +1,86 @@
+name: Weekly rate feed audit
+
+on:
+  schedule:
+    - cron: "30 9 * * MON"
+      timezone: "America/Edmonton"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  create-audit-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create weekly audit checklist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const dateParts = new Intl.DateTimeFormat("en-CA", {
+              timeZone: "America/Edmonton",
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit"
+            }).formatToParts(new Date());
+            const part = (type) => dateParts.find((item) => item.type === type).value;
+            const auditDate = `${part("year")}-${part("month")}-${part("day")}`;
+            const title = `Weekly rate feed audit - ${auditDate}`;
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const healthUrl = "https://dalemackie.github.io/ratecompass-preview/feed-health.html";
+            const feedUrl = "https://dalemackie.github.io/ratecompass-preview/rates.json";
+
+            const body = [
+              "Use this checklist to confirm the feed is fresh and the most important public rate signals still line up with their source pages.",
+              "",
+              `Health page: ${healthUrl}`,
+              `Public feed: ${feedUrl}`,
+              `Audit workflow run: ${runUrl}`,
+              "",
+              "## Feed health",
+              "- [ ] Open the health page and confirm the feed is Fresh today, or Due soon before the first scheduled refresh.",
+              "- [ ] Confirm benchmark rows are present.",
+              "- [ ] Confirm institution rows are present.",
+              "- [ ] Confirm source checks are normal, or note any unavailable source below.",
+              "- [ ] Open the backup feed and dated archive from the health page.",
+              "",
+              "## Source spot checks",
+              "- [ ] Compare Ratehub best mortgage rates against the feed.",
+              "- [ ] Compare Ratehub 5-year fixed mortgage rates against the feed.",
+              "- [ ] Compare WOWA mortgage rates against the feed.",
+              "- [ ] Compare Ratehub GIC rates against the feed.",
+              "- [ ] Compare NerdWallet Canada GIC rates against the feed.",
+              "- [ ] Compare Ratehub savings rates against the feed.",
+              "",
+              "## App spot checks",
+              "- [ ] Open Rate Compass on iPhone and confirm Today's Snapshot does not show Sample for savings, mortgage, or GIC rows.",
+              "- [ ] Open the Rates page and confirm mortgage, savings, GIC, and prime rows are not marked Sample.",
+              "- [ ] If anything is stale, run Refresh marketplace rates manually from GitHub Actions.",
+              "",
+              "## Notes",
+              "- Source unavailable:",
+              "- Feed issue:",
+              "- App display issue:",
+              "",
+              "Close this issue when the weekly audit is complete."
+            ].join("\n");
+
+            const query = `repo:${context.repo.owner}/${context.repo.repo} is:issue in:title "${title}"`;
+            const existing = await github.rest.search.issuesAndPullRequests({ q: query, per_page: 1 });
+
+            if (existing.data.items.length) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.data.items[0].number,
+                body: `Weekly audit checklist already exists for ${auditDate}.\n\nWorkflow run: ${runUrl}`
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body
+              });
+            }
