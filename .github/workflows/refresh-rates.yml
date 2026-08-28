@@ -3,8 +3,10 @@ name: Refresh marketplace rates
 on:
   schedule:
     # Morning refresh plus an afternoon backup, both away from peak top-of-hour load.
-    - cron: "15 11 * * *"
-    - cron: "45 19 * * *"
+    - cron: "15 5 * * *"
+      timezone: "America/Edmonton"
+    - cron: "45 13 * * *"
+      timezone: "America/Edmonton"
   workflow_dispatch:
 
 permissions:
