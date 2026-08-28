@@ -2,12 +2,18 @@ name: Refresh marketplace rates
 
 on:
   schedule:
-    # 11:15 UTC is early morning in Canada and keeps the refresh to once per day.
+    # Morning refresh plus an afternoon backup, both away from peak top-of-hour load.
     - cron: "15 11 * * *"
+    - cron: "45 19 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: write
+
+concurrency:
+  group: refresh-marketplace-rates
+  cancel-in-progress: false
 
 jobs:
   refresh:
@@ -25,6 +31,58 @@ jobs:
       - name: Refresh marketplace feed
         run: node scripts/refresh-marketplace-feed.mjs
 
+      - name: Validate refreshed feed freshness
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile } from "node:fs/promises";
+
+          const expectedDate = new Date().toISOString().slice(0, 10);
+          const feedPaths = [
+            "rates.json",
+            "docs/rates.json",
+            "RateCompass-GitHub-Pages-Upload/docs/rates.json",
+            "RateCompass-GitHub-Pages-Upload 2/docs/rates.json"
+          ];
+
+          const canonical = await readFile(feedPaths[0], "utf8");
+
+          for (const path of feedPaths) {
+            const contents = await readFile(path, "utf8");
+            if (contents !== canonical) {
+              throw new Error(`${path} does not match rates.json`);
+            }
+
+            const feed = JSON.parse(contents);
+            if (feed.updatedAt !== expectedDate) {
+              throw new Error(`${path} updatedAt is ${feed.updatedAt}; expected ${expectedDate}`);
+            }
+
+            if (!Array.isArray(feed.benchmarks) || feed.benchmarks.length === 0) {
+              throw new Error(`${path} has no benchmark rows`);
+            }
+
+            if (!Array.isArray(feed.institutionRates) || feed.institutionRates.length === 0) {
+              throw new Error(`${path} has no institution rows`);
+            }
+
+            const staleBenchmarks = feed.benchmarks.filter((entry) => {
+              const checked = entry.lastChecked ?? "";
+              return entry.status !== "Verified" && !checked.includes(expectedDate);
+            });
+
+            const staleInstitutionRows = feed.institutionRates.filter((entry) => {
+              const isVerified = entry.note === "Verified" || entry.status === "Verified";
+              return !isVerified && entry.lastChecked !== expectedDate;
+            });
+
+            if (staleBenchmarks.length || staleInstitutionRows.length) {
+              throw new Error(`${path} has stale rows: ${staleBenchmarks.length} benchmarks, ${staleInstitutionRows.length} institution rows`);
+            }
+          }
+
+          console.log(`All feed files are fresh for ${expectedDate}.`);
+          NODE
+
       - name: Commit refreshed feed
         run: |
           git config user.name "github-actions[bot]"
@@ -36,3 +94,29 @@ jobs:
             git commit -m "Refresh marketplace rate feed"
             git push
           fi
+
+      - name: Open failure issue
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "Rate feed refresh needs attention";
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = `The scheduled Rate Compass marketplace feed refresh failed.\n\nRun: ${runUrl}\n\nPlease refresh the feed manually and check the source pages.`;
+            const query = `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open in:title "${title}"`;
+            const existing = await github.rest.search.issuesAndPullRequests({ q: query, per_page: 1 });
+            if (existing.data.items.length) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.data.items[0].number,
+                body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body
+              });
+            }
