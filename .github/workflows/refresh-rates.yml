@@ -39,12 +39,21 @@ jobs:
           import { readFile } from "node:fs/promises";
 
           const expectedDate = new Date().toISOString().slice(0, 10);
-          const feedPaths = [
+          const liveFeedPaths = [
             "rates.json",
             "docs/rates.json",
             "RateCompass-GitHub-Pages-Upload/docs/rates.json",
             "RateCompass-GitHub-Pages-Upload 2/docs/rates.json"
           ];
+          const backupFeedPaths = [
+            "rates-backup.json",
+            "docs/rates-backup.json"
+          ];
+          const archiveFeedPaths = [
+            `feed-archive/rates-${expectedDate}.json`,
+            `docs/feed-archive/rates-${expectedDate}.json`
+          ];
+          const feedPaths = [...liveFeedPaths, ...backupFeedPaths, ...archiveFeedPaths];
 
           const canonical = await readFile(feedPaths[0], "utf8");
 
@@ -89,7 +98,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add rates.json docs/rates.json "RateCompass-GitHub-Pages-Upload/docs/rates.json" "RateCompass-GitHub-Pages-Upload 2/docs/rates.json"
+          git add rates.json docs/rates.json rates-backup.json docs/rates-backup.json feed-archive docs/feed-archive "RateCompass-GitHub-Pages-Upload/docs/rates.json" "RateCompass-GitHub-Pages-Upload 2/docs/rates.json"
           if git diff --cached --quiet; then
             echo "No feed changes to commit."
           else
