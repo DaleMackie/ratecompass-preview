@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { dirname } from "node:path";
 
 const feedPaths = [
   "rates.json",
@@ -8,6 +9,18 @@ const feedPaths = [
   "RateCompass-GitHub-Pages-Upload/docs/rates.json",
   "RateCompass-GitHub-Pages-Upload 2/docs/rates.json"
 ];
+
+const backupFeedPaths = [
+  "rates-backup.json",
+  "docs/rates-backup.json"
+];
+
+function archiveFeedPaths(checkedAt) {
+  return [
+    `feed-archive/rates-${checkedAt}.json`,
+    `docs/feed-archive/rates-${checkedAt}.json`
+  ];
+}
 
 const marketplaceSourceConfigs = [
   {
@@ -214,9 +227,15 @@ const marketSignalSources = await Promise.all(
 const baseFeed = JSON.parse(await readFile(feedPaths[0], "utf8"));
 const refreshedFeed = normalizeFeed(baseFeed, checkedAt, marketplaceSources, marketSignalSources);
 const output = `${JSON.stringify(refreshedFeed, null, 2)}\n`;
+const archivePaths = archiveFeedPaths(checkedAt);
+const outputPaths = [...feedPaths, ...backupFeedPaths, ...archivePaths];
 
-await Promise.all(feedPaths.map((path) => writeFile(path, output)));
+await Promise.all(
+  [...new Set(outputPaths.map((path) => dirname(path)).filter((directory) => directory !== "."))]
+    .map((directory) => mkdir(directory, { recursive: true }))
+);
+await Promise.all(outputPaths.map((path) => writeFile(path, output)));
 
-console.log(`Updated ${feedPaths.length} feed files for ${checkedAt}.`);
+console.log(`Updated ${feedPaths.length} feed files, ${backupFeedPaths.length} backup files, and ${archivePaths.length} archive files for ${checkedAt}.`);
 console.log(`Marketplace checks: ${marketplaceSources.map((source) => `${source.label}: ${source.status}`).join("; ")}`);
 console.log(`Yahoo signal checks: ${marketSignalSources.map((source) => `${source.label}: ${source.status}`).join("; ")}`);
