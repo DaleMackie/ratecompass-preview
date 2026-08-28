@@ -285,6 +285,8 @@
         <p id="summary">Loading feed summary...</p>
         <div class="footer-links">
           <a href="rates.json">Open rates.json</a>
+          <a href="rates-backup.json">Open backup feed</a>
+          <a id="archive-link" href="#">Open dated archive</a>
           <a href="https://github.com/DaleMackie/ratecompass-preview/actions/workflows/refresh-rates.yml">Open refresh workflow</a>
           <a href="https://github.com/DaleMackie/ratecompass-preview/issues">Open GitHub issues</a>
         </div>
@@ -391,6 +393,7 @@
         "summary",
         `The public feed is dated ${feed.updatedAt}, with ${benchmarkCount} benchmark rows and ${institutionCount} institution rows. ${sourceNote}`
       );
+      document.getElementById("archive-link").href = `feed-archive/rates-${feed.updatedAt}.json`;
 
       renderSources(feed);
     }
