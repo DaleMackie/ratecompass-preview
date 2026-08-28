@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rate Compass Feed Health</title>
+  <style>
+    :root {
+      --ink: #13202b;
+      --muted: #667481;
+      --line: #d9e2e8;
+      --panel: #ffffff;
+      --page: #eef4f7;
+      --blue: #0068b4;
+      --green: #238b63;
+      --amber: #b66a00;
+      --red: #b4232c;
+      --teal: #087f8c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--page);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: 0;
+      line-height: 1.06;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .healthy { color: var(--green); }
+    .due { color: var(--amber); }
+    .stale, .failed { color: var(--red); }
+    .info { color: var(--teal); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(19, 32, 43, 0.06);
+    }
+
+    .metric {
+      min-height: 132px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      color: var(--ink);
+      font-size: 32px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .metric-note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .wide {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 11px 8px;
+      border-top: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th:last-child,
+    td:last-child {
+      min-width: 104px;
+      white-space: nowrap;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .row-title {
+      font-weight: 750;
+      color: var(--ink);
+    }
+
+    .source-url {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+      word-break: break-word;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .loading {
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      header,
+      .wide {
+        display: block;
+      }
+
+      header .pill {
+        margin-top: 14px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .wide .panel + .panel {
+        margin-top: 14px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(100vw - 20px, 1120px);
+        padding-top: 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 14px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Rate Compass Feed Health</h1>
+        <p>Live check of the public rate feed used by the app.</p>
+      </div>
+      <span class="pill info" id="page-status">Checking...</span>
+    </header>
+
+    <section class="grid" aria-label="Feed metrics">
+      <article class="panel metric">
+        <div class="metric-label">Feed date</div>
+        <div class="metric-value" id="feed-date">--</div>
+        <div class="metric-note" id="feed-age">Checking feed age</div>
+      </article>
+
+      <article class="panel metric">
+        <div class="metric-label">Benchmark rows</div>
+        <div class="metric-value" id="benchmark-count">--</div>
+        <div class="metric-note">Mortgage, GIC, savings, prime, and related rows</div>
+      </article>
+
+      <article class="panel metric">
+        <div class="metric-label">Institution rows</div>
+        <div class="metric-value" id="institution-count">--</div>
+        <div class="metric-note">Marketplace comparison rows shown in app rate views</div>
+      </article>
+
+      <article class="panel metric">
+        <div class="metric-label">Latest refresh run</div>
+        <div class="metric-value" id="workflow-status">--</div>
+        <div class="metric-note" id="workflow-note">Checking GitHub Actions</div>
+      </article>
+    </section>
+
+    <section class="wide">
+      <article class="panel">
+        <h2>Source Checks</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Product</th>
+              <th>Status</th>
+              <th>Checked</th>
+            </tr>
+          </thead>
+          <tbody id="source-rows">
+            <tr><td colspan="4">Loading source checks...</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="panel">
+        <h2>What To Watch</h2>
+        <p id="summary">Loading feed summary...</p>
+        <div class="footer-links">
+          <a href="rates.json">Open rates.json</a>
+          <a href="https://github.com/DaleMackie/ratecompass-preview/actions/workflows/refresh-rates.yml">Open refresh workflow</a>
+          <a href="https://github.com/DaleMackie/ratecompass-preview/issues">Open GitHub issues</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const feedUrl = `rates.json?cacheBust=${Date.now()}`;
+    const workflowRunsUrl = "https://api.github.com/repos/DaleMackie/ratecompass-preview/actions/workflows/refresh-rates.yml/runs?per_page=1";
+
+    const dateFormatter = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/Edmonton",
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    });
+
+    const dateTimeFormatter = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/Edmonton",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZoneName: "short"
+    });
+
+    function setText(id, value) {
+      document.getElementById(id).textContent = value;
+    }
+
+    function setStatus(kind, label) {
+      const status = document.getElementById("page-status");
+      status.className = `pill ${kind}`;
+      status.textContent = label;
+    }
+
+    function daysSince(dateText) {
+      const today = new Date();
+      const todayUTC = Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate());
+      const [year, month, day] = dateText.split("-").map(Number);
+      const feedUTC = Date.UTC(year, month - 1, day);
+      return Math.floor((todayUTC - feedUTC) / 86400000);
+    }
+
+    function sourceClass(status) {
+      if (status === "Checked" || status === "Reachable") return "healthy";
+      if (status === "Unavailable") return "failed";
+      return "due";
+    }
+
+    function renderSources(feed) {
+      const sources = [
+        ...(feed.marketplaceSources ?? []),
+        ...(feed.marketSignalSources ?? [])
+      ];
+      const rows = sources.map((source) => `
+        <tr>
+          <td>
+            <span class="row-title">${source.label}</span>
+            <a class="source-url" href="${source.url}">${source.url}</a>
+          </td>
+          <td>${source.product ?? source.signal ?? "Market signal"}</td>
+          <td><span class="${sourceClass(source.status)}">${source.status}</span></td>
+          <td>${source.lastChecked ?? "--"}</td>
+        </tr>
+      `).join("");
+
+      document.getElementById("source-rows").innerHTML = rows || "<tr><td colspan=\"4\">No source checks found.</td></tr>";
+    }
+
+    function renderFeed(feed) {
+      const benchmarkCount = feed.benchmarks?.length ?? 0;
+      const institutionCount = feed.institutionRates?.length ?? 0;
+      const sourceCount = (feed.marketplaceSources?.length ?? 0) + (feed.marketSignalSources?.length ?? 0);
+      const ageDays = daysSince(feed.updatedAt);
+
+      setText("feed-date", feed.updatedAt ?? "--");
+      setText("benchmark-count", benchmarkCount.toLocaleString("en-CA"));
+      setText("institution-count", institutionCount.toLocaleString("en-CA"));
+
+      if (ageDays <= 0) {
+        setStatus("healthy", "Fresh today");
+        setText("feed-age", "Updated today");
+      } else if (ageDays === 1) {
+        setStatus("due", "Due soon");
+        setText("feed-age", "One day old");
+      } else {
+        setStatus("stale", "Stale");
+        setText("feed-age", `${ageDays} days old`);
+      }
+
+      const unavailableSources = [
+        ...(feed.marketplaceSources ?? []),
+        ...(feed.marketSignalSources ?? [])
+      ].filter((source) => source.status === "Unavailable");
+
+      const sourceNote = unavailableSources.length
+        ? `${unavailableSources.length} source check${unavailableSources.length === 1 ? "" : "s"} need attention.`
+        : `${sourceCount} source checks are reporting normally.`;
+
+      setText(
+        "summary",
+        `The public feed is dated ${feed.updatedAt}, with ${benchmarkCount} benchmark rows and ${institutionCount} institution rows. ${sourceNote}`
+      );
+
+      renderSources(feed);
+    }
+
+    async function renderWorkflow() {
+      try {
+        const response = await fetch(workflowRunsUrl, { headers: { accept: "application/vnd.github+json" } });
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        const payload = await response.json();
+        const latest = payload.workflow_runs?.[0];
+
+        if (!latest) {
+          setText("workflow-status", "--");
+          setText("workflow-note", "No workflow runs found");
+          return;
+        }
+
+        setText("workflow-status", latest.conclusion === "success" ? "Success" : latest.status);
+        setText("workflow-note", `Run ${latest.run_number} ${latest.conclusion ?? latest.status} on ${dateTimeFormatter.format(new Date(latest.updated_at))}`);
+      } catch (error) {
+        setText("workflow-status", "Unknown");
+        setText("workflow-note", `Could not check GitHub Actions: ${error.message}`);
+      }
+    }
+
+    async function boot() {
+      try {
+        const response = await fetch(feedUrl, { cache: "no-store" });
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        const feed = await response.json();
+        renderFeed(feed);
+      } catch (error) {
+        setStatus("failed", "Feed unavailable");
+        setText("summary", `The public rates feed could not be loaded: ${error.message}`);
+      }
+
+      await renderWorkflow();
+    }
+
+    boot();
+  </script>
+</body>
+</html>
