@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-30",
+  "updatedAt": "2026-08-31",
   "sourceSummary": "RateCompass hosted marketplace benchmark and consumer comparison feed. Values can include Ratehub, WOWA, and NerdWallet marketplace comparisons plus curated fallback rows; they are not live lender rates unless explicitly marked Verified with an official source.",
   "benchmarks": [
     {
@@ -9,7 +9,7 @@
       "rate": 5.19,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 1-year fixed term.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -21,7 +21,7 @@
       "rate": 4.89,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 2-year fixed term.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -33,7 +33,7 @@
       "rate": 4.59,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 3-year fixed term.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -45,7 +45,7 @@
       "rate": 4.39,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year fixed term.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -57,7 +57,7 @@
       "rate": 5.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian mortgage benchmark for a 5-year variable term.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -70,7 +70,7 @@
       "rate": 4.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -82,7 +82,7 @@
       "rate": 3.9,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -94,7 +94,7 @@
       "rate": 3.8,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -106,7 +106,7 @@
       "rate": 3.65,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year non-redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -118,7 +118,7 @@
       "rate": 3.55,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -130,7 +130,7 @@
       "rate": 3.4,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -142,7 +142,7 @@
       "rate": 3.3,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -154,7 +154,7 @@
       "rate": 3.15,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year redeemable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -166,7 +166,7 @@
       "rate": 3.3,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 1-year cashable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -178,7 +178,7 @@
       "rate": 3.15,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 2-year cashable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -190,7 +190,7 @@
       "rate": 3.05,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 3-year cashable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -202,7 +202,7 @@
       "rate": 2.9,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian 5-year cashable GIC benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -213,7 +213,7 @@
       "rate": 1.75,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian standard savings benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -224,7 +224,7 @@
       "rate": 2.96,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian high-interest savings benchmark.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -236,7 +236,7 @@
       "benchmarkLabel": "Prime +0.50%",
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted secured LOC/HELOC benchmark expressed as a spread over prime.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -248,7 +248,7 @@
       "benchmarkLabel": "Prime +2.00%",
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted unsecured line-of-credit benchmark expressed as a spread over prime.",
-      "lastChecked": "Last checked: 2026-08-30",
+      "lastChecked": "Last checked: 2026-08-31",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -264,7 +264,7 @@
       "rate": 5.19,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -275,7 +275,7 @@
       "rate": 5.24,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -286,7 +286,7 @@
       "rate": 5.14,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -297,7 +297,7 @@
       "rate": 5.18,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -308,7 +308,7 @@
       "rate": 5.21,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -319,7 +319,7 @@
       "rate": 5.16,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -330,7 +330,7 @@
       "rate": 5.17,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -341,7 +341,7 @@
       "rate": 5.11,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -352,7 +352,7 @@
       "rate": 5.09,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -363,7 +363,7 @@
       "rate": 5.15,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -374,7 +374,7 @@
       "rate": 4.89,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -385,7 +385,7 @@
       "rate": 4.94,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -396,7 +396,7 @@
       "rate": 4.84,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -407,7 +407,7 @@
       "rate": 4.88,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -418,7 +418,7 @@
       "rate": 4.91,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -429,7 +429,7 @@
       "rate": 4.86,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -440,7 +440,7 @@
       "rate": 4.87,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -451,7 +451,7 @@
       "rate": 4.82,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -462,7 +462,7 @@
       "rate": 4.8,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -473,7 +473,7 @@
       "rate": 4.85,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -484,7 +484,7 @@
       "rate": 4.59,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -495,7 +495,7 @@
       "rate": 4.64,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -506,7 +506,7 @@
       "rate": 4.54,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -517,7 +517,7 @@
       "rate": 4.58,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -528,7 +528,7 @@
       "rate": 4.61,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -539,7 +539,7 @@
       "rate": 4.56,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -550,7 +550,7 @@
       "rate": 4.57,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -561,7 +561,7 @@
       "rate": 4.52,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -572,7 +572,7 @@
       "rate": 4.5,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -583,7 +583,7 @@
       "rate": 4.55,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -594,7 +594,7 @@
       "rate": 4.49,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -605,7 +605,7 @@
       "rate": 4.54,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -616,7 +616,7 @@
       "rate": 4.44,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -627,7 +627,7 @@
       "rate": 4.48,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -638,7 +638,7 @@
       "rate": 4.51,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -649,7 +649,7 @@
       "rate": 4.46,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -660,7 +660,7 @@
       "rate": 4.47,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -671,7 +671,7 @@
       "rate": 4.42,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -682,7 +682,7 @@
       "rate": 4.4,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -693,7 +693,7 @@
       "rate": 4.45,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -704,7 +704,7 @@
       "rate": 4.39,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -715,7 +715,7 @@
       "rate": 4.44,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -726,7 +726,7 @@
       "rate": 4.35,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -737,7 +737,7 @@
       "rate": 4.38,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -748,7 +748,7 @@
       "rate": 4.42,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -759,7 +759,7 @@
       "rate": 4.37,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -770,7 +770,7 @@
       "rate": 4.36,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -781,7 +781,7 @@
       "rate": 4.32,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -792,7 +792,7 @@
       "rate": 4.3,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -803,7 +803,7 @@
       "rate": 4.34,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -814,7 +814,7 @@
       "spreadOverPrime": 0.6,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -825,7 +825,7 @@
       "spreadOverPrime": 0.65,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -836,7 +836,7 @@
       "spreadOverPrime": 0.55,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -847,7 +847,7 @@
       "spreadOverPrime": 0.59,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -858,7 +858,7 @@
       "spreadOverPrime": 0.63,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -869,7 +869,7 @@
       "spreadOverPrime": 0.58,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -880,7 +880,7 @@
       "spreadOverPrime": 0.57,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -891,7 +891,7 @@
       "spreadOverPrime": 0.54,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -902,7 +902,7 @@
       "spreadOverPrime": 0.52,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Mortgage",
@@ -913,7 +913,7 @@
       "spreadOverPrime": 0.56,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -924,7 +924,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -935,7 +935,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -946,7 +946,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -957,7 +957,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -968,7 +968,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -979,7 +979,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -990,7 +990,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1001,7 +1001,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1012,7 +1012,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1023,7 +1023,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1034,7 +1034,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1045,7 +1045,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1056,7 +1056,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1067,7 +1067,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1078,7 +1078,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1089,7 +1089,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1100,7 +1100,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1111,7 +1111,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "Savings",
@@ -1122,7 +1122,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1133,7 +1133,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1144,7 +1144,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1155,7 +1155,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1166,7 +1166,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1177,7 +1177,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1188,7 +1188,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1199,7 +1199,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1210,7 +1210,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1221,7 +1221,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1232,7 +1232,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1243,7 +1243,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1254,7 +1254,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1265,7 +1265,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1276,7 +1276,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1287,7 +1287,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1298,7 +1298,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1309,7 +1309,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1320,7 +1320,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1331,7 +1331,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1342,7 +1342,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1353,7 +1353,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1364,7 +1364,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1375,7 +1375,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1386,7 +1386,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     },
     {
       "category": "GIC",
@@ -1397,7 +1397,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-08-30"
+      "lastChecked": "2026-08-31"
     }
   ],
   "refreshPolicy": {
@@ -1413,7 +1413,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Checked",
       "ratesFound": [
         0.61,
@@ -1456,7 +1456,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Checked",
       "ratesFound": [
         0.85,
@@ -1494,7 +1494,7 @@
       "product": "Mortgage",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Checked",
       "ratesFound": [
         0.85,
@@ -1536,7 +1536,7 @@
       "product": "GIC",
       "url": "https://www.ratehub.ca/gics",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Checked",
       "ratesFound": [
         2.25,
@@ -1554,11 +1554,10 @@
       "product": "Savings",
       "url": "https://www.ratehub.ca/savings-accounts",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Checked",
       "ratesFound": [
-        2.75,
-        3
+        2.75
       ],
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -1567,7 +1566,7 @@
       "product": "Mortgage",
       "url": "https://wowa.ca/mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Checked",
       "ratesFound": [
         0.6,
@@ -1589,7 +1588,7 @@
       "product": "GIC",
       "url": "https://www.nerdwallet.com/ca/p/best/banking/best-gic-rates-in-canada",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Checked",
       "ratesFound": [
         2.35,
@@ -1642,7 +1641,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/RY.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1651,7 +1650,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/TD.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1660,7 +1659,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BMO.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1669,7 +1668,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BNS.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1678,7 +1677,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/CM.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -1687,7 +1686,7 @@
       "signal": "Currency",
       "url": "https://ca.finance.yahoo.com/quote/CADUSD=X",
       "sourceType": "Market signal",
-      "lastChecked": "2026-08-30",
+      "lastChecked": "2026-08-31",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     }
