@@ -401,16 +401,15 @@ async function checkOfficialMortgageSource(source, checkedAt) {
       };
     }
 
-    const html = await fetchText(source.url);
-    const rates = extractPercentRates(html).filter((rate) => rate >= 2.5 && rate <= 10.5);
+    await fetchText(source.url);
 
     return {
       ...source,
       product: "Mortgage",
       lastChecked: checkedAt,
       status: "Reachable",
-      ratesFound: rates.slice(0, 40),
-      note: "Official bank or Bank of Canada page used as a validation cross-check. Posted bank rates can be higher than consumer comparison or negotiated special-offer rates."
+      ratesFound: [],
+      note: "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
     };
   } catch (error) {
     return {
