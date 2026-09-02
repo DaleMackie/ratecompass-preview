@@ -2291,5 +2291,80 @@
       "ratesFound": [],
       "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
     }
+  ],
+  "specialOfferPolicy": {
+    "label": "Specials Watch",
+    "mortgageRule": "Flag a public mortgage offer when it is at least 10 basis points below the current marketplace benchmark for the same term.",
+    "gicRule": "Flag a public GIC offer when it is at least 10 basis points above the current marketplace benchmark for the same term and redeemability.",
+    "benchmarkRule": "Specials are shown as opportunity signals and do not replace the stable benchmark rate unless they become recurring marketplace pricing.",
+    "reviewRule": "Verify eligibility, availability, account type, region, rate hold, minimum deposit, and product conditions before treating a special as a firm offer.",
+    "lastChecked": "2026-09-02"
+  },
+  "specialOffers": [
+    {
+      "product": "Mortgage",
+      "term": "2 year",
+      "provider": "Big 6 Bank",
+      "rate": 3.89,
+      "benchmarkRate": 4.49,
+      "advantageBps": 60,
+      "source": "Ratehub 2-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/2-year/fixed",
+      "lastChecked": "2026-09-02",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
+      "product": "Mortgage",
+      "term": "1 year",
+      "provider": "Scotiabank",
+      "rate": 4.59,
+      "benchmarkRate": 5.09,
+      "advantageBps": 50,
+      "source": "Ratehub 1-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/1-year/fixed",
+      "lastChecked": "2026-09-02",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
+      "product": "Mortgage",
+      "term": "5 year variable",
+      "provider": "Canadian Lender",
+      "rate": 3.3,
+      "benchmarkRate": 3.58,
+      "advantageBps": 28,
+      "source": "Ratehub 5-year variable mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
+      "lastChecked": "2026-09-02",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
+      "product": "Mortgage",
+      "term": "3 year",
+      "provider": "Big 6 Bank",
+      "rate": 3.94,
+      "benchmarkRate": 4.17,
+      "advantageBps": 23,
+      "source": "Ratehub 3-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
+      "lastChecked": "2026-09-02",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
+      "product": "Mortgage",
+      "term": "5 year",
+      "provider": "Big 6 Bank",
+      "rate": 4.09,
+      "benchmarkRate": 4.21,
+      "advantageBps": 12,
+      "source": "Ratehub 5-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
+      "lastChecked": "2026-09-02",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    }
   ]
 }
