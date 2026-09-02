@@ -1918,7 +1918,6 @@
       "ratesFound": [
         3.5,
         3.65,
-        3.4,
         4,
         4.1
       ],
@@ -1935,12 +1934,6 @@
           "term": "1 year",
           "gicRedeemability": "Non-redeemable",
           "rate": 3.65
-        },
-        {
-          "provider": "EQ Bank",
-          "term": "1 year",
-          "gicRedeemability": "Non-redeemable",
-          "rate": 3.4
         },
         {
           "provider": "EQ Bank",
@@ -1969,11 +1962,11 @@
         3.65,
         3.65,
         3.85,
-        3.85,
+        4,
         3.95,
-        3.95,
+        4.05,
         4.1,
-        4.1,
+        4.15,
         3.5,
         4.1,
         4
@@ -2002,7 +1995,7 @@
           "provider": "Marketplace",
           "term": "2 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 3.85
+          "rate": 4
         },
         {
           "provider": "Achieva Financial",
@@ -2014,7 +2007,7 @@
           "provider": "Marketplace",
           "term": "3 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 3.95
+          "rate": 4.05
         },
         {
           "provider": "Oaken Financial",
@@ -2026,7 +2019,7 @@
           "provider": "Marketplace",
           "term": "5 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 4.1
+          "rate": 4.15
         },
         {
           "provider": "Oaken Financial",
@@ -2221,7 +2214,6 @@
       "lastChecked": "2026-09-02",
       "status": "Reachable",
       "ratesFound": [
-        4.45,
         5.49,
         6.05,
         6.09,
@@ -2230,7 +2222,6 @@
         2.75
       ],
       "officialRates": {
-        "prime": 4.45,
         "mortgageOneYear": 5.49,
         "mortgageThreeYear": 6.05,
         "mortgageFiveYear": 6.09,
@@ -2238,7 +2229,7 @@
         "gicThreeYear": 2.55,
         "gicFiveYear": 2.75
       },
-      "officialDate": "2026-08-26",
+      "officialDate": "2026-09-02",
       "note": "Official Bank of Canada Valet data used as a major-bank posted-rate and deposit-rate cross-check. Posted bank rates can be higher for mortgages and lower for GICs than consumer comparison or negotiated rates."
     },
     {
@@ -2354,6 +2345,20 @@
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
     {
+      "product": "GIC",
+      "term": "2 year",
+      "gicRedeemability": "Non-redeemable",
+      "provider": "Marketplace",
+      "rate": 4,
+      "benchmarkRate": 3.85,
+      "advantageBps": 15,
+      "source": "Ratehub best GIC rates",
+      "sourceUrl": "https://www.ratehub.ca/gics/best-gic-rates",
+      "lastChecked": "2026-09-02",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
+    },
+    {
       "product": "Mortgage",
       "term": "5 year",
       "provider": "Big 6 Bank",
@@ -2365,6 +2370,20 @@
       "lastChecked": "2026-09-02",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
+      "product": "GIC",
+      "term": "3 year",
+      "gicRedeemability": "Non-redeemable",
+      "provider": "Marketplace",
+      "rate": 4.05,
+      "benchmarkRate": 3.95,
+      "advantageBps": 10,
+      "source": "Ratehub best GIC rates",
+      "sourceUrl": "https://www.ratehub.ca/gics/best-gic-rates",
+      "lastChecked": "2026-09-02",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
     }
   ]
 }
