@@ -2248,12 +2248,8 @@
       "product": "Mortgage",
       "lastChecked": "2026-09-02",
       "status": "Reachable",
-      "ratesFound": [
-        3.65,
-        3.95,
-        4.05
-      ],
-      "note": "Official bank or Bank of Canada page used as a validation cross-check. Posted bank rates can be higher than consumer comparison or negotiated special-offer rates."
+      "ratesFound": [],
+      "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
     },
     {
       "label": "TD mortgage rates",
@@ -2263,7 +2259,7 @@
       "lastChecked": "2026-09-02",
       "status": "Reachable",
       "ratesFound": [],
-      "note": "Official bank or Bank of Canada page used as a validation cross-check. Posted bank rates can be higher than consumer comparison or negotiated special-offer rates."
+      "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
     },
     {
       "label": "BMO mortgage rates",
@@ -2283,7 +2279,7 @@
       "lastChecked": "2026-09-02",
       "status": "Reachable",
       "ratesFound": [],
-      "note": "Official bank or Bank of Canada page used as a validation cross-check. Posted bank rates can be higher than consumer comparison or negotiated special-offer rates."
+      "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
     },
     {
       "label": "Scotiabank mortgage rates",
@@ -2292,12 +2288,8 @@
       "product": "Mortgage",
       "lastChecked": "2026-09-02",
       "status": "Reachable",
-      "ratesFound": [
-        4.91,
-        5.95,
-        7.65
-      ],
-      "note": "Official bank or Bank of Canada page used as a validation cross-check. Posted bank rates can be higher than consumer comparison or negotiated special-offer rates."
+      "ratesFound": [],
+      "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
     }
   ]
 }
