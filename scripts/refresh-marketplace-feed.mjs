@@ -325,6 +325,99 @@ function upperMiddle(values) {
   return Number(sorted[index].toFixed(2));
 }
 
+function rateToBps(rateDelta) {
+  return Math.round(rateDelta * 100);
+}
+
+function buildSpecialOffers(normalizedBenchmarks, marketplaceSources, checkedAt) {
+  const benchmarkByMortgageTerm = new Map(
+    normalizedBenchmarks
+      .filter((benchmark) => benchmark.product === "Mortgage" && Number.isFinite(benchmark.rate))
+      .map((benchmark) => [benchmark.term, benchmark])
+  );
+  const benchmarkByGicKey = new Map(
+    normalizedBenchmarks
+      .filter((benchmark) => benchmark.product === "GIC" && Number.isFinite(benchmark.rate))
+      .map((benchmark) => [`${benchmark.term}|${benchmark.gicRedeemability}`, benchmark])
+  );
+  const offers = [];
+
+  for (const source of marketplaceSources) {
+    if (source.product !== "Mortgage" || !source.benchmarkTerm || !source.mortgageRows?.length) continue;
+
+    const benchmark = benchmarkByMortgageTerm.get(source.benchmarkTerm);
+    if (!benchmark) continue;
+
+    const bestRow = source.mortgageRows
+      .filter((row) => Number.isFinite(row.rate))
+      .sort((a, b) => a.rate - b.rate)[0];
+    if (!bestRow) continue;
+
+    const advantageBps = rateToBps(benchmark.rate - bestRow.rate);
+    if (advantageBps < 10) continue;
+
+    offers.push({
+      product: "Mortgage",
+      term: source.benchmarkTerm,
+      provider: bestRow.provider,
+      rate: bestRow.rate,
+      benchmarkRate: benchmark.rate,
+      advantageBps,
+      source: source.label,
+      sourceUrl: source.url,
+      lastChecked: checkedAt,
+      status: "Special opportunity",
+      note: "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    });
+  }
+
+  const gicRowsByKey = new Map();
+  for (const source of marketplaceSources) {
+    if (source.product !== "GIC" || !source.gicRows?.length) continue;
+
+    for (const row of source.gicRows) {
+      if (!Number.isFinite(row.rate)) continue;
+
+      const key = `${row.term}|${row.gicRedeemability}`;
+      const sourceRow = {
+        ...row,
+        source: source.label,
+        sourceUrl: source.url
+      };
+      const existing = gicRowsByKey.get(key);
+
+      if (!existing || sourceRow.rate > existing.rate || (sourceRow.rate === existing.rate && existing.provider === "Marketplace")) {
+        gicRowsByKey.set(key, sourceRow);
+      }
+    }
+  }
+
+  for (const [key, row] of gicRowsByKey) {
+    const benchmark = benchmarkByGicKey.get(key);
+    if (!benchmark) continue;
+
+    const advantageBps = rateToBps(row.rate - benchmark.rate);
+    if (advantageBps < 10) continue;
+
+    offers.push({
+      product: "GIC",
+      term: row.term,
+      gicRedeemability: row.gicRedeemability,
+      provider: row.provider,
+      rate: row.rate,
+      benchmarkRate: benchmark.rate,
+      advantageBps,
+      source: row.source,
+      sourceUrl: row.sourceUrl,
+      lastChecked: checkedAt,
+      status: "Special opportunity",
+      note: "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
+    });
+  }
+
+  return offers.sort((a, b) => b.advantageBps - a.advantageBps || a.product.localeCompare(b.product) || a.term.localeCompare(b.term));
+}
+
 async function fetchText(url, timeoutMs = 12000) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
@@ -517,9 +610,10 @@ function normalizeFeed(feed, checkedAt, marketplaceSources, officialMortgageSour
           ? gicBenchmark.reviewNote
         : productWasChecked
           ? "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
-          : "No current source check was available for this benchmark during the latest refresh."
+      : "No current source check was available for this benchmark during the latest refresh."
     };
   });
+  const specialOffers = buildSpecialOffers(normalizedBenchmarks, marketplaceSources, checkedAt);
   const updatedBenchmarkRates = new Map(
     normalizedBenchmarks
       .filter((benchmark) => (benchmark.product === "Mortgage" || benchmark.product === "GIC") && Number.isFinite(benchmark.rate))
@@ -567,6 +661,15 @@ function normalizeFeed(feed, checkedAt, marketplaceSources, officialMortgageSour
       marketSignalLabel: "Market signal",
       verifiedLabelRule: "Only official lender or Bank of Canada sources with a last-checked date should be labelled Verified."
     },
+    specialOfferPolicy: {
+      label: "Specials Watch",
+      mortgageRule: "Flag a public mortgage offer when it is at least 10 basis points below the current marketplace benchmark for the same term.",
+      gicRule: "Flag a public GIC offer when it is at least 10 basis points above the current marketplace benchmark for the same term and redeemability.",
+      benchmarkRule: "Specials are shown as opportunity signals and do not replace the stable benchmark rate unless they become recurring marketplace pricing.",
+      reviewRule: "Verify eligibility, availability, account type, region, rate hold, minimum deposit, and product conditions before treating a special as a firm offer.",
+      lastChecked: checkedAt
+    },
+    specialOffers,
     marketplaceSources,
     officialMortgageSources,
     marketSignalSources,
