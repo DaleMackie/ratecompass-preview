@@ -42,7 +42,7 @@
     {
       "product": "Mortgage",
       "term": "5 year",
-      "rate": 4.21,
+      "rate": 4.27,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 5-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
       "lastChecked": "Last checked: 2026-09-04",
@@ -701,7 +701,7 @@
       "institution": "RBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.21,
+      "rate": 4.27,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -712,7 +712,7 @@
       "institution": "TD",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.26,
+      "rate": 4.32,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -723,7 +723,7 @@
       "institution": "BMO",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.17,
+      "rate": 4.23,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -734,7 +734,7 @@
       "institution": "CIBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.2,
+      "rate": 4.26,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -745,7 +745,7 @@
       "institution": "Scotiabank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.24,
+      "rate": 4.3,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -756,7 +756,7 @@
       "institution": "National Bank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.19,
+      "rate": 4.25,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -767,7 +767,7 @@
       "institution": "Desjardins",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.18,
+      "rate": 4.24,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -778,7 +778,7 @@
       "institution": "First National",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.14,
+      "rate": 4.2,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -789,7 +789,7 @@
       "institution": "MCAP",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.12,
+      "rate": 4.18,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -800,7 +800,7 @@
       "institution": "Tangerine",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.16,
+      "rate": 4.22,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-04"
@@ -1605,7 +1605,7 @@
       "status": "Checked",
       "ratesFound": [
         3.94,
-        3.99,
+        4.04,
         4.09,
         4.24,
         4.29,
@@ -1628,7 +1628,7 @@
         },
         {
           "provider": "Meridian Credit Union",
-          "rate": 3.99
+          "rate": 4.04
         },
         {
           "provider": "Scotiabank",
@@ -1704,7 +1704,7 @@
       "ratesFound": [
         4.09,
         4.14,
-        4.14,
+        4.24,
         4.29,
         4.34,
         4.49,
@@ -1727,12 +1727,12 @@
           "rate": 4.09
         },
         {
-          "provider": "Meridian Credit Union",
+          "provider": "Canadian Lender",
           "rate": 4.14
         },
         {
-          "provider": "Canadian Lender",
-          "rate": 4.14
+          "provider": "Meridian Credit Union",
+          "rate": 4.24
         },
         {
           "provider": "Scotiabank",
@@ -1796,7 +1796,7 @@
         }
       ],
       "gicRows": [],
-      "benchmarkRate": 4.21,
+      "benchmarkRate": 4.27,
       "benchmarkMethod": "Median of the leading visible comparison-table rates",
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -2347,6 +2347,19 @@
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
     {
+      "product": "Mortgage",
+      "term": "5 year",
+      "provider": "Big 6 Bank",
+      "rate": 4.09,
+      "benchmarkRate": 4.27,
+      "advantageBps": 18,
+      "source": "Ratehub 5-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
+      "lastChecked": "2026-09-04",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Non-redeemable",
@@ -2359,19 +2372,6 @@
       "lastChecked": "2026-09-04",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
-    },
-    {
-      "product": "Mortgage",
-      "term": "5 year",
-      "provider": "Big 6 Bank",
-      "rate": 4.09,
-      "benchmarkRate": 4.21,
-      "advantageBps": 12,
-      "source": "Ratehub 5-year fixed mortgage rates",
-      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
-      "lastChecked": "2026-09-04",
-      "status": "Special opportunity",
-      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
     {
       "product": "GIC",
