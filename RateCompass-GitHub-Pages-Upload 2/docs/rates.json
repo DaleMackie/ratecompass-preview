@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-05",
   "sourceSummary": "RateCompass hosted marketplace benchmark and consumer comparison feed. Mortgage benchmarks are updated from public comparison-table rates where available. GIC benchmarks use the upper-middle public marketplace range where available. Official bank and Bank of Canada posted-rate pages are checked separately as validation references because posted bank rates can be higher for mortgages and lower for deposits than marketplace or negotiated rates.",
   "benchmarks": [
     {
@@ -9,7 +9,7 @@
       "rate": 5.09,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 1-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -21,7 +21,7 @@
       "rate": 4.49,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 2-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -33,7 +33,7 @@
       "rate": 4.17,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 3-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -45,7 +45,7 @@
       "rate": 4.27,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 5-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -57,7 +57,7 @@
       "rate": 3.58,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 5-year variable mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "appliesLocalAdjustments": true,
@@ -70,7 +70,7 @@
       "rate": 3.65,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Upper-middle public marketplace GIC rate range. Bank of Canada posted GIC data is checked separately as a low-side floor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Updated from the current public GIC comparison table. This is comparison context, not a verified institution offer."
@@ -82,7 +82,7 @@
       "rate": 3.85,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Upper-middle public marketplace GIC rate range. Bank of Canada posted GIC data is checked separately as a low-side floor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Updated from the current public GIC comparison table. This is comparison context, not a verified institution offer."
@@ -94,7 +94,7 @@
       "rate": 3.95,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Upper-middle public marketplace GIC rate range. Bank of Canada posted GIC data is checked separately as a low-side floor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Updated from the current public GIC comparison table. This is comparison context, not a verified institution offer."
@@ -106,7 +106,7 @@
       "rate": 4.1,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Upper-middle public marketplace GIC rate range. Bank of Canada posted GIC data is checked separately as a low-side floor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Updated from the current public GIC comparison table. This is comparison context, not a verified institution offer."
@@ -118,7 +118,7 @@
       "rate": 3.15,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated redeemable GIC benchmark using a 0.50 percentage-point flexibility discount from the current non-redeemable marketplace anchor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Adjusted from current non-redeemable marketplace GIC rates because redeemable products usually pay less for added flexibility."
@@ -130,7 +130,7 @@
       "rate": 3.35,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated redeemable GIC benchmark using a 0.50 percentage-point flexibility discount from the current non-redeemable marketplace anchor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Adjusted from current non-redeemable marketplace GIC rates because redeemable products usually pay less for added flexibility."
@@ -142,7 +142,7 @@
       "rate": 3.45,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated redeemable GIC benchmark using a 0.50 percentage-point flexibility discount from the current non-redeemable marketplace anchor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Adjusted from current non-redeemable marketplace GIC rates because redeemable products usually pay less for added flexibility."
@@ -154,7 +154,7 @@
       "rate": 3.6,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated redeemable GIC benchmark using a 0.50 percentage-point flexibility discount from the current non-redeemable marketplace anchor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Adjusted from current non-redeemable marketplace GIC rates because redeemable products usually pay less for added flexibility."
@@ -166,7 +166,7 @@
       "rate": 2.9,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated cashable GIC benchmark using a 0.75 percentage-point liquidity discount from the current non-redeemable marketplace anchor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Adjusted from current non-redeemable marketplace GIC rates because cashable products usually pay less for added liquidity."
@@ -178,7 +178,7 @@
       "rate": 3.1,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated cashable GIC benchmark using a 0.75 percentage-point liquidity discount from the current non-redeemable marketplace anchor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Adjusted from current non-redeemable marketplace GIC rates because cashable products usually pay less for added liquidity."
@@ -190,7 +190,7 @@
       "rate": 3.2,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated cashable GIC benchmark using a 0.75 percentage-point liquidity discount from the current non-redeemable marketplace anchor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Adjusted from current non-redeemable marketplace GIC rates because cashable products usually pay less for added liquidity."
@@ -202,7 +202,7 @@
       "rate": 3.35,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated cashable GIC benchmark using a 0.75 percentage-point liquidity discount from the current non-redeemable marketplace anchor.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Adjusted from current non-redeemable marketplace GIC rates because cashable products usually pay less for added liquidity."
@@ -213,7 +213,7 @@
       "rate": 1.75,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian standard savings benchmark.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -224,7 +224,7 @@
       "rate": 2.96,
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted Canadian high-interest savings benchmark.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": false,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -236,7 +236,7 @@
       "benchmarkLabel": "Prime +0.50%",
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted secured LOC/HELOC benchmark expressed as a spread over prime.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -248,7 +248,7 @@
       "benchmarkLabel": "Prime +2.00%",
       "source": "RateCompass hosted marketplace benchmark feed",
       "sourceDetail": "Weighted unsecured line-of-credit benchmark expressed as a spread over prime.",
-      "lastChecked": "Last checked: 2026-09-04",
+      "lastChecked": "Last checked: 2026-09-05",
       "status": "Marketplace",
       "lowerIsBetter": true,
       "reviewNote": "Reviewed against the current public marketplace source checks. This is comparison context, not a verified lender offer."
@@ -264,7 +264,7 @@
       "rate": 5.09,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -275,7 +275,7 @@
       "rate": 5.14,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -286,7 +286,7 @@
       "rate": 5.04,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -297,7 +297,7 @@
       "rate": 5.08,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -308,7 +308,7 @@
       "rate": 5.11,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -319,7 +319,7 @@
       "rate": 5.06,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -330,7 +330,7 @@
       "rate": 5.07,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -341,7 +341,7 @@
       "rate": 5.01,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -352,7 +352,7 @@
       "rate": 4.99,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -363,7 +363,7 @@
       "rate": 5.05,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -374,7 +374,7 @@
       "rate": 4.49,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -385,7 +385,7 @@
       "rate": 4.54,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -396,7 +396,7 @@
       "rate": 4.44,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -407,7 +407,7 @@
       "rate": 4.48,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -418,7 +418,7 @@
       "rate": 4.51,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -429,7 +429,7 @@
       "rate": 4.46,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -440,7 +440,7 @@
       "rate": 4.47,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -451,7 +451,7 @@
       "rate": 4.42,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -462,7 +462,7 @@
       "rate": 4.4,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -473,7 +473,7 @@
       "rate": 4.45,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -484,7 +484,7 @@
       "rate": 4.17,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -495,7 +495,7 @@
       "rate": 4.22,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -506,7 +506,7 @@
       "rate": 4.12,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -517,7 +517,7 @@
       "rate": 4.16,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -528,7 +528,7 @@
       "rate": 4.19,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -539,7 +539,7 @@
       "rate": 4.14,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -550,7 +550,7 @@
       "rate": 4.15,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -561,7 +561,7 @@
       "rate": 4.1,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -572,7 +572,7 @@
       "rate": 4.08,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -583,7 +583,7 @@
       "rate": 4.13,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -594,7 +594,7 @@
       "rate": 4.49,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -605,7 +605,7 @@
       "rate": 4.54,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -616,7 +616,7 @@
       "rate": 4.44,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -627,7 +627,7 @@
       "rate": 4.48,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -638,7 +638,7 @@
       "rate": 4.51,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -649,7 +649,7 @@
       "rate": 4.46,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -660,7 +660,7 @@
       "rate": 4.47,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -671,7 +671,7 @@
       "rate": 4.42,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -682,7 +682,7 @@
       "rate": 4.4,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -693,7 +693,7 @@
       "rate": 4.45,
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -704,7 +704,7 @@
       "rate": 4.27,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -715,7 +715,7 @@
       "rate": 4.32,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -726,7 +726,7 @@
       "rate": 4.23,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -737,7 +737,7 @@
       "rate": 4.26,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -748,7 +748,7 @@
       "rate": 4.3,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -759,7 +759,7 @@
       "rate": 4.25,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -770,7 +770,7 @@
       "rate": 4.24,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -781,7 +781,7 @@
       "rate": 4.2,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -792,7 +792,7 @@
       "rate": 4.18,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -803,7 +803,7 @@
       "rate": 4.22,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -814,7 +814,7 @@
       "spreadOverPrime": -0.87,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -825,7 +825,7 @@
       "spreadOverPrime": -0.82,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -836,7 +836,7 @@
       "spreadOverPrime": -0.92,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -847,7 +847,7 @@
       "spreadOverPrime": -0.88,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -858,7 +858,7 @@
       "spreadOverPrime": -0.84,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -869,7 +869,7 @@
       "spreadOverPrime": -0.89,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -880,7 +880,7 @@
       "spreadOverPrime": -0.9,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -891,7 +891,7 @@
       "spreadOverPrime": -0.93,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -902,7 +902,7 @@
       "spreadOverPrime": -0.95,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Mortgage",
@@ -913,7 +913,7 @@
       "spreadOverPrime": -0.91,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -924,7 +924,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -935,7 +935,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -946,7 +946,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -957,7 +957,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -968,7 +968,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -979,7 +979,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -990,7 +990,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1001,7 +1001,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1012,7 +1012,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1023,7 +1023,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1034,7 +1034,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1045,7 +1045,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1056,7 +1056,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1067,7 +1067,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1078,7 +1078,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1089,7 +1089,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1100,7 +1100,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1111,7 +1111,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "Savings",
@@ -1122,7 +1122,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "RateCompass hosted marketplace benchmark feed",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1133,7 +1133,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1144,7 +1144,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1155,7 +1155,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1166,7 +1166,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1177,7 +1177,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1188,7 +1188,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1199,7 +1199,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1210,7 +1210,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1221,7 +1221,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1232,7 +1232,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1243,7 +1243,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1254,7 +1254,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1265,7 +1265,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1276,7 +1276,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1287,7 +1287,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1298,7 +1298,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1309,7 +1309,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1320,7 +1320,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1331,7 +1331,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1342,7 +1342,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1353,7 +1353,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1364,7 +1364,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1375,7 +1375,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1386,7 +1386,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     },
     {
       "category": "GIC",
@@ -1397,7 +1397,7 @@
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
-      "lastChecked": "2026-09-04"
+      "lastChecked": "2026-09-05"
     }
   ],
   "refreshPolicy": {
@@ -1415,7 +1415,7 @@
       "benchmarkTerm": "1 year",
       "url": "https://www.ratehub.ca/best-mortgage-rates/1-year/fixed",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         4.59,
@@ -1503,7 +1503,7 @@
       "benchmarkTerm": "2 year",
       "url": "https://www.ratehub.ca/best-mortgage-rates/2-year/fixed",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         3.89,
@@ -1601,7 +1601,7 @@
       "benchmarkTerm": "3 year",
       "url": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         3.94,
@@ -1699,7 +1699,7 @@
       "benchmarkTerm": "5 year",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         4.09,
@@ -1807,7 +1807,7 @@
       "benchmarkTerm": "5 year variable",
       "url": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         3.3,
@@ -1913,7 +1913,7 @@
       "product": "GIC",
       "url": "https://www.ratehub.ca/gics",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         3.5,
@@ -1956,7 +1956,7 @@
       "product": "GIC",
       "url": "https://www.ratehub.ca/gics/best-gic-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         3.65,
@@ -2048,7 +2048,7 @@
       "product": "Savings",
       "url": "https://www.ratehub.ca/savings-accounts",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         2.75,
@@ -2065,7 +2065,7 @@
       "product": "Mortgage",
       "url": "https://wowa.ca/mortgage-rates",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         0.6,
@@ -2090,7 +2090,7 @@
       "product": "GIC",
       "url": "https://www.nerdwallet.com/ca/p/best/banking/best-gic-rates-in-canada",
       "sourceType": "Marketplace",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Checked",
       "ratesFound": [
         2.35,
@@ -2146,7 +2146,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/RY.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -2155,7 +2155,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/TD.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -2164,7 +2164,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BMO.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -2173,7 +2173,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/BNS.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -2182,7 +2182,7 @@
       "signal": "Canadian bank equity",
       "url": "https://ca.finance.yahoo.com/quote/CM.TO",
       "sourceType": "Market signal",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
@@ -2191,7 +2191,7 @@
       "signal": "Currency",
       "url": "https://ca.finance.yahoo.com/quote/CADUSD=X",
       "sourceType": "Market signal",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     }
@@ -2211,7 +2211,7 @@
       },
       "url": "https://www.bankofcanada.ca/rates/banking-and-financial-statistics/posted-interest-rates-offered-by-chartered-banks/",
       "product": "Mortgage and GIC",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "ratesFound": [
         4.45,
@@ -2239,7 +2239,7 @@
       "sourceType": "Official lender page",
       "url": "https://www.rbcroyalbank.com/mortgages/mortgage-rates.html",
       "product": "Mortgage",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "ratesFound": [],
       "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
@@ -2249,7 +2249,7 @@
       "sourceType": "Official lender page",
       "url": "https://www.td.com/ca/en/personal-banking/products/mortgages/mortgage-rates",
       "product": "Mortgage",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "ratesFound": [],
       "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
@@ -2259,7 +2259,7 @@
       "sourceType": "Official lender page",
       "url": "https://www.bmo.com/en-ca/main/personal/mortgages/mortgage-rates/",
       "product": "Mortgage",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Unavailable",
       "ratesFound": [],
       "note": "Official mortgage source could not be checked: This operation was aborted"
@@ -2269,7 +2269,7 @@
       "sourceType": "Official lender page",
       "url": "https://www.cibc.com/en/interest-rates/mortgage-rates.html",
       "product": "Mortgage",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "ratesFound": [],
       "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
@@ -2279,7 +2279,7 @@
       "sourceType": "Official lender page",
       "url": "https://www.scotiabank.com/ca/en/personal/rates-prices/mortgages-rates.html",
       "product": "Mortgage",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Reachable",
       "ratesFound": [],
       "note": "Official lender page reached for source monitoring. Numeric posted-rate cross-checks come from the Bank of Canada Valet feed to avoid mixing unrelated page percentages into the benchmark."
@@ -2291,7 +2291,7 @@
     "gicRule": "Flag a public GIC offer when it is at least 10 basis points above the current marketplace benchmark for the same term and redeemability.",
     "benchmarkRule": "Specials are shown as opportunity signals and do not replace the stable benchmark rate unless they become recurring marketplace pricing.",
     "reviewRule": "Verify eligibility, availability, account type, region, rate hold, minimum deposit, and product conditions before treating a special as a firm offer.",
-    "lastChecked": "2026-09-04"
+    "lastChecked": "2026-09-05"
   },
   "specialOffers": [
     {
@@ -2303,7 +2303,7 @@
       "advantageBps": 60,
       "source": "Ratehub 2-year fixed mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/2-year/fixed",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
@@ -2316,7 +2316,7 @@
       "advantageBps": 50,
       "source": "Ratehub 1-year fixed mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/1-year/fixed",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
@@ -2329,7 +2329,7 @@
       "advantageBps": 28,
       "source": "Ratehub 5-year variable mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
@@ -2342,7 +2342,7 @@
       "advantageBps": 23,
       "source": "Ratehub 3-year fixed mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
@@ -2355,7 +2355,7 @@
       "advantageBps": 18,
       "source": "Ratehub 5-year fixed mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
@@ -2369,7 +2369,7 @@
       "advantageBps": 15,
       "source": "Ratehub best GIC rates",
       "sourceUrl": "https://www.ratehub.ca/gics/best-gic-rates",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
     },
@@ -2383,7 +2383,7 @@
       "advantageBps": 10,
       "source": "Ratehub best GIC rates",
       "sourceUrl": "https://www.ratehub.ca/gics/best-gic-rates",
-      "lastChecked": "2026-09-04",
+      "lastChecked": "2026-09-05",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
     }
