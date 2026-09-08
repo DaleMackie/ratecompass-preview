@@ -79,7 +79,7 @@
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Non-redeemable",
-      "rate": 3.9,
+      "rate": 4,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Upper-middle public marketplace GIC rate range. Bank of Canada posted GIC data is checked separately as a low-side floor.",
       "lastChecked": "Last checked: 2026-09-08",
@@ -127,7 +127,7 @@
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Redeemable",
-      "rate": 3.4,
+      "rate": 3.5,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated redeemable GIC benchmark using a 0.50 percentage-point flexibility discount from the current non-redeemable marketplace anchor.",
       "lastChecked": "Last checked: 2026-09-08",
@@ -175,7 +175,7 @@
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Cashable",
-      "rate": 3.15,
+      "rate": 3.25,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated cashable GIC benchmark using a 0.75 percentage-point liquidity discount from the current non-redeemable marketplace anchor.",
       "lastChecked": "Last checked: 2026-09-08",
@@ -1140,7 +1140,7 @@
       "gicRedeemability": "Non-redeemable",
       "institution": "CIBC",
       "productName": "2-year non-redeemable GIC",
-      "rate": 3.95,
+      "rate": 4.05,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1239,7 +1239,7 @@
       "gicRedeemability": "Redeemable",
       "institution": "CIBC",
       "productName": "2-year redeemable GIC",
-      "rate": 3.45,
+      "rate": 3.55,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1327,7 +1327,7 @@
       "gicRedeemability": "Cashable",
       "institution": "CIBC",
       "productName": "2-year cashable GIC",
-      "rate": 3.2,
+      "rate": 3.3,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1917,7 +1917,7 @@
       "status": "Checked",
       "ratesFound": [
         3.55,
-        3.65,
+        4,
         4,
         4.1
       ],
@@ -1930,10 +1930,10 @@
           "rate": 3.55
         },
         {
-          "provider": "Achieva Financial",
-          "term": "1 year",
+          "provider": "Haventree Bank",
+          "term": "2 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 3.65
+          "rate": 4
         },
         {
           "provider": "EQ Bank",
@@ -1968,8 +1968,9 @@
         4.25,
         4.25,
         3.55,
-        4.1,
-        4
+        4,
+        4,
+        4.1
       ],
       "mortgageRows": [],
       "gicRows": [
@@ -2028,16 +2029,22 @@
           "rate": 3.55
         },
         {
-          "provider": "Achieva Financial",
-          "term": "5 year",
+          "provider": "Haventree Bank",
+          "term": "2 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 4.1
+          "rate": 4
         },
         {
           "provider": "EQ Bank",
           "term": "5 year",
           "gicRedeemability": "Non-redeemable",
           "rate": 4
+        },
+        {
+          "provider": "Achieva Financial",
+          "term": "5 year",
+          "gicRedeemability": "Non-redeemable",
+          "rate": 4.1
         }
       ],
       "benchmarkRate": null,
@@ -2367,20 +2374,6 @@
       "rate": 4.25,
       "benchmarkRate": 4.1,
       "advantageBps": 15,
-      "source": "Ratehub best GIC rates",
-      "sourceUrl": "https://www.ratehub.ca/gics/best-gic-rates",
-      "lastChecked": "2026-09-08",
-      "status": "Special opportunity",
-      "note": "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
-    },
-    {
-      "product": "GIC",
-      "term": "2 year",
-      "gicRedeemability": "Non-redeemable",
-      "provider": "Marketplace",
-      "rate": 4,
-      "benchmarkRate": 3.9,
-      "advantageBps": 10,
       "source": "Ratehub best GIC rates",
       "sourceUrl": "https://www.ratehub.ca/gics/best-gic-rates",
       "lastChecked": "2026-09-08",
