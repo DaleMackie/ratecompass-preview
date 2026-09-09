@@ -2137,9 +2137,9 @@
         4.05,
         4.1,
         4.15,
+        4.2,
         4.25,
-        4.3,
-        5
+        4.3
       ],
       "mortgageRows": [],
       "gicRows": [],
@@ -2221,7 +2221,6 @@
       "lastChecked": "2026-09-09",
       "status": "Reachable",
       "ratesFound": [
-        4.45,
         5.49,
         6.05,
         6.09,
@@ -2230,7 +2229,6 @@
         2.75
       ],
       "officialRates": {
-        "prime": 4.45,
         "mortgageOneYear": 5.49,
         "mortgageThreeYear": 6.05,
         "mortgageFiveYear": 6.09,
@@ -2238,7 +2236,7 @@
         "gicThreeYear": 2.55,
         "gicFiveYear": 2.75
       },
-      "officialDate": "2026-09-02",
+      "officialDate": "2026-09-09",
       "note": "Official Bank of Canada Valet data used as a major-bank posted-rate and deposit-rate cross-check. Posted bank rates can be higher for mortgages and lower for GICs than consumer comparison or negotiated rates."
     },
     {
