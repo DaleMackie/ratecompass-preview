@@ -42,7 +42,7 @@
     {
       "product": "Mortgage",
       "term": "5 year",
-      "rate": 4.27,
+      "rate": 4.19,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 5-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
       "lastChecked": "Last checked: 2026-09-10",
@@ -54,7 +54,7 @@
     {
       "product": "Mortgage",
       "term": "5 year variable",
-      "rate": 3.58,
+      "rate": 3.55,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 5-year variable mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
       "lastChecked": "Last checked: 2026-09-10",
@@ -701,7 +701,7 @@
       "institution": "RBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.27,
+      "rate": 4.19,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-10"
@@ -710,61 +710,6 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearFixed",
       "institution": "TD",
-      "productName": "5-year fixed",
-      "note": "Marketplace",
-      "rate": 4.32,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearFixed",
-      "institution": "BMO",
-      "productName": "5-year fixed",
-      "note": "Marketplace",
-      "rate": 4.23,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearFixed",
-      "institution": "CIBC",
-      "productName": "5-year fixed",
-      "note": "Marketplace",
-      "rate": 4.26,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearFixed",
-      "institution": "Scotiabank",
-      "productName": "5-year fixed",
-      "note": "Marketplace",
-      "rate": 4.3,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearFixed",
-      "institution": "National Bank",
-      "productName": "5-year fixed",
-      "note": "Marketplace",
-      "rate": 4.25,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearFixed",
-      "institution": "Desjardins",
       "productName": "5-year fixed",
       "note": "Marketplace",
       "rate": 4.24,
@@ -775,10 +720,10 @@
     {
       "category": "Mortgage",
       "mortgageTerm": "fiveYearFixed",
-      "institution": "First National",
+      "institution": "BMO",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.2,
+      "rate": 4.15,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-10"
@@ -786,7 +731,7 @@
     {
       "category": "Mortgage",
       "mortgageTerm": "fiveYearFixed",
-      "institution": "MCAP",
+      "institution": "CIBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
       "rate": 4.18,
@@ -797,7 +742,7 @@
     {
       "category": "Mortgage",
       "mortgageTerm": "fiveYearFixed",
-      "institution": "Tangerine",
+      "institution": "Scotiabank",
       "productName": "5-year fixed",
       "note": "Marketplace",
       "rate": 4.22,
@@ -807,74 +752,63 @@
     },
     {
       "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "National Bank",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.17,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "Desjardins",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.16,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "First National",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.12,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "MCAP",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.1,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearFixed",
+      "institution": "Tangerine",
+      "productName": "5-year fixed",
+      "note": "Marketplace",
+      "rate": 4.14,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "RBC",
-      "productName": "Prime -0.87%",
-      "note": "Marketplace",
-      "spreadOverPrime": -0.87,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearVariable",
-      "institution": "TD",
-      "productName": "Prime -0.82%",
-      "note": "Marketplace",
-      "spreadOverPrime": -0.82,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearVariable",
-      "institution": "BMO",
-      "productName": "Prime -0.92%",
-      "note": "Marketplace",
-      "spreadOverPrime": -0.92,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearVariable",
-      "institution": "CIBC",
-      "productName": "Prime -0.88%",
-      "note": "Marketplace",
-      "spreadOverPrime": -0.88,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearVariable",
-      "institution": "Scotiabank",
-      "productName": "Prime -0.84%",
-      "note": "Marketplace",
-      "spreadOverPrime": -0.84,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearVariable",
-      "institution": "National Bank",
-      "productName": "Prime -0.89%",
-      "note": "Marketplace",
-      "spreadOverPrime": -0.89,
-      "status": "Marketplace",
-      "source": "Ratehub.ca marketplace comparison table",
-      "lastChecked": "2026-09-10"
-    },
-    {
-      "category": "Mortgage",
-      "mortgageTerm": "fiveYearVariable",
-      "institution": "Desjardins",
       "productName": "Prime -0.90%",
       "note": "Marketplace",
       "spreadOverPrime": -0.9,
@@ -885,10 +819,10 @@
     {
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
-      "institution": "First National",
-      "productName": "Prime -0.93%",
+      "institution": "TD",
+      "productName": "Prime -0.85%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.93,
+      "spreadOverPrime": -0.85,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-10"
@@ -896,7 +830,7 @@
     {
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
-      "institution": "MCAP",
+      "institution": "BMO",
       "productName": "Prime -0.95%",
       "note": "Marketplace",
       "spreadOverPrime": -0.95,
@@ -907,10 +841,76 @@
     {
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
-      "institution": "Tangerine",
+      "institution": "CIBC",
       "productName": "Prime -0.91%",
       "note": "Marketplace",
       "spreadOverPrime": -0.91,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "Scotiabank",
+      "productName": "Prime -0.87%",
+      "note": "Marketplace",
+      "spreadOverPrime": -0.87,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "National Bank",
+      "productName": "Prime -0.92%",
+      "note": "Marketplace",
+      "spreadOverPrime": -0.92,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "Desjardins",
+      "productName": "Prime -0.93%",
+      "note": "Marketplace",
+      "spreadOverPrime": -0.93,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "First National",
+      "productName": "Prime -0.96%",
+      "note": "Marketplace",
+      "spreadOverPrime": -0.96,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "MCAP",
+      "productName": "Prime -0.98%",
+      "note": "Marketplace",
+      "spreadOverPrime": -0.98,
+      "status": "Marketplace",
+      "source": "Ratehub.ca marketplace comparison table",
+      "lastChecked": "2026-09-10"
+    },
+    {
+      "category": "Mortgage",
+      "mortgageTerm": "fiveYearVariable",
+      "institution": "Tangerine",
+      "productName": "Prime -0.94%",
+      "note": "Marketplace",
+      "spreadOverPrime": -0.94,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-10"
@@ -1704,18 +1704,18 @@
       "ratesFound": [
         4.09,
         4.14,
+        4.14,
         4.24,
         4.29,
-        4.34,
-        4.49,
         4.51,
         4.54,
-        4.54,
-        4.54,
         4.59,
-        4.64,
+        4.59,
+        4.69,
+        4.69,
         4.69,
         4.74,
+        4.79,
         5.99,
         4.09,
         4.49,
@@ -1725,6 +1725,10 @@
         {
           "provider": "Big 6 Bank",
           "rate": 4.09
+        },
+        {
+          "provider": "Alterna Savings",
+          "rate": 4.14
         },
         {
           "provider": "Canadian Lender",
@@ -1739,14 +1743,6 @@
           "rate": 4.29
         },
         {
-          "provider": "Alterna Savings",
-          "rate": 4.34
-        },
-        {
-          "provider": "TD Bank",
-          "rate": 4.49
-        },
-        {
           "provider": "Bank of Montreal",
           "rate": 4.51
         },
@@ -1755,20 +1751,20 @@
           "rate": 4.54
         },
         {
-          "provider": "CMLS Financial",
-          "rate": 4.54
-        },
-        {
-          "provider": "Canwise",
-          "rate": 4.54
-        },
-        {
           "provider": "RBC Royal Bank",
           "rate": 4.59
         },
         {
-          "provider": "First National",
-          "rate": 4.64
+          "provider": "TD Bank",
+          "rate": 4.59
+        },
+        {
+          "provider": "CMLS Financial",
+          "rate": 4.69
+        },
+        {
+          "provider": "Canwise",
+          "rate": 4.69
         },
         {
           "provider": "National Bank of Canada",
@@ -1777,6 +1773,10 @@
         {
           "provider": "MCAP",
           "rate": 4.74
+        },
+        {
+          "provider": "First National",
+          "rate": 4.79
         },
         {
           "provider": "ICICI Bank Canada",
@@ -1796,7 +1796,7 @@
         }
       ],
       "gicRows": [],
-      "benchmarkRate": 4.27,
+      "benchmarkRate": 4.19,
       "benchmarkMethod": "Median of the leading visible comparison-table rates",
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -1812,7 +1812,7 @@
       "ratesFound": [
         3.3,
         3.44,
-        3.55,
+        3.5,
         3.6,
         3.6,
         3.65,
@@ -1840,7 +1840,7 @@
         },
         {
           "provider": "Big 6 Bank",
-          "rate": 3.55
+          "rate": 3.5
         },
         {
           "provider": "Canwise",
@@ -1904,7 +1904,7 @@
         }
       ],
       "gicRows": [],
-      "benchmarkRate": 3.58,
+      "benchmarkRate": 3.55,
       "benchmarkMethod": "Median of the leading visible comparison-table rates",
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -2059,7 +2059,7 @@
       "status": "Checked",
       "ratesFound": [
         2.75,
-        3,
+        2.8,
         4.6
       ],
       "mortgageRows": [],
@@ -2332,8 +2332,8 @@
       "term": "5 year variable",
       "provider": "Canadian Lender",
       "rate": 3.3,
-      "benchmarkRate": 3.58,
-      "advantageBps": 28,
+      "benchmarkRate": 3.55,
+      "advantageBps": 25,
       "source": "Ratehub 5-year variable mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
       "lastChecked": "2026-09-10",
@@ -2354,19 +2354,6 @@
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
     {
-      "product": "Mortgage",
-      "term": "5 year",
-      "provider": "Big 6 Bank",
-      "rate": 4.09,
-      "benchmarkRate": 4.27,
-      "advantageBps": 18,
-      "source": "Ratehub 5-year fixed mortgage rates",
-      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
-      "lastChecked": "2026-09-10",
-      "status": "Special opportunity",
-      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
-    },
-    {
       "product": "GIC",
       "term": "5 year",
       "gicRedeemability": "Non-redeemable",
@@ -2379,6 +2366,19 @@
       "lastChecked": "2026-09-10",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
+    },
+    {
+      "product": "Mortgage",
+      "term": "5 year",
+      "provider": "Big 6 Bank",
+      "rate": 4.09,
+      "benchmarkRate": 4.19,
+      "advantageBps": 10,
+      "source": "Ratehub 5-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
+      "lastChecked": "2026-09-10",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     }
   ]
 }
