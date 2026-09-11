@@ -42,7 +42,7 @@
     {
       "product": "Mortgage",
       "term": "5 year",
-      "rate": 4.19,
+      "rate": 4.21,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 5-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
       "lastChecked": "Last checked: 2026-09-11",
@@ -79,7 +79,7 @@
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Non-redeemable",
-      "rate": 4,
+      "rate": 3.9,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Upper-middle public marketplace GIC rate range. Bank of Canada posted GIC data is checked separately as a low-side floor.",
       "lastChecked": "Last checked: 2026-09-11",
@@ -127,7 +127,7 @@
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Redeemable",
-      "rate": 3.5,
+      "rate": 3.4,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated redeemable GIC benchmark using a 0.50 percentage-point flexibility discount from the current non-redeemable marketplace anchor.",
       "lastChecked": "Last checked: 2026-09-11",
@@ -175,7 +175,7 @@
       "product": "GIC",
       "term": "2 year",
       "gicRedeemability": "Cashable",
-      "rate": 3.25,
+      "rate": 3.15,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated cashable GIC benchmark using a 0.75 percentage-point liquidity discount from the current non-redeemable marketplace anchor.",
       "lastChecked": "Last checked: 2026-09-11",
@@ -701,7 +701,7 @@
       "institution": "RBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.19,
+      "rate": 4.21,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -712,7 +712,7 @@
       "institution": "TD",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.24,
+      "rate": 4.26,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -723,7 +723,7 @@
       "institution": "BMO",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.15,
+      "rate": 4.17,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -734,7 +734,7 @@
       "institution": "CIBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.18,
+      "rate": 4.2,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -745,7 +745,7 @@
       "institution": "Scotiabank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.22,
+      "rate": 4.24,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -756,7 +756,7 @@
       "institution": "National Bank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.17,
+      "rate": 4.19,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -767,7 +767,7 @@
       "institution": "Desjardins",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.16,
+      "rate": 4.18,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -778,7 +778,7 @@
       "institution": "First National",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.12,
+      "rate": 4.14,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -789,7 +789,7 @@
       "institution": "MCAP",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.1,
+      "rate": 4.12,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -800,7 +800,7 @@
       "institution": "Tangerine",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.14,
+      "rate": 4.16,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-11"
@@ -1140,7 +1140,7 @@
       "gicRedeemability": "Non-redeemable",
       "institution": "CIBC",
       "productName": "2-year non-redeemable GIC",
-      "rate": 4.05,
+      "rate": 3.95,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1239,7 +1239,7 @@
       "gicRedeemability": "Redeemable",
       "institution": "CIBC",
       "productName": "2-year redeemable GIC",
-      "rate": 3.55,
+      "rate": 3.45,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1327,7 +1327,7 @@
       "gicRedeemability": "Cashable",
       "institution": "CIBC",
       "productName": "2-year cashable GIC",
-      "rate": 3.3,
+      "rate": 3.2,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1705,7 +1705,7 @@
         4.09,
         4.14,
         4.14,
-        4.24,
+        4.29,
         4.29,
         4.51,
         4.54,
@@ -1736,7 +1736,7 @@
         },
         {
           "provider": "Meridian Credit Union",
-          "rate": 4.24
+          "rate": 4.29
         },
         {
           "provider": "Scotiabank",
@@ -1796,7 +1796,7 @@
         }
       ],
       "gicRows": [],
-      "benchmarkRate": 4.19,
+      "benchmarkRate": 4.21,
       "benchmarkMethod": "Median of the leading visible comparison-table rates",
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -1917,7 +1917,7 @@
       "status": "Checked",
       "ratesFound": [
         3.55,
-        4,
+        3.4,
         4,
         4.1
       ],
@@ -1930,10 +1930,10 @@
           "rate": 3.55
         },
         {
-          "provider": "Haventree Bank",
-          "term": "2 year",
+          "provider": "EQ Bank",
+          "term": "1 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 4
+          "rate": 3.4
         },
         {
           "provider": "EQ Bank",
@@ -1962,13 +1962,12 @@
         3.65,
         3.65,
         3.9,
+        3.9,
         4,
         4,
-        4.05,
         4.25,
         4.25,
         3.55,
-        4,
         4,
         4.1
       ],
@@ -1996,7 +1995,7 @@
           "provider": "Marketplace",
           "term": "2 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 4
+          "rate": 3.9
         },
         {
           "provider": "Oaken Financial",
@@ -2008,7 +2007,7 @@
           "provider": "Marketplace",
           "term": "3 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 4.05
+          "rate": 4
         },
         {
           "provider": "Oaken Financial",
@@ -2027,12 +2026,6 @@
           "term": "1 year",
           "gicRedeemability": "Non-redeemable",
           "rate": 3.55
-        },
-        {
-          "provider": "Haventree Bank",
-          "term": "2 year",
-          "gicRedeemability": "Non-redeemable",
-          "rate": 4
         },
         {
           "provider": "EQ Bank",
@@ -2059,7 +2052,7 @@
       "status": "Checked",
       "ratesFound": [
         2.75,
-        2.8,
+        3,
         4.6
       ],
       "mortgageRows": [],
@@ -2372,8 +2365,8 @@
       "term": "5 year",
       "provider": "Big 6 Bank",
       "rate": 4.09,
-      "benchmarkRate": 4.19,
-      "advantageBps": 10,
+      "benchmarkRate": 4.21,
+      "advantageBps": 12,
       "source": "Ratehub 5-year fixed mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
       "lastChecked": "2026-09-11",
