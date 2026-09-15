@@ -1702,8 +1702,8 @@
       "lastChecked": "2026-09-15",
       "status": "Checked",
       "ratesFound": [
+        4.09,
         4.14,
-        4.19,
         4.24,
         4.29,
         4.51,
@@ -1723,12 +1723,12 @@
       ],
       "mortgageRows": [
         {
-          "provider": "Alterna Savings",
-          "rate": 4.14
+          "provider": "Canadian Lender",
+          "rate": 4.09
         },
         {
-          "provider": "Canadian Lender",
-          "rate": 4.19
+          "provider": "Alterna Savings",
+          "rate": 4.14
         },
         {
           "provider": "Big 6 Bank",
@@ -2074,9 +2074,9 @@
         2.8,
         3.1,
         3.3,
-        3.89,
-        3.94,
+        3.99,
         4,
+        4.09,
         4.5,
         4.6
       ],
@@ -2349,7 +2349,7 @@
     {
       "product": "Mortgage",
       "term": "5 year",
-      "provider": "Simplii Financial ™",
+      "provider": "Canadian Lender",
       "rate": 4.09,
       "benchmarkRate": 4.27,
       "advantageBps": 18,
