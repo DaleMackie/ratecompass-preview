@@ -30,7 +30,7 @@
     {
       "product": "Mortgage",
       "term": "3 year",
-      "rate": 4.14,
+      "rate": 4.29,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 3-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
       "lastChecked": "Last checked: 2026-09-16",
@@ -42,7 +42,7 @@
     {
       "product": "Mortgage",
       "term": "5 year",
-      "rate": 4.27,
+      "rate": 4.37,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 5-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
       "lastChecked": "Last checked: 2026-09-16",
@@ -481,7 +481,7 @@
       "institution": "RBC",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.14,
+      "rate": 4.29,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -492,7 +492,7 @@
       "institution": "TD",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.19,
+      "rate": 4.34,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -503,7 +503,7 @@
       "institution": "BMO",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.09,
+      "rate": 4.24,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -514,7 +514,7 @@
       "institution": "CIBC",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.13,
+      "rate": 4.28,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -525,7 +525,7 @@
       "institution": "Scotiabank",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.16,
+      "rate": 4.31,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -536,7 +536,7 @@
       "institution": "National Bank",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.11,
+      "rate": 4.26,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -547,7 +547,7 @@
       "institution": "Desjardins",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.12,
+      "rate": 4.27,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -558,7 +558,7 @@
       "institution": "First National",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.07,
+      "rate": 4.22,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -569,7 +569,7 @@
       "institution": "MCAP",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.05,
+      "rate": 4.2,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -580,7 +580,7 @@
       "institution": "Tangerine",
       "productName": "3-year fixed",
       "note": "Marketplace",
-      "rate": 4.1,
+      "rate": 4.25,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -701,7 +701,7 @@
       "institution": "RBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.27,
+      "rate": 4.37,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -712,7 +712,7 @@
       "institution": "TD",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.32,
+      "rate": 4.42,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -723,7 +723,7 @@
       "institution": "BMO",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.23,
+      "rate": 4.33,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -734,7 +734,7 @@
       "institution": "CIBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.26,
+      "rate": 4.36,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -745,7 +745,7 @@
       "institution": "Scotiabank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.3,
+      "rate": 4.4,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -756,7 +756,7 @@
       "institution": "National Bank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.25,
+      "rate": 4.35,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -767,7 +767,7 @@
       "institution": "Desjardins",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.24,
+      "rate": 4.34,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -778,7 +778,7 @@
       "institution": "First National",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.2,
+      "rate": 4.3,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -789,7 +789,7 @@
       "institution": "MCAP",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.18,
+      "rate": 4.28,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -800,7 +800,7 @@
       "institution": "Tangerine",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.22,
+      "rate": 4.32,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-09-16"
@@ -1609,10 +1609,10 @@
       "lastChecked": "2026-09-16",
       "status": "Checked",
       "ratesFound": [
-        3.94,
-        3.99,
         4.09,
         4.19,
+        4.29,
+        4.29,
         4.29,
         4.34,
         4.59,
@@ -1628,14 +1628,6 @@
       ],
       "mortgageRows": [
         {
-          "provider": "Canadian Lender",
-          "rate": 3.94
-        },
-        {
-          "provider": "Alterna Savings",
-          "rate": 3.99
-        },
-        {
           "provider": "Meridian Credit Union",
           "rate": 4.09
         },
@@ -1644,7 +1636,15 @@
           "rate": 4.19
         },
         {
+          "provider": "Alterna Savings",
+          "rate": 4.29
+        },
+        {
           "provider": "Bank of Montreal",
+          "rate": 4.29
+        },
+        {
+          "provider": "Canadian Lender",
           "rate": 4.29
         },
         {
@@ -1693,7 +1693,7 @@
         }
       ],
       "gicRows": [],
-      "benchmarkRate": 4.14,
+      "benchmarkRate": 4.29,
       "benchmarkMethod": "Median of the leading visible comparison-table rates",
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -1707,18 +1707,18 @@
       "lastChecked": "2026-09-16",
       "status": "Checked",
       "ratesFound": [
-        4.09,
-        4.14,
+        4.24,
         4.24,
         4.29,
+        4.44,
         4.51,
         4.54,
         4.54,
         4.59,
-        4.59,
         4.69,
         4.69,
         4.69,
+        4.79,
         4.79,
         4.89,
         5.99,
@@ -1728,20 +1728,20 @@
       ],
       "mortgageRows": [
         {
-          "provider": "Canadian Lender",
-          "rate": 4.09
-        },
-        {
-          "provider": "Alterna Savings",
-          "rate": 4.14
-        },
-        {
           "provider": "Big 6 Bank",
+          "rate": 4.24
+        },
+        {
+          "provider": "Canadian Lender",
           "rate": 4.24
         },
         {
           "provider": "Meridian Credit Union",
           "rate": 4.29
+        },
+        {
+          "provider": "Alterna Savings",
+          "rate": 4.44
         },
         {
           "provider": "Bank of Montreal",
@@ -1760,10 +1760,6 @@
           "rate": 4.59
         },
         {
-          "provider": "TD Bank",
-          "rate": 4.59
-        },
-        {
           "provider": "CMLS Financial",
           "rate": 4.69
         },
@@ -1777,6 +1773,10 @@
         },
         {
           "provider": "First National",
+          "rate": 4.79
+        },
+        {
+          "provider": "TD Bank",
           "rate": 4.79
         },
         {
@@ -1801,7 +1801,7 @@
         }
       ],
       "gicRows": [],
-      "benchmarkRate": 4.27,
+      "benchmarkRate": 4.37,
       "benchmarkMethod": "Median of the leading visible comparison-table rates",
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -1826,7 +1826,7 @@
         3.7,
         3.7,
         3.9,
-        4.04,
+        3.99,
         4.45,
         4.53,
         4.6,
@@ -1881,7 +1881,7 @@
         },
         {
           "provider": "TD Bank",
-          "rate": 4.04
+          "rate": 3.99
         },
         {
           "provider": "ICICI Bank Canada",
@@ -2072,7 +2072,6 @@
         2.8,
         3.1,
         3.3,
-        3.99,
         4,
         4.5,
         4.6
@@ -2211,24 +2210,22 @@
       "lastChecked": "2026-09-16",
       "status": "Reachable",
       "ratesFound": [
-        4.45,
         5.49,
         6.05,
         6.09,
-        2.45,
-        2.55,
-        2.75
+        2.6,
+        2.75,
+        3
       ],
       "officialRates": {
-        "prime": 4.45,
         "mortgageOneYear": 5.49,
         "mortgageThreeYear": 6.05,
         "mortgageFiveYear": 6.09,
-        "gicOneYear": 2.45,
-        "gicThreeYear": 2.55,
-        "gicFiveYear": 2.75
+        "gicOneYear": 2.6,
+        "gicThreeYear": 2.75,
+        "gicFiveYear": 3
       },
-      "officialDate": "2026-09-09",
+      "officialDate": "2026-09-16",
       "note": "Official Bank of Canada Valet data used as a major-bank posted-rate and deposit-rate cross-check. Posted bank rates can be higher for mortgages and lower for GICs than consumer comparison or negotiated rates."
     },
     {
@@ -2319,26 +2316,26 @@
     },
     {
       "product": "Mortgage",
-      "term": "3 year",
-      "provider": "Canadian Lender",
-      "rate": 3.94,
-      "benchmarkRate": 4.14,
-      "advantageBps": 20,
-      "source": "Ratehub 3-year fixed mortgage rates",
-      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
+      "term": "5 year",
+      "provider": "Simplii Financial ™",
+      "rate": 4.09,
+      "benchmarkRate": 4.37,
+      "advantageBps": 28,
+      "source": "Ratehub 5-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
       "lastChecked": "2026-09-16",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
     {
       "product": "Mortgage",
-      "term": "5 year",
-      "provider": "Canadian Lender",
+      "term": "3 year",
+      "provider": "Meridian Credit Union",
       "rate": 4.09,
-      "benchmarkRate": 4.27,
-      "advantageBps": 18,
-      "source": "Ratehub 5-year fixed mortgage rates",
-      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
+      "benchmarkRate": 4.29,
+      "advantageBps": 20,
+      "source": "Ratehub 3-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
       "lastChecked": "2026-09-16",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
