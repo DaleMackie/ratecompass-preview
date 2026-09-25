@@ -1703,7 +1703,7 @@
         4.69,
         4.74,
         4.79,
-        4.79,
+        4.89,
         4.99,
         5.09,
         5.99,
@@ -1752,12 +1752,12 @@
           "rate": 4.74
         },
         {
-          "provider": "First National",
+          "provider": "TD Bank",
           "rate": 4.79
         },
         {
-          "provider": "TD Bank",
-          "rate": 4.79
+          "provider": "First National",
+          "rate": 4.89
         },
         {
           "provider": "Bank of Montreal",
