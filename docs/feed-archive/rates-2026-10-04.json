@@ -2152,8 +2152,8 @@
       "url": "https://ca.finance.yahoo.com/quote/CM.TO",
       "sourceType": "Market signal",
       "lastChecked": "2026-10-04",
-      "status": "Unavailable",
-      "note": "Yahoo Finance Canada context page could not be checked: 500 INKApi Error"
+      "status": "Reachable",
+      "note": "Yahoo Finance Canada context page. Use for market direction, not lender product rates."
     },
     {
       "label": "CAD/USD",
