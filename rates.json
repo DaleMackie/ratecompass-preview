@@ -6,7 +6,7 @@
     {
       "product": "Mortgage",
       "term": "1 year",
-      "rate": 5.02,
+      "rate": 5.06,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 1-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
       "lastChecked": "Last checked: 2026-10-06",
@@ -261,7 +261,7 @@
       "institution": "RBC",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.02,
+      "rate": 5.06,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -272,7 +272,7 @@
       "institution": "TD",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.07,
+      "rate": 5.11,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -283,7 +283,7 @@
       "institution": "BMO",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 4.97,
+      "rate": 5.01,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -294,7 +294,7 @@
       "institution": "CIBC",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.01,
+      "rate": 5.05,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -305,7 +305,7 @@
       "institution": "Scotiabank",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5.04,
+      "rate": 5.08,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -316,7 +316,7 @@
       "institution": "National Bank",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 4.99,
+      "rate": 5.03,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -327,7 +327,7 @@
       "institution": "Desjardins",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 5,
+      "rate": 5.04,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -338,7 +338,7 @@
       "institution": "First National",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 4.94,
+      "rate": 4.98,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -349,7 +349,7 @@
       "institution": "MCAP",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 4.92,
+      "rate": 4.96,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -360,7 +360,7 @@
       "institution": "Tangerine",
       "productName": "1-year fixed",
       "note": "Marketplace",
-      "rate": 4.98,
+      "rate": 5.02,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -1421,7 +1421,7 @@
         4.49,
         4.64,
         4.99,
-        5.04,
+        5.14,
         5.29,
         5.33,
         5.39,
@@ -1448,7 +1448,7 @@
         },
         {
           "provider": "RBC Royal Bank",
-          "rate": 5.04
+          "rate": 5.14
         },
         {
           "provider": "MCAP",
@@ -1492,7 +1492,7 @@
         }
       ],
       "gicRows": [],
-      "benchmarkRate": 5.02,
+      "benchmarkRate": 5.06,
       "benchmarkMethod": "Median of the leading visible comparison-table rates",
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -1511,11 +1511,11 @@
         4.49,
         4.49,
         4.73,
-        4.94,
         4.99,
         4.99,
         5.09,
         5.09,
+        5.14,
         5.59,
         5.74,
         7.54,
@@ -1544,10 +1544,6 @@
           "rate": 4.73
         },
         {
-          "provider": "RBC Royal Bank",
-          "rate": 4.94
-        },
-        {
           "provider": "MCAP",
           "rate": 4.99
         },
@@ -1562,6 +1558,10 @@
         {
           "provider": "TD Bank",
           "rate": 5.09
+        },
+        {
+          "provider": "RBC Royal Bank",
+          "rate": 5.14
         },
         {
           "provider": "First National",
@@ -1606,9 +1606,9 @@
         4.59,
         4.69,
         4.79,
-        4.79,
         4.89,
         4.94,
+        4.99,
         5.09,
         5.49,
         6.79,
@@ -1641,10 +1641,6 @@
           "rate": 4.69
         },
         {
-          "provider": "RBC Royal Bank",
-          "rate": 4.79
-        },
-        {
           "provider": "MCAP",
           "rate": 4.79
         },
@@ -1655,6 +1651,10 @@
         {
           "provider": "National Bank of Canada",
           "rate": 4.94
+        },
+        {
+          "provider": "RBC Royal Bank",
+          "rate": 4.99
         },
         {
           "provider": "TD Bank",
@@ -1697,7 +1697,7 @@
         4.59,
         4.59,
         4.69,
-        4.74,
+        4.84,
         4.84,
         4.89,
         4.89,
@@ -1733,7 +1733,7 @@
         },
         {
           "provider": "RBC Royal Bank",
-          "rate": 4.74
+          "rate": 4.84
         },
         {
           "provider": "National Bank of Canada",
@@ -1801,10 +1801,10 @@
         3.6,
         3.6,
         3.65,
-        3.65,
         3.7,
         3.7,
         3.7,
+        3.85,
         3.9,
         3.99,
         4,
@@ -1835,10 +1835,6 @@
           "rate": 3.6
         },
         {
-          "provider": "RBC Royal Bank",
-          "rate": 3.65
-        },
-        {
           "provider": "Scotiabank",
           "rate": 3.65
         },
@@ -1853,6 +1849,10 @@
         {
           "provider": "First National",
           "rate": 3.7
+        },
+        {
+          "provider": "RBC Royal Bank",
+          "rate": 3.85
         },
         {
           "provider": "MCAP",
@@ -2276,8 +2276,8 @@
       "term": "1 year",
       "provider": "Big 6 Bank",
       "rate": 4.49,
-      "benchmarkRate": 5.02,
-      "advantageBps": 53,
+      "benchmarkRate": 5.06,
+      "advantageBps": 57,
       "source": "Ratehub 1-year fixed mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/1-year/fixed",
       "lastChecked": "2026-10-06",
