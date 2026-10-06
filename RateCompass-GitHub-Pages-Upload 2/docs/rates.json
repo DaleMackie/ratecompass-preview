@@ -42,7 +42,7 @@
     {
       "product": "Mortgage",
       "term": "5 year",
-      "rate": 4.59,
+      "rate": 4.64,
       "source": "Ratehub.ca marketplace comparison table",
       "sourceDetail": "Median of the leading visible comparison-table rates from Ratehub 5-year fixed mortgage rates. Bank posted-rate pages are checked separately as a high-side guardrail.",
       "lastChecked": "Last checked: 2026-10-06",
@@ -91,7 +91,7 @@
       "product": "GIC",
       "term": "3 year",
       "gicRedeemability": "Non-redeemable",
-      "rate": 4.4,
+      "rate": 4.3,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Upper-middle public marketplace GIC rate range. Bank of Canada posted GIC data is checked separately as a low-side floor.",
       "lastChecked": "Last checked: 2026-10-06",
@@ -139,7 +139,7 @@
       "product": "GIC",
       "term": "3 year",
       "gicRedeemability": "Redeemable",
-      "rate": 3.9,
+      "rate": 3.8,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated redeemable GIC benchmark using a 0.50 percentage-point flexibility discount from the current non-redeemable marketplace anchor.",
       "lastChecked": "Last checked: 2026-10-06",
@@ -187,7 +187,7 @@
       "product": "GIC",
       "term": "3 year",
       "gicRedeemability": "Cashable",
-      "rate": 3.65,
+      "rate": 3.55,
       "source": "Ratehub.ca GIC marketplace comparison table",
       "sourceDetail": "Estimated cashable GIC benchmark using a 0.75 percentage-point liquidity discount from the current non-redeemable marketplace anchor.",
       "lastChecked": "Last checked: 2026-10-06",
@@ -701,7 +701,7 @@
       "institution": "RBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.59,
+      "rate": 4.64,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -712,7 +712,7 @@
       "institution": "TD",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.64,
+      "rate": 4.69,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -723,7 +723,7 @@
       "institution": "BMO",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.55,
+      "rate": 4.6,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -734,7 +734,7 @@
       "institution": "CIBC",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.58,
+      "rate": 4.63,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -745,7 +745,7 @@
       "institution": "Scotiabank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.62,
+      "rate": 4.67,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -756,7 +756,7 @@
       "institution": "National Bank",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.57,
+      "rate": 4.62,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -767,7 +767,7 @@
       "institution": "Desjardins",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.56,
+      "rate": 4.61,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -778,7 +778,7 @@
       "institution": "First National",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.52,
+      "rate": 4.57,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -789,7 +789,7 @@
       "institution": "MCAP",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.5,
+      "rate": 4.55,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -800,7 +800,7 @@
       "institution": "Tangerine",
       "productName": "5-year fixed",
       "note": "Marketplace",
-      "rate": 4.54,
+      "rate": 4.59,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-10-06"
@@ -1162,7 +1162,7 @@
       "gicRedeemability": "Non-redeemable",
       "institution": "BMO",
       "productName": "3-year non-redeemable GIC",
-      "rate": 4.4,
+      "rate": 4.3,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1261,7 +1261,7 @@
       "gicRedeemability": "Redeemable",
       "institution": "BMO",
       "productName": "3-year redeemable GIC",
-      "rate": 3.9,
+      "rate": 3.8,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1349,7 +1349,7 @@
       "gicRedeemability": "Cashable",
       "institution": "BMO",
       "productName": "3-year cashable GIC",
-      "rate": 3.65,
+      "rate": 3.55,
       "note": "Marketplace",
       "status": "Marketplace",
       "source": "Ratehub.ca GIC marketplace comparison table",
@@ -1695,8 +1695,8 @@
         4.34,
         4.34,
         4.59,
-        4.59,
         4.69,
+        4.74,
         4.84,
         4.84,
         4.89,
@@ -1724,12 +1724,12 @@
           "rate": 4.59
         },
         {
-          "provider": "Scotiabank",
-          "rate": 4.59
-        },
-        {
           "provider": "Alterna Savings",
           "rate": 4.69
+        },
+        {
+          "provider": "Scotiabank",
+          "rate": 4.74
         },
         {
           "provider": "RBC Royal Bank",
@@ -1781,7 +1781,7 @@
         }
       ],
       "gicRows": [],
-      "benchmarkRate": 4.59,
+      "benchmarkRate": 4.64,
       "benchmarkMethod": "Median of the leading visible comparison-table rates",
       "note": "Public marketplace page check. These values are comparison signals, not verified lender rates."
     },
@@ -1943,7 +1943,7 @@
         4,
         4.25,
         4.25,
-        4.4,
+        4.3,
         4.4,
         4.5,
         4.5,
@@ -1966,7 +1966,7 @@
           "rate": 4
         },
         {
-          "provider": "Wealth One Bank of Canada",
+          "provider": "Oaken Financial",
           "term": "2 year",
           "gicRedeemability": "Non-redeemable",
           "rate": 4.25
@@ -1978,10 +1978,10 @@
           "rate": 4.25
         },
         {
-          "provider": "Wealth One Bank of Canada",
+          "provider": "Oaken Financial",
           "term": "3 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 4.4
+          "rate": 4.3
         },
         {
           "provider": "Marketplace",
@@ -2299,6 +2299,19 @@
     },
     {
       "product": "Mortgage",
+      "term": "5 year",
+      "provider": "Big 6 Bank",
+      "rate": 4.34,
+      "benchmarkRate": 4.64,
+      "advantageBps": 30,
+      "source": "Ratehub 5-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
+      "lastChecked": "2026-10-06",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
+      "product": "Mortgage",
       "term": "3 year",
       "provider": "Big 6 Bank",
       "rate": 4.19,
@@ -2306,19 +2319,6 @@
       "advantageBps": 25,
       "source": "Ratehub 3-year fixed mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
-      "lastChecked": "2026-10-06",
-      "status": "Special opportunity",
-      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
-    },
-    {
-      "product": "Mortgage",
-      "term": "5 year",
-      "provider": "Big 6 Bank",
-      "rate": 4.34,
-      "benchmarkRate": 4.59,
-      "advantageBps": 25,
-      "source": "Ratehub 5-year fixed mortgage rates",
-      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/fixed",
       "lastChecked": "2026-10-06",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
@@ -2363,6 +2363,20 @@
       "lastChecked": "2026-10-06",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
+      "product": "GIC",
+      "term": "3 year",
+      "gicRedeemability": "Non-redeemable",
+      "provider": "Marketplace",
+      "rate": 4.4,
+      "benchmarkRate": 4.3,
+      "advantageBps": 10,
+      "source": "Ratehub best GIC rates",
+      "sourceUrl": "https://www.ratehub.ca/gics/best-gic-rates",
+      "lastChecked": "2026-10-06",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify minimum deposit, registered-account eligibility, deposit-insurance coverage, cashability, and availability before relying on it."
     }
   ]
 }
