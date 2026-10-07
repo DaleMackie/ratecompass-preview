@@ -1693,7 +1693,7 @@
       "status": "Checked",
       "ratesFound": [
         4.34,
-        4.34,
+        4.54,
         4.59,
         4.69,
         4.74,
@@ -1712,12 +1712,12 @@
       ],
       "mortgageRows": [
         {
-          "provider": "Big 6 Bank",
+          "provider": "Canadian Lender",
           "rate": 4.34
         },
         {
-          "provider": "Canadian Lender",
-          "rate": 4.34
+          "provider": "Big 6 Bank",
+          "rate": 4.54
         },
         {
           "provider": "Meridian Credit Union",
@@ -2058,7 +2058,7 @@
         3.25,
         3.55,
         4,
-        4.19,
+        4.29,
         4.5
       ],
       "mortgageRows": [],
@@ -2298,7 +2298,7 @@
     {
       "product": "Mortgage",
       "term": "5 year",
-      "provider": "Big 6 Bank",
+      "provider": "Canadian Lender",
       "rate": 4.34,
       "benchmarkRate": 4.64,
       "advantageBps": 30,
