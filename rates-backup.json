@@ -1704,8 +1704,8 @@
         4.89,
         4.99,
         4.99,
-        4.99,
         5.09,
+        5.19,
         5.99,
         4.84,
         4.99
@@ -1752,10 +1752,6 @@
           "rate": 4.89
         },
         {
-          "provider": "Bank of Montreal",
-          "rate": 4.99
-        },
-        {
           "provider": "First National",
           "rate": 4.99
         },
@@ -1766,6 +1762,10 @@
         {
           "provider": "MCAP",
           "rate": 5.09
+        },
+        {
+          "provider": "Bank of Montreal",
+          "rate": 5.19
         },
         {
           "provider": "ICICI Bank Canada",
@@ -1795,8 +1795,8 @@
       "lastChecked": "2026-10-13",
       "status": "Checked",
       "ratesFound": [
-        3.4,
         3.44,
+        3.45,
         3.6,
         3.6,
         3.6,
@@ -1815,12 +1815,12 @@
       ],
       "mortgageRows": [
         {
-          "provider": "Canadian Lender",
-          "rate": 3.4
-        },
-        {
           "provider": "Meridian Credit Union",
           "rate": 3.44
+        },
+        {
+          "provider": "Canadian Lender",
+          "rate": 3.45
         },
         {
           "provider": "Big 6 Bank",
@@ -2031,7 +2031,7 @@
       "lastChecked": "2026-10-13",
       "status": "Checked",
       "ratesFound": [
-        2.75,
+        1.5,
         2.8,
         3,
         4.25,
@@ -2340,19 +2340,6 @@
     },
     {
       "product": "Mortgage",
-      "term": "5 year variable",
-      "provider": "Canadian Lender",
-      "rate": 3.4,
-      "benchmarkRate": 3.6,
-      "advantageBps": 20,
-      "source": "Ratehub 5-year variable mortgage rates",
-      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
-      "lastChecked": "2026-10-13",
-      "status": "Special opportunity",
-      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
-    },
-    {
-      "product": "Mortgage",
       "term": "3 year",
       "provider": "Meridian Credit Union",
       "rate": 4.34,
@@ -2360,6 +2347,19 @@
       "advantageBps": 18,
       "source": "Ratehub 3-year fixed mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
+      "lastChecked": "2026-10-13",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
+      "product": "Mortgage",
+      "term": "5 year variable",
+      "provider": "Meridian Credit Union",
+      "rate": 3.44,
+      "benchmarkRate": 3.6,
+      "advantageBps": 16,
+      "source": "Ratehub 5-year variable mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
       "lastChecked": "2026-10-13",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
