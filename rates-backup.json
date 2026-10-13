@@ -1604,9 +1604,9 @@
         4.49,
         4.54,
         4.59,
-        4.69,
         4.79,
         4.89,
+        4.99,
         4.99,
         4.99,
         5.09,
@@ -1637,10 +1637,6 @@
           "rate": 4.59
         },
         {
-          "provider": "Bank of Montreal",
-          "rate": 4.69
-        },
-        {
           "provider": "MCAP",
           "rate": 4.79
         },
@@ -1650,6 +1646,10 @@
         },
         {
           "provider": "RBC Royal Bank",
+          "rate": 4.99
+        },
+        {
+          "provider": "Bank of Montreal",
           "rate": 4.99
         },
         {
@@ -2031,7 +2031,7 @@
       "lastChecked": "2026-10-13",
       "status": "Checked",
       "ratesFound": [
-        1.5,
+        2.75,
         2.8,
         3,
         4.25,
