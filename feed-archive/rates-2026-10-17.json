@@ -1608,11 +1608,11 @@
         4.89,
         4.99,
         4.99,
-        4.99,
+        5.04,
         5.19,
         5.49,
         6.79,
-        4.64,
+        4.94,
         5.09
       ],
       "mortgageRows": [
@@ -1654,7 +1654,7 @@
         },
         {
           "provider": "National Bank of Canada",
-          "rate": 4.99
+          "rate": 5.04
         },
         {
           "provider": "TD Bank",
@@ -1670,7 +1670,7 @@
         },
         {
           "provider": "Tangerine",
-          "rate": 4.64
+          "rate": 4.94
         },
         {
           "provider": "CIBC",
@@ -2031,7 +2031,7 @@
       "lastChecked": "2026-10-17",
       "status": "Checked",
       "ratesFound": [
-        1.5,
+        2.75,
         2.8,
         3,
         4.25,
