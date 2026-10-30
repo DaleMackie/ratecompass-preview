@@ -1696,17 +1696,17 @@
         4.59,
         4.69,
         4.69,
-        4.84,
         4.89,
         4.89,
         4.89,
-        4.94,
         4.99,
         4.99,
         5.04,
         5.09,
         5.19,
         5.99,
+        4.84,
+        4.94,
         4.99,
         5.19
       ],
@@ -1728,10 +1728,6 @@
           "rate": 4.69
         },
         {
-          "provider": "RBC Royal Bank",
-          "rate": 4.84
-        },
-        {
           "provider": "Equitable Bank",
           "rate": 4.89
         },
@@ -1742,10 +1738,6 @@
         {
           "provider": "Canwise",
           "rate": 4.89
-        },
-        {
-          "provider": "National Bank of Canada",
-          "rate": 4.94
         },
         {
           "provider": "Scotiabank",
@@ -1770,6 +1762,14 @@
         {
           "provider": "ICICI Bank Canada",
           "rate": 5.99
+        },
+        {
+          "provider": "RBC Royal Bank",
+          "rate": 4.84
+        },
+        {
+          "provider": "National Bank of Canada",
+          "rate": 4.94
         },
         {
           "provider": "CIBC",
@@ -1804,12 +1804,12 @@
         3.95,
         3.95,
         3.95,
-        4,
-        4.1,
         4.15,
         4.19,
         4.37,
         4.7,
+        4,
+        4.1,
         4.2,
         4.3
       ],
@@ -1851,14 +1851,6 @@
           "rate": 3.95
         },
         {
-          "provider": "National Bank of Canada",
-          "rate": 4
-        },
-        {
-          "provider": "RBC Royal Bank",
-          "rate": 4.1
-        },
-        {
           "provider": "MCAP",
           "rate": 4.15
         },
@@ -1873,6 +1865,14 @@
         {
           "provider": "ICICI Bank Canada",
           "rate": 4.7
+        },
+        {
+          "provider": "National Bank of Canada",
+          "rate": 4
+        },
+        {
+          "provider": "RBC Royal Bank",
+          "rate": 4.1
         },
         {
           "provider": "Tangerine",
@@ -2066,6 +2066,7 @@
         2.8,
         3.1,
         3.25,
+        3.45,
         3.5,
         3.55,
         3.58,
