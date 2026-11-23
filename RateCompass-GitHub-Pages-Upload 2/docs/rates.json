@@ -1514,7 +1514,7 @@
         4.99,
         5.09,
         5.19,
-        5.34,
+        5.29,
         5.74,
         7.54,
         4.84,
@@ -1557,7 +1557,7 @@
         },
         {
           "provider": "First National",
-          "rate": 5.34
+          "rate": 5.29
         },
         {
           "provider": "Meridian Credit Union",
@@ -1607,8 +1607,8 @@
         4.69,
         4.79,
         4.99,
+        5.18,
         5.19,
-        5.21,
         6.79,
         4.94,
         5.09,
@@ -1649,12 +1649,12 @@
           "rate": 4.99
         },
         {
-          "provider": "TD Bank",
-          "rate": 5.19
+          "provider": "First National",
+          "rate": 5.18
         },
         {
-          "provider": "First National",
-          "rate": 5.21
+          "provider": "TD Bank",
+          "rate": 5.19
         },
         {
           "provider": "ICICI Bank Canada",
@@ -1896,7 +1896,7 @@
       "lastChecked": "2026-11-23",
       "status": "Checked",
       "ratesFound": [
-        4.15,
+        4.3,
         4.25,
         4.35
       ],
@@ -1906,7 +1906,7 @@
           "provider": "Haventree Bank",
           "term": "2 year",
           "gicRedeemability": "Non-redeemable",
-          "rate": 4.15
+          "rate": 4.3
         },
         {
           "provider": "EQ Bank",
@@ -1940,7 +1940,6 @@
         4.4,
         4.5,
         4.5,
-        4.15,
         4.25,
         4.35
       ],
@@ -1959,7 +1958,7 @@
           "rate": 4
         },
         {
-          "provider": "Oaken Financial",
+          "provider": "Haventree Bank",
           "term": "2 year",
           "gicRedeemability": "Non-redeemable",
           "rate": 4.3
@@ -1971,7 +1970,7 @@
           "rate": 4.3
         },
         {
-          "provider": "Oaken Financial",
+          "provider": "Haventree Bank",
           "term": "3 year",
           "gicRedeemability": "Non-redeemable",
           "rate": 4.35
@@ -1983,7 +1982,7 @@
           "rate": 4.4
         },
         {
-          "provider": "Oaken Financial",
+          "provider": "Haventree Bank",
           "term": "5 year",
           "gicRedeemability": "Non-redeemable",
           "rate": 4.5
@@ -1993,12 +1992,6 @@
           "term": "5 year",
           "gicRedeemability": "Non-redeemable",
           "rate": 4.5
-        },
-        {
-          "provider": "Haventree Bank",
-          "term": "2 year",
-          "gicRedeemability": "Non-redeemable",
-          "rate": 4.15
         },
         {
           "provider": "EQ Bank",
@@ -2053,13 +2046,16 @@
         3.25,
         3.52,
         3.55,
+        3.59,
         3.6,
         3.62,
+        3.7,
         3.75,
         4,
         4.09,
         4.19,
         4.24,
+        4.25,
         4.26,
         4.34,
         4.45,
@@ -2352,7 +2348,7 @@
       "product": "GIC",
       "term": "5 year",
       "gicRedeemability": "Non-redeemable",
-      "provider": "Oaken Financial",
+      "provider": "Haventree Bank",
       "rate": 4.5,
       "benchmarkRate": 4.35,
       "advantageBps": 15,
