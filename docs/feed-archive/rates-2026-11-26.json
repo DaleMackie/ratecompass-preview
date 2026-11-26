@@ -809,9 +809,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "RBC",
-      "productName": "Prime -0.62%",
+      "productName": "Prime -0.87%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.62,
+      "spreadOverPrime": -0.87,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -820,9 +820,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "TD",
-      "productName": "Prime -0.57%",
+      "productName": "Prime -0.82%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.57,
+      "spreadOverPrime": -0.82,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -831,9 +831,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "BMO",
-      "productName": "Prime -0.67%",
+      "productName": "Prime -0.92%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.67,
+      "spreadOverPrime": -0.92,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -842,9 +842,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "CIBC",
-      "productName": "Prime -0.63%",
+      "productName": "Prime -0.88%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.63,
+      "spreadOverPrime": -0.88,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -853,9 +853,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "Scotiabank",
-      "productName": "Prime -0.59%",
+      "productName": "Prime -0.84%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.59,
+      "spreadOverPrime": -0.84,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -864,9 +864,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "National Bank",
-      "productName": "Prime -0.64%",
+      "productName": "Prime -0.89%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.64,
+      "spreadOverPrime": -0.89,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -875,9 +875,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "Desjardins",
-      "productName": "Prime -0.65%",
+      "productName": "Prime -0.90%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.65,
+      "spreadOverPrime": -0.9,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -886,9 +886,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "First National",
-      "productName": "Prime -0.68%",
+      "productName": "Prime -0.93%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.68,
+      "spreadOverPrime": -0.93,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -897,9 +897,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "MCAP",
-      "productName": "Prime -0.70%",
+      "productName": "Prime -0.95%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.7,
+      "spreadOverPrime": -0.95,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -908,9 +908,9 @@
       "category": "Mortgage",
       "mortgageTerm": "fiveYearVariable",
       "institution": "Tangerine",
-      "productName": "Prime -0.66%",
+      "productName": "Prime -0.91%",
       "note": "Marketplace",
-      "spreadOverPrime": -0.66,
+      "spreadOverPrime": -0.91,
       "status": "Marketplace",
       "source": "Ratehub.ca marketplace comparison table",
       "lastChecked": "2026-11-26"
@@ -1599,7 +1599,7 @@
       "lastChecked": "2026-11-26",
       "status": "Checked",
       "ratesFound": [
-        4.48,
+        4.34,
         4.54,
         4.59,
         4.69,
@@ -1618,7 +1618,7 @@
       "mortgageRows": [
         {
           "provider": "Canadian Lender",
-          "rate": 4.48
+          "rate": 4.34
         },
         {
           "provider": "Big 6 Bank",
@@ -2196,6 +2196,7 @@
       "lastChecked": "2026-11-26",
       "status": "Reachable",
       "ratesFound": [
+        4.7,
         5.49,
         6.05,
         6.19,
@@ -2204,6 +2205,7 @@
         2.75
       ],
       "officialRates": {
+        "prime": 4.7,
         "mortgageOneYear": 5.49,
         "mortgageThreeYear": 6.05,
         "mortgageFiveYear": 6.19,
@@ -2301,6 +2303,19 @@
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
     },
     {
+      "product": "Mortgage",
+      "term": "3 year",
+      "provider": "Canadian Lender",
+      "rate": 4.34,
+      "benchmarkRate": 4.64,
+      "advantageBps": 30,
+      "source": "Ratehub 3-year fixed mortgage rates",
+      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
+      "lastChecked": "2026-11-26",
+      "status": "Special opportunity",
+      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
+    },
+    {
       "product": "GIC",
       "term": "1 year",
       "gicRedeemability": "Non-redeemable",
@@ -2323,19 +2338,6 @@
       "advantageBps": 18,
       "source": "Ratehub 5-year variable mortgage rates",
       "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/5-year/variable",
-      "lastChecked": "2026-11-26",
-      "status": "Special opportunity",
-      "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
-    },
-    {
-      "product": "Mortgage",
-      "term": "3 year",
-      "provider": "Canadian Lender",
-      "rate": 4.48,
-      "benchmarkRate": 4.64,
-      "advantageBps": 16,
-      "source": "Ratehub 3-year fixed mortgage rates",
-      "sourceUrl": "https://www.ratehub.ca/best-mortgage-rates/3-year/fixed",
       "lastChecked": "2026-11-26",
       "status": "Special opportunity",
       "note": "Public marketplace special signal. Verify lender eligibility, conditions, availability, and whether the rate applies to the user's mortgage type before relying on it."
